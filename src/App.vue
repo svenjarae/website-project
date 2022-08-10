@@ -14,10 +14,10 @@
         <div class="arrow-container">
           <DownBtn></DownBtn>
         </div>
-        <span>PROJECTS</span>
+        <span class="projectPar">PROJECTS</span>
       </router-link>
     </div>
-    <div class="centerBottom">
+    <div class="leftBottom">
       <router-link to="/">
         <span>SVENJA RAETZSCH</span>
       </router-link>
@@ -96,12 +96,28 @@ a {
   cursor: pointer;
 }
 
+a:hover{
+  color: red;
+}
+
 a.router-link-exact-active .arrow-container {
   display: none;
 }
 
+a.router-link-exact-active{
+  color: red;
+}
+
 .arrow-container{
   display: block;
+}
+
+.projectPar{
+  font-size: 40px;
+}
+
+a.router-link-exact-active .projectPar{
+  font-size: 16px!important;
 }
 
 .mediumFont{
@@ -128,12 +144,12 @@ a.router-link-exact-active .arrow-container {
   z-index: 10000;
 }
 
-.centerBottom{
+.leftBottom {
   position: absolute;
-  left: 50%;
-  bottom: 20px;
+  left: -50px;
+  bottom: 90px;
   z-index: 10000;
-  transform: translate(-50%);
+  transform: rotate(-90deg);
 }
 
 </style>

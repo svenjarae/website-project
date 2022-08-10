@@ -2,13 +2,13 @@
   <div class="language-btn-container">
     <div>
       <a v-if="$i18n.locale !== 'de'" @click="setLocale('de')">DE</a>
-      <strong v-if="$i18n.locale === 'de'">DE</strong>
-      &nbsp;|&nbsp;
+      <span class="active" v-if="$i18n.locale === 'de'">DE</span>
+      <span>&nbsp;|&nbsp;</span>
       <a v-if="$i18n.locale !== 'en'" @click="setLocale('en')">EN</a>
-      <strong v-if="$i18n.locale === 'en'">EN</strong>
+      <span class="active" v-if="$i18n.locale === 'en'">EN</span>
       &nbsp;|&nbsp;
       <a v-if="$i18n.locale !== 'es'" @click="setLocale('es')">ES</a>
-      <strong v-if="$i18n.locale === 'es'">ES</strong>
+      <span class="active" v-if="$i18n.locale === 'es'">ES</span>
     </div>
   </div>
 </template>
@@ -41,5 +41,9 @@ export default defineComponent({
   background-color: transparent;
   border: none;
   padding: 0;
+}
+
+.active{
+  color: red;
 }
 </style>

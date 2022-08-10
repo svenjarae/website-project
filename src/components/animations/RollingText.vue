@@ -30,6 +30,10 @@ export default {
 
 <style scoped>
 
+.skills{
+  font-size: 40px;
+}
+
 .marquee-text-content{
   font-size: 100px;
   text-transform: uppercase;

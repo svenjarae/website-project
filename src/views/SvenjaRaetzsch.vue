@@ -2,12 +2,10 @@
   <div class="home">
     <div id="parent">
       <div class="pageOne">
-        <div style="padding: 60px">
+        <div class="liquidContainer">
           <TextAnime></TextAnime>
         </div>
-        <div>
-          <RollingText></RollingText>
-        </div>
+
         <div class="mediumFont skillsContainer">
           <span>Development</span>
           <span>Design</span>
@@ -15,7 +13,11 @@
           <span>Content</span>
           <span>Ideas</span>
         </div>
-        <div class="containerSmall"></div>
+
+        <div style="margin-top: 40px">
+          <RollingText></RollingText>
+        </div>
+
         <div class="containerBig"></div>
       </div>
     </div>
@@ -38,14 +40,13 @@ export default {
 
 <style>
 #parent { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
-#parent > div { height: 100%; width: 100%; }
 #parent > div:nth-child(1) { background: var(--bright); }
 #parent > div:nth-child(2) { background: whitesmoke; }
 
 .skillsContainer{
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .containerSmall{
@@ -58,12 +59,18 @@ export default {
 }
 
 .containerBig{
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 920px;
   background-color: whitesmoke;
-  position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 60px;
+  margin: 60px auto auto auto;
+}
+
+.liquidContainer{
+  position: absolute;
+  right: 220px;
+  top: 100px;
 }
 
 
