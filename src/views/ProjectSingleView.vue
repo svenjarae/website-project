@@ -1,7 +1,9 @@
 <template>
   <div id="parent">
     <div class="pageOne">
-        <img class="landingImg" :src="image" alt=""/>
+      <div class="iframeContainer">
+        <iframe src="https://player.vimeo.com/video/738275803?h=e20b2762d1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width:100%;height:100%;" title="P1011678_Vimeo.mp4"></iframe>
+      </div>
     </div>
     <div class="divContainer">
       <div>
@@ -67,6 +69,14 @@ export default {
   bottom: 287px;
   z-index: 10000;
   transform: rotate(-90deg);
+}
+
+.iframeContainer{
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .divContainer{
