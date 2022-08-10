@@ -6,6 +6,15 @@
           <TextAnime></TextAnime>
         </div>
 
+        <div class="rightLeftCorner">
+          <router-link to="/projects">
+            <div class="arrow-container">
+              <DownBtn></DownBtn>
+            </div>
+            <span class="projectPar">PROJECTS</span>
+          </router-link>
+        </div>
+
         <div class="mediumFont skillsContainer">
           <span>Development</span>
           <span>Design</span>
@@ -14,7 +23,7 @@
           <span>Ideas</span>
         </div>
 
-        <div style="margin-top: 40px">
+        <div style="margin-top: 60px">
           <RollingText></RollingText>
         </div>
 
@@ -27,13 +36,14 @@
 <script>
 import TextAnime from "@/components/animations/TextAnime";
 import RollingText from "@/components/animations/RollingText";
+import DownBtn from "@/components/buttons/DownBtn";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
     TextAnime,
     RollingText,
-
+    DownBtn,
   },
 }
 </script>
@@ -46,16 +56,7 @@ export default {
 .skillsContainer{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-}
-
-.containerSmall{
-  height: 200px;
-  width: 200px;
-  background-color: whitesmoke;
-  position: absolute;
-  right: 80px;
-  top: 250px;
+  margin-top: 60px;
 }
 
 .containerBig{
@@ -64,7 +65,7 @@ export default {
   background-color: whitesmoke;
   bottom: 20px;
   left: 60px;
-  margin: 60px auto auto auto;
+  margin: 60px auto;
 }
 
 .liquidContainer{

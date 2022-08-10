@@ -1,21 +1,7 @@
 <template>
   <nav>
-    <!--<div class="leftTopCorner">
-      <router-link to="/">
-        <img alt="Vue logo" src="./assets/logo.png">
-      </router-link>
-    </div>-->
-
     <div class="leftBottomCorner">
       <SelectLanguage></SelectLanguage>
-    </div>
-    <div class="rightLeftCorner">
-      <router-link to="/projects">
-        <div class="arrow-container">
-          <DownBtn></DownBtn>
-        </div>
-        <span class="projectPar">PROJECTS</span>
-      </router-link>
     </div>
     <div class="leftBottom">
       <router-link to="/">
@@ -23,17 +9,19 @@
       </router-link>
     </div>
   </nav>
-  <router-view/>
+  <router-view v-slot="{ Component }">
+    <transition>
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <script>
 import SelectLanguage from "@/components/settings/language/SelectLanguage";
-import DownBtn from "@/components/buttons/DownBtn";
 
 export default {
   name: 'App',
   components: {
-    DownBtn,
     SelectLanguage
   },
   methods: {
@@ -138,18 +126,40 @@ a.router-link-exact-active .projectPar{
 }
 
 .rightLeftCorner{
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 10000;
 }
 
 .leftBottom {
-  position: absolute;
+  position: fixed;
   left: -50px;
   bottom: 90px;
   z-index: 10000;
   transform: rotate(-90deg);
+}
+
+/*
+routes transitions
+ */
+
+.route-enter-from{
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.route-enter-active{
+  transition: all 0.3s ease-out;
+}
+
+.route-leave-to{
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.route-leave-active{
+  transition: all 0.3s ease-in;
 }
 
 </style>

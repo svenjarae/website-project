@@ -1,4 +1,9 @@
 <template>
+  <div class="leftCorner">
+    <router-link to="/projects">
+      <span class="projectPar">/ PROJECTS</span>
+    </router-link>
+  </div>
   <div class="about" id="parentAbout">
     <div class="grid-container">
       <div>
@@ -94,13 +99,21 @@ export default {
   top: 20px;
   left: 50px;
   right: 20px;
-  bottom: 50px;
+  bottom: 20px;
 }
 
 #parentAbout > div {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+}
+
+.leftCorner{
+  position: fixed;
+  left: -20px;
+  bottom: 220px;
+  z-index: 10000;
+  transform: rotate(-90deg);
 }
 
 .grid-container {
