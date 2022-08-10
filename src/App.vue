@@ -1,30 +1,139 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!--<div class="leftTopCorner">
+      <router-link to="/">
+        <img alt="Vue logo" src="./assets/logo.png">
+      </router-link>
+    </div>-->
+
+    <div class="leftBottomCorner">
+      <SelectLanguage></SelectLanguage>
+    </div>
+    <div class="rightLeftCorner">
+      <router-link to="/projects">
+        <div class="arrow-container">
+          <DownBtn></DownBtn>
+        </div>
+        <span>PROJECTS</span>
+      </router-link>
+    </div>
+    <div class="centerBottom">
+      <router-link to="/">
+        <span>SVENJA RAETZSCH</span>
+      </router-link>
+    </div>
   </nav>
   <router-view/>
 </template>
 
+<script>
+import SelectLanguage from "@/components/settings/language/SelectLanguage";
+import DownBtn from "@/components/buttons/DownBtn";
+
+export default {
+  name: 'App',
+  components: {
+    DownBtn,
+    SelectLanguage
+  },
+  methods: {
+
+  }
+}
+</script>
+
+
 <style>
+
+:root {
+  --bright: #fff;
+  --dark:  #000;
+  --darkBlue: #2c3e50;
+  --blue: #0000FFFF;
+  --green: #00a200;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--dark);
 }
 
-nav {
-  padding: 30px;
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.router-link-exact-active .arrow-container {
+  display: none;
+}
+
+.arrow-container{
+  display: block;
+}
+
+.mediumFont{
+  column-gap: 0;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 8px;
+}
+
+.leftBottomCorner {
+  position: fixed;
+  left: -20px;
+  top: 60px;
+  z-index: 10000;
+  transform: rotate(-90deg);
+}
+
+.rightLeftCorner{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+}
+
+.centerBottom{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  z-index: 10000;
+  transform: translate(-50%);
+}
+
 </style>
