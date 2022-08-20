@@ -7,8 +7,15 @@
                   border-top-left-radius: 5px;
                   filter: blur(2px);
                   opacity: 0.9;
-                  object-fit: cover;"
-           :src=iconSrc alt="">
+                  object-fit: cover;
+                  -webkit-filter: blur(2px);" :src=iconSrc alt="">
+      <img style="left: 50%;
+                  width: 100%;
+                  transform: translate(-50%);
+                  position: absolute;
+                  top: 0;
+                  height: 150px;
+                  object-fit: contain;" :src=iconSrc alt="">
     </div>
     <div class="contentContainer">
       <div class="titleContainer mediumFont">
@@ -61,8 +68,16 @@ export default {
     cursor: pointer;
   }
 
+  .news-card-container svg{
+    fill: var(--green);
+  }
+
   .news-card-container:hover{
     transform: scale(90%);
+  }
+
+  .news-card-container:hover svg{
+    fill: red;
   }
 
   .contentContainer{

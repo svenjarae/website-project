@@ -44,6 +44,9 @@ export default defineComponent({
 }
 
 .active{
-  color: red;
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  padding: 5px;
 }
 </style>

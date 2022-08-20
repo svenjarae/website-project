@@ -30,8 +30,8 @@
     <router-link to="/projects">
       <span>/ PROJECTS</span>
     </router-link>
-    <router-link to="/projects/project">
-      <span class="projectPar"> / PROJECTNAME</span>
+    <router-link to="/projects/uw-plants">
+      <span class=""> / UW-PLANTS</span>
     </router-link>
   </div>
 </template>
@@ -40,7 +40,7 @@
 // images
 import image from "/src/assets/logo.png";
 export default {
-  name: 'ProjectSingleView',
+  name: 'ProjectUwPlantsView',
   components: {
   },
   data(){
@@ -52,9 +52,17 @@ export default {
 </script>
 <style scoped>
 
-#parent { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+#parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 #parent > div:nth-child(1) {
+  background-color: whitesmoke;
   height: 100%;
   width: 100%;
 }
@@ -65,13 +73,14 @@ export default {
 
 .leftCorner{
   position: fixed;
-  left: -90px;
-  bottom: 287px;
-  z-index: 10000;
+  left: -83px;
+  bottom: 285px;
+  z-index: 99;
   transform: rotate(-90deg);
 }
 
 .iframeContainer{
+  background-color: #175600;
   position: absolute;
   left: 60px;
   top: 0;
@@ -109,6 +118,28 @@ export default {
   max-height: 100%;
   object-fit: cover;
 }
+
+iframe{
+  display: block;
+  justify-content: inherit !important;
+
+  align-items: center;
+}
+
+iframe .vp-center {
+  display: block;
+  justify-content: inherit !important;
+
+  align-items: center;
+}
+
+.vp-center {
+  display: block;
+  justify-content: inherit !important;
+
+  align-items: center;
+}
+
 
 
 </style>

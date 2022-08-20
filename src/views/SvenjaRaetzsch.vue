@@ -11,7 +11,7 @@
             <div class="arrow-container">
               <DownBtn></DownBtn>
             </div>
-            <span class="projectPar">PROJECTS</span>
+            <span>ALL PROJECTS</span>
           </router-link>
         </div>
 
@@ -23,7 +23,7 @@
           <span>Ideas</span>
         </div>
 
-        <div style="margin-top: 60px">
+        <div>
           <RollingText></RollingText>
         </div>
 
@@ -51,12 +51,13 @@ export default {
 <style>
 #parent { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
 #parent > div:nth-child(1) { background: var(--bright); }
-#parent > div:nth-child(2) { background: whitesmoke; }
 
 .skillsContainer{
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  justify-content: right;
+  align-items: flex-end;
+  padding: 60px;
 }
 
 .containerBig{
@@ -68,10 +69,10 @@ export default {
   margin: 60px auto;
 }
 
-.liquidContainer{
+.liquidContainer {
   position: absolute;
-  right: 220px;
-  top: 100px;
+  left: 60px;
+  top: 195px;
 }
 
 

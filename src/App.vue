@@ -53,6 +53,10 @@ html {
   color: var(--dark);
 }
 
+body {
+  cursor: url('/src/assets/logo.png'), default;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -79,7 +83,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 a {
-  color: var(--green);
+  color: black;
+  padding: 5px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -93,19 +98,14 @@ a.router-link-exact-active .arrow-container {
 }
 
 a.router-link-exact-active{
-  color: red;
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  padding: 5px;
 }
 
 .arrow-container{
   display: block;
-}
-
-.projectPar{
-  font-size: 40px;
-}
-
-a.router-link-exact-active .projectPar{
-  font-size: 16px!important;
 }
 
 .mediumFont{
@@ -119,9 +119,9 @@ a.router-link-exact-active .projectPar{
 
 .leftBottomCorner {
   position: fixed;
-  left: -20px;
+  left: -30px;
   top: 60px;
-  z-index: 10000;
+  z-index: 99;
   transform: rotate(-90deg);
 }
 
@@ -129,37 +129,14 @@ a.router-link-exact-active .projectPar{
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 10000;
+  z-index: 99;
 }
 
 .leftBottom {
   position: fixed;
   left: -50px;
   bottom: 90px;
-  z-index: 10000;
+  z-index: 99;
   transform: rotate(-90deg);
 }
-
-/*
-routes transitions
- */
-
-.route-enter-from{
-  opacity: 0;
-  transform: translateX(100px);
-}
-
-.route-enter-active{
-  transition: all 0.3s ease-out;
-}
-
-.route-leave-to{
-  opacity: 0;
-  transform: translateX(-100px);
-}
-
-.route-leave-active{
-  transition: all 0.3s ease-in;
-}
-
 </style>
