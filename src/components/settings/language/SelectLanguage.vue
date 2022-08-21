@@ -43,6 +43,11 @@ export default defineComponent({
   padding: 0;
 }
 
+.language-btn-container a{
+  color:black;
+  padding: 5px;
+}
+
 .active{
   color: white;
   background-color: black;

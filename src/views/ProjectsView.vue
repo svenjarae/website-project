@@ -107,7 +107,7 @@ export default {
 #parentAbout {
   position: absolute;
   top: 20px;
-  left: 50px;
+  left: 60px;
   right: 20px;
   bottom: 20px;
 }
@@ -135,18 +135,10 @@ export default {
 }
 
 .grid-container > div {
-  border: 3px solid whitesmoke;
   text-align: center;
   font-size: 30px;
   border-radius: 2px;
-}
-
-.grid-container > div:hover {
-  border: 3px solid var(--green);
-}
-
-.grid-container > div:hover .show{
-  display: block;
+  min-width: 200px;
 }
 
 </style>

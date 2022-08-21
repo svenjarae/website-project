@@ -18,12 +18,17 @@ const routes = [
   {
     path: '/projects/uw-plants',
     name: 'uw-plants',
-    component: () => import(/* webpackChunkName: "project" */ '../views/ProjectUwPlantsView')
+    component: () => import(/* webpackChunkName: "uw-plants" */ '../views/ProjectUwPlantsView')
   },
   {
     path: '/projects/galapagos',
     name: 'galapagos',
-    component: () => import(/* webpackChunkName: "project" */ '../views/ProjectGalapagosView')
+    component: () => import(/* webpackChunkName: "galapagos" */ '../views/ProjectGalapagosView')
+  },
+  {
+    path: '/projects/onistvdio',
+    name: 'onistvdio',
+    component: () => import(/* webpackChunkName: "onistvdio" */ '../views/ProjectOniStudioView')
   },
 ]
 

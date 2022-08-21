@@ -2,7 +2,7 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <iframe src="https://player.vimeo.com/video/738656811?h=43cdb7d58f" frameborder="0" allow="autoplay; fullscreen" style="width:100%;height:100%;" allowfullscreen></iframe>
+        <img :src="sealion"/>
       </div>
     </div>
     <div class="divContainer">
@@ -34,47 +34,184 @@
         <a
             data-lg-size="1406-1390"
             class="gallery-item"
-            data-src="https://images.unsplash.com/photo-1581894158358-5ecd2c518883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1406&q=80"
+            :data-src="waterTurtle"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
-              src="https://images.unsplash.com/photo-1581894158358-5ecd2c518883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80"
+              :src="waterTurtle"
           />
         </a>
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            data-src="https://images.unsplash.com/photo-1544550285-f813152fb2fd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+            :data-src="waterHigh"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@asoshiation' >Shah </a></h4><p> Location - <a href='https://unsplash.com/s/photos/shinimamiya%2C-osaka%2C-japan'>Shinimamiya, Osaka, Japan</a></p>"
         >
           <img
               class="img-responsive"
-              src="https://images.unsplash.com/photo-1544550285-f813152fb2fd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80"
+              :src="waterHigh"
           />
         </a>
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            data-src="https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+            :data-src="puertoVillamil"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
-              style="width: 100px"
               class="img-responsive"
-              src="https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80"
+              :src="puertoVillamil"
           />
         </a>
         <a
+            data-lg-size="1400-1400"
             class="gallery-item"
-            data-video='{"source": [{"src":"https://www.lightgalleryjs.com/videos/video1.mp4", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
-            data-poster=""
+            :data-src="iDive"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
-              width="300"
               class="img-responsive"
-              src="https://www.lightgalleryjs.com/images/demo/html5-video-poster.jpg"
+              :src="iDive"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="galapagosShark"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="galapagosShark"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="manta"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="manta"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="sealionsCuddle"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="sealionsCuddle"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="island"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="island"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="sharkFin"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="sharkFin"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/738656811"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="sealion"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/741586500"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="pingu"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/741586539"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="sharksWhiteTips"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/741586552"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="whiteTips"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/741586442"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="islandSealions"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/741586482"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="fish"
           />
         </a>
       </lightgallery>
@@ -94,6 +231,25 @@
 // images
 import image from "/src/assets/logo.png";
 
+import waterTurtle from "/././././././src/assets/images/projects/galapagos/galleryImgs/water-turtle.jpg";
+import waterHigh from "/././././././src/assets/images/projects/galapagos/galleryImgs/water-high-saturation.jpg";
+import puertoVillamil from "/././././././src/assets/images/projects/galapagos/galleryImgs/puertovillamil.jpg";
+import galapagosShark from "/././././././src/assets/images/projects/galapagos/galleryImgs/galapagos-shark.jpg";
+import iDive from "/././././././src/assets/images/projects/galapagos/galleryImgs/i-dive.png";
+import sealion from "/././././././src/assets/images/projects/galapagos/titleImg.png";
+import island from "/././././././src/assets/images/projects/galapagos/galleryImgs/island-and-bird.jpg";
+import manta from "/././././././src/assets/images/projects/galapagos/galleryImgs/manta.jpg";
+import sealionsCuddle from "/././././././src/assets/images/projects/galapagos/galleryImgs/seelions-cuddle.jpg";
+import sharkFin from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharkfin.jpg";
+import pingu from "/././././././src/assets/images/projects/galapagos/galleryImgs/piingu.png";
+import sharksWhiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharksWhiteTips.png";
+import islandSealions from "/././././././src/assets/images/projects/galapagos/galleryImgs/islandSealions.png";
+import fish from "/././././././src/assets/images/projects/galapagos/galleryImgs/fish.png";
+import whiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/whiteTips.png";
+
+
+
+
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
@@ -105,6 +261,22 @@ export default {
   },
   data: () => ({
     image: image,
+    sealionsCuddle: sealionsCuddle,
+    whiteTips: whiteTips,
+    sharkFin: sharkFin,
+    sharksWhiteTips: sharksWhiteTips,
+    fish: fish,
+    manta: manta,
+    island: island,
+    galapagosShark: galapagosShark,
+    islandSealions: islandSealions,
+    iDive: iDive,
+    waterTurtle: waterTurtle,
+    waterHigh: waterHigh,
+    puertoVillamil: puertoVillamil,
+    sealion: sealion,
+    pingu: pingu,
+
     plugins: [lgZoom, lgVideo],
   }),
   methods: {
@@ -163,7 +335,7 @@ export default {
 
 .leftCorner{
   position: fixed;
-  left: -83px;
+  left: -78px;
   bottom: 285px;
   z-index: 99;
   transform: rotate(-90deg);
@@ -176,6 +348,12 @@ export default {
   top: 0;
   bottom: 0;
   right: 0;
+}
+
+.iframeContainer img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .divContainer{

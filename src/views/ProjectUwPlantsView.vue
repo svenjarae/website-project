@@ -73,7 +73,7 @@ export default {
 
 .leftCorner{
   position: fixed;
-  left: -83px;
+  left: -78px;
   bottom: 285px;
   z-index: 99;
   transform: rotate(-90deg);

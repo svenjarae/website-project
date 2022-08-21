@@ -4,7 +4,7 @@
       <SelectLanguage></SelectLanguage>
     </div>
     <div class="leftBottom">
-      <router-link to="/">
+      <router-link to="/" style="padding: 5px;">
         <span>SVENJA RAETZSCH</span>
       </router-link>
     </div>
@@ -83,10 +83,9 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 a {
-  color: black;
-  padding: 5px;
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 
 a:hover{
