@@ -11,7 +11,7 @@
             <div class="arrow-container">
               <DownBtn></DownBtn>
             </div>
-            <span>ALL PROJECTS</span>
+            <h1>ALL PROJECTS</h1>
           </router-link>
         </div>
 
@@ -27,7 +27,13 @@
           <RollingText></RollingText>
         </div>
 
-        <div class="containerBig"></div>
+        <div class="containerBig">
+          <video autoplay loop>
+            <source :src="titleVideo" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +44,8 @@ import TextAnime from "@/components/animations/TextAnime";
 import RollingText from "@/components/animations/RollingText";
 import DownBtn from "@/components/buttons/DownBtn";
 
+import titleVideo from "/././././././src/assets/videos/titlevid.mp4";
+
 export default {
   name: 'SvenjaRaetzsch',
   components: {
@@ -45,6 +53,11 @@ export default {
     RollingText,
     DownBtn,
   },
+  data(){
+    return{
+      titleVideo: titleVideo,
+    }
+  }
 }
 </script>
 
@@ -75,7 +88,11 @@ export default {
   top: 195px;
 }
 
-
+video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
 </style>

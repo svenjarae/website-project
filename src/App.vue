@@ -82,6 +82,10 @@ h1, h2, h3, h4, h5, h6, p{
   font-weight: normal;
 }
 
+h1{
+  font-family: fantasy;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -89,7 +93,7 @@ a {
 }
 
 a:hover{
-  color: red;
+  color: orangered;
 }
 
 a.router-link-exact-active .arrow-container {

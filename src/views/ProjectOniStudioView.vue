@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="divContainer">
-      <div>
+      <div class="mainDescriptionWrapper">
         <h1>Title</h1>
         <p>Content</p>
       </div>
@@ -221,8 +221,8 @@
     <router-link to="/projects">
       <span>/ PROJECTS</span>
     </router-link>
-    <router-link to="/projects/onistvdio">
-      <span class=""> / ONI.STVDIO</span>
+    <router-link class="currentLink" to="/projects/onistvdio">
+      <span> / ONISTVDIO</span>
     </router-link>
   </div>
 </template>
@@ -255,7 +255,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
 export default {
-  name: 'ProjectOniStudioView',
+  name: 'ProjectOniStudio',
   components: {
     Lightgallery,
   },
@@ -335,7 +335,7 @@ export default {
 
 .leftCorner{
   position: fixed;
-  left: -75px;
+  left: -76px;
   bottom: 281px;
   z-index: 99;
   transform: rotate(-90deg);
@@ -373,18 +373,18 @@ export default {
   gap: 20px;
 }
 
+.mainDescriptionWrapper{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .flexWrapper{
   display: flex;
   flex-direction: column;
   text-align: left;
-}
-
-.landingImg{
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
 }
 
 iframe{
@@ -406,6 +406,10 @@ iframe .vp-center {
   justify-content: inherit !important;
 
   align-items: center;
+}
+
+.currentLink{
+  margin-left: 5px;
 }
 
 

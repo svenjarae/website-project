@@ -8,7 +8,7 @@
     <div class="grid-container">
       <div>
         <router-link to="/projects/uw-plants">
-          <NewsCard title="UW-PLANTS" subtitle="" :icon-src=titleImgPlants></NewsCard>
+          <NewsCard title="UWPLANTS" subtitle="" :icon-src=titleImgPlants></NewsCard>
         </router-link>
       </div>
       <div>
@@ -128,7 +128,7 @@ export default {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   gap: 20px;
   background-color: var(--bright);
   overflow: auto;

@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="divContainer">
-      <div>
+      <div class="mainDescriptionWrapper">
         <h1>Title</h1>
         <p>Content</p>
       </div>
@@ -103,6 +103,14 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.mainDescriptionWrapper{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexWrapper{

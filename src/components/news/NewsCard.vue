@@ -1,33 +1,15 @@
 <template>
   <div class="news-card-container">
     <div>
-      <img style="width: 100%;
-                  height: 150px;
-                  border-top-right-radius: 5px;
-                  border-top-left-radius: 5px;
-                  filter: blur(2px);
-                  opacity: 0.9;
-                  object-fit: cover;
-                  -webkit-filter: blur(2px);" :src=iconSrc alt="">
+      <h1 class="cardTitle">{{title}}</h1>
       <img style="left: 50%;
                   width: 100%;
                   transform: translate(-50%);
                   position: absolute;
                   top: 0;
-                  height: 150px;
-                  object-fit: contain;" :src=iconSrc alt="">
+                  height: 100%;
+                  object-fit: cover;" :src=iconSrc alt="">
     </div>
-    <!--<div class="contentContainer">
-      <div class="titleContainer mediumFont">
-        <h3>{{title}}</h3>
-      </div>
-      <div class="subTitleContainer">
-        <p>{{subtitle}}</p>
-      </div>
-    </div>
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg>
-    </div>-->
   </div>
 </template>
 
@@ -41,9 +23,6 @@ export default {
   props: {
     iconSrc: String,
     title: String,
-    subtitle: String,
-    date: String,
-    button: String,
   },
   data(){
     return{
@@ -64,20 +43,22 @@ export default {
   .news-card-container{
     height: 100%;
     position: relative;
-    transition: transform 330ms ease-in-out;
     cursor: pointer;
+    min-width: 300px;
+    min-height: 300px;
   }
 
-  .news-card-container svg{
-    fill: var(--green);
+  .cardTitle {
+    opacity: 0;
   }
 
-  .news-card-container:hover{
-    transform: scale(90%);
+  .news-card-container:hover .cardTitle {
+    font-size: 40px;
+    opacity: 1;
   }
 
   .news-card-container:hover svg{
-    fill: red;
+    fill: orangered;
   }
 
   .contentContainer{
@@ -94,6 +75,17 @@ export default {
   p{
     font-weight: normal;
     font-size: 12px;
+  }
+
+  .cardTitle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: orangered;
+    font-size: 16px;
+    transition: font-size 330ms ease-in-out;
   }
 
 </style>
