@@ -26,9 +26,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "galapagos" */ '../views/ProjectGalapagosView')
   },
   {
-    path: '/projects/onistvdio',
-    name: 'onistvdio',
-    component: () => import(/* webpackChunkName: "onistvdio" */ '../views/ProjectOniStudioView')
+    path: '/projects/glowingturts',
+    name: 'glowingturts',
+    component: () => import(/* webpackChunkName: "galapagos" */ '../views/ProjectGlowingTurtsView')
+  },
+  {
+    path: '/projects/onistudio',
+    name: 'onistudio',
+    component: () => import(/* webpackChunkName: "onistudio" */ '../views/ProjectOniStudioView')
+  },
+  {
+    path: '/projects/maldives',
+    name: 'maldives',
+    component: () => import(/* webpackChunkName: "maldives" */ '../views/ProjectMaldivesView')
   },
 ]
 

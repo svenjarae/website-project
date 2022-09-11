@@ -2,7 +2,13 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <img :src="sealion"/>
+
+
+        <h1 class="projectTitle">ONI STUDIO</h1>
+        <img :src="sequ5stil1"/>
+        <div class="containerDownBtn">
+          <DownBtn></DownBtn>
+        </div>
       </div>
     </div>
     <div class="divContainer">
@@ -31,109 +37,76 @@
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/740775943"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="sequ5stil1"
+          />
+          <span class="playBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
+          </span>
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/740779236"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="sequ4stil1"
+          />
+          <span class="playBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
+          </span>
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/740767794"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="sequ3stil1"
+          />
+          <span class="playBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
+          </span>
+        </a>
+
         <a
             data-lg-size="1406-1390"
             class="gallery-item"
-            :data-src="waterTurtle"
+            :data-src="sequ2stil1"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
-              :src="waterTurtle"
+              :src="sequ2stil1"
           />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="waterHigh"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@asoshiation' >Shah </a></h4><p> Location - <a href='https://unsplash.com/s/photos/shinimamiya%2C-osaka%2C-japan'>Shinimamiya, Osaka, Japan</a></p>"
-        >
-          <img
-              class="img-responsive"
-              :src="waterHigh"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="puertoVillamil"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="puertoVillamil"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="iDive"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="iDive"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="galapagosShark"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="galapagosShark"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="manta"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="manta"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="sealionsCuddle"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="sealionsCuddle"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="island"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="island"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="sharkFin"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="sharkFin"
-          />
+          <span class="imgBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          </span>
         </a>
         <!-- VImeo Video --->
         <a
             data-lg-size="1280-720"
-            data-src="//vimeo.com/738656811"
+            data-src="//vimeo.com/740764055"
             data-poster=""
             data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
@@ -141,78 +114,26 @@
               width="300"
               height="100"
               class="img-responsive"
-              :src="sealion"
+              :src="sequ2stil2"
           />
+          <span class="playBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
+          </span>
         </a>
-        <!-- VImeo Video --->
+
         <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586500"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="sequ2stil3"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
-              width="300"
-              height="100"
               class="img-responsive"
-              :src="pingu"
+              :src="sequ2stil3"
           />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586539"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="sharksWhiteTips"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586552"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="whiteTips"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586442"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="islandSealions"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586482"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="fish"
-          />
+          <span class="imgBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          </span>
         </a>
       </lightgallery>
     </div>
@@ -221,8 +142,8 @@
     <router-link to="/projects">
       <span>/ PROJECTS</span>
     </router-link>
-    <router-link class="currentLink" to="/projects/onistvdio">
-      <span> / ONISTVDIO</span>
+    <router-link class="currentLink" to="/projects/onistudio">
+      <span> / ONI STUDIO</span>
     </router-link>
   </div>
 </template>
@@ -231,51 +152,36 @@
 // images
 import image from "/src/assets/logo.png";
 
-import waterTurtle from "/././././././src/assets/images/projects/galapagos/galleryImgs/water-turtle.jpg";
-import waterHigh from "/././././././src/assets/images/projects/galapagos/galleryImgs/water-high-saturation.jpg";
-import puertoVillamil from "/././././././src/assets/images/projects/galapagos/galleryImgs/puertovillamil.jpg";
-import galapagosShark from "/././././././src/assets/images/projects/galapagos/galleryImgs/galapagos-shark.jpg";
-import iDive from "/././././././src/assets/images/projects/galapagos/galleryImgs/i-dive.png";
-import sealion from "/././././././src/assets/images/projects/galapagos/titleImg.png";
-import island from "/././././././src/assets/images/projects/galapagos/galleryImgs/island-and-bird.jpg";
-import manta from "/././././././src/assets/images/projects/galapagos/galleryImgs/manta.jpg";
-import sealionsCuddle from "/././././././src/assets/images/projects/galapagos/galleryImgs/seelions-cuddle.jpg";
-import sharkFin from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharkfin.jpg";
-import pingu from "/././././././src/assets/images/projects/galapagos/galleryImgs/piingu.png";
-import sharksWhiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharksWhiteTips.png";
-import islandSealions from "/././././././src/assets/images/projects/galapagos/galleryImgs/islandSealions.png";
-import fish from "/././././././src/assets/images/projects/galapagos/galleryImgs/fish.png";
-import whiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/whiteTips.png";
 
+import sequ2stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
+import sequ2stil2 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil2.png";
+import sequ2stil3 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil3.jpg";
 
+import sequ5stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence5-Stil1.png";
+import sequ4stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence4-Stil1.png";
+import sequ3stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence3-Stil1.jpg";
 
 
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
+import DownBtn from "@/components/buttons/DownBtn";
+
 export default {
   name: 'ProjectOniStudio',
   components: {
     Lightgallery,
+    DownBtn,
   },
   data: () => ({
     image: image,
-    sealionsCuddle: sealionsCuddle,
-    whiteTips: whiteTips,
-    sharkFin: sharkFin,
-    sharksWhiteTips: sharksWhiteTips,
-    fish: fish,
-    manta: manta,
-    island: island,
-    galapagosShark: galapagosShark,
-    islandSealions: islandSealions,
-    iDive: iDive,
-    waterTurtle: waterTurtle,
-    waterHigh: waterHigh,
-    puertoVillamil: puertoVillamil,
-    sealion: sealion,
-    pingu: pingu,
+    sequ2stil1: sequ2stil1,
+    sequ2stil2:  sequ2stil2,
+    sequ2stil3: sequ2stil3,
+    sequ5stil1: sequ5stil1,
+    sequ3stil1: sequ3stil1,
+    sequ4stil1: sequ4stil1,
 
     plugins: [lgZoom, lgVideo],
   }),
@@ -298,12 +204,44 @@ export default {
   position: relative;
 }
 
+.projectTitle{
+  position: absolute;
+  font-size: 100px;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: orangered;
+}
+
+.containerDownBtn{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.galleryContainer a{
+  position: relative;
+}
+.galleryContainer a:hover svg{
+  fill: orangered;
+}
+.playBtn, .imgBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px;
+  background-color: white;
+  display: flex;
+}
+
 .lightgallery-vue{
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 20px;
+  gap: 15px;
   position: absolute;
-  left: 60px;
+  left: 70px;
   top: 0;
   bottom: 20px;
   right: 0;
@@ -335,8 +273,8 @@ export default {
 
 .leftCorner{
   position: fixed;
-  left: -76px;
-  bottom: 281px;
+  left: -79px;
+  bottom: 285px;
   z-index: 99;
   transform: rotate(-90deg);
 }
@@ -344,7 +282,7 @@ export default {
 .iframeContainer{
   background-color: #007385;
   position: absolute;
-  left: 60px;
+  left: 70px;
   top: 0;
   bottom: 0;
   right: 0;
@@ -370,7 +308,7 @@ export default {
 .flexContainer{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .mainDescriptionWrapper{

@@ -53,7 +53,7 @@ export default {
   }
 
   .news-card-container:hover .cardTitle {
-    font-size: 40px;
+    font-size: 24px;
     opacity: 1;
   }
 

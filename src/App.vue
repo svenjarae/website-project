@@ -37,7 +37,7 @@ export default {
   --bright: #fff;
   --dark:  #000;
   --darkBlue: #2c3e50;
-  --blue: #0000FFFF;
+  --blue: #4973ff;
   --green: #00a200;
 }
 
@@ -90,6 +90,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: black;
+  font-weight: 500;
 }
 
 a:hover{

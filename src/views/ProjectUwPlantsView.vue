@@ -82,7 +82,7 @@ export default {
 .iframeContainer{
   background-color: #175600;
   position: absolute;
-  left: 60px;
+  left: 70px;
   top: 0;
   bottom: 0;
   right: 0;
@@ -102,7 +102,7 @@ export default {
 .flexContainer{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .mainDescriptionWrapper{

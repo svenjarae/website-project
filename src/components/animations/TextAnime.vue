@@ -1,6 +1,6 @@
 <template>
 <div>
-  <svg viewbox="0 0 100 20" data-v-01c3b717=""><defs data-v-01c3b717=""><linearGradient id="gradient" data-v-01c3b717=""><stop color="#000" data-v-01c3b717=""></stop></linearGradient><pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse" data-v-01c3b717=""><path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)" data-v-01c3b717=""><animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate" from="0,0" to="40,0" repeatCount="indefinite" data-v-01c3b717=""></animateTransform></path></pattern></defs><text text-anchor="middle" x="50" y="18" font-size="18" fill="url(#wave)" fill-opacity="1" data-v-01c3b717="">LIQUID</text></svg>
+  <svg viewbox="0 0 100 20" data-v-01c3b717=""><defs data-v-01c3b717=""><linearGradient id="gradient" data-v-01c3b717=""><stop color="#000" data-v-01c3b717=""></stop></linearGradient><pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse" data-v-01c3b717=""><path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)" data-v-01c3b717=""><animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate" from="0,0" to="40,0" repeatCount="indefinite" data-v-01c3b717=""></animateTransform></path></pattern></defs><text text-anchor="middle" x="50" y="18" font-size="18" fill="url(#wave)" fill-opacity="1" data-v-01c3b717="">SKILLS</text></svg>
 </div>
 </template>
 

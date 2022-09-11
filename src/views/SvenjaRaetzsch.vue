@@ -2,60 +2,50 @@
   <div class="home">
     <div id="parent">
       <div class="pageOne">
-        <div class="liquidContainer">
-          <TextAnime></TextAnime>
-        </div>
-
-        <div class="rightLeftCorner">
+        <!--<div class="rightLeftCorner">
           <router-link to="/projects">
             <div class="arrow-container">
               <DownBtn></DownBtn>
             </div>
             <h1>ALL PROJECTS</h1>
           </router-link>
-        </div>
-
-        <div class="mediumFont skillsContainer">
-          <span>Development</span>
-          <span>Design</span>
-          <span>Digital</span>
-          <span>Content</span>
-          <span>Ideas</span>
-        </div>
-
+        </div>-->
         <div>
-          <RollingText></RollingText>
+          <WaterAnimation></WaterAnimation>
         </div>
-
+        <acc-slider></acc-slider>
         <div class="containerBig">
-          <video autoplay loop>
+          <video muted autoplay loop preload="auto">
             <source :src="titleVideo" type="video/mp4">
             Your browser does not support HTML video.
           </video>
 
         </div>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import TextAnime from "@/components/animations/TextAnime";
-import RollingText from "@/components/animations/RollingText";
-import DownBtn from "@/components/buttons/DownBtn";
+//import DownBtn from "@/components/buttons/DownBtn";
 
 import titleVideo from "/././././././src/assets/videos/titlevid.mp4";
+import videoTitleImg from "/././././././src/assets/images/projects/uw-plants/titleImg.png";
+import WaterAnimation from "@/components/buttons/WaterAnimation";
+import AccSlider from "@/components/slider/AccSlider";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
-    TextAnime,
-    RollingText,
-    DownBtn,
+    AccSlider,
+    WaterAnimation,
+    //DownBtn,
   },
   data(){
     return{
       titleVideo: titleVideo,
+      videoTitleImg: videoTitleImg,
     }
   }
 }
@@ -65,26 +55,34 @@ export default {
 #parent { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
 #parent > div:nth-child(1) { background: var(--bright); }
 
-.skillsContainer{
+.skillsContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: right;
+  justify-content: center;
   align-items: flex-end;
-  padding: 60px;
+  margin-bottom: 40px;
 }
 
-.containerBig{
+.skillsContainer span{
+  margin-right: 20px;
+}
+
+.skillsContainer span:last-child{
+  margin-right: 0;
+}
+
+.containerBig {
   height: 200px;
-  width: 920px;
   background-color: whitesmoke;
   bottom: 20px;
-  left: 60px;
+  left: 70px;
+  right: 0;
   margin: 60px auto;
+  z-index: 98;
+  position: absolute;
 }
 
 .liquidContainer {
   position: absolute;
-  left: 60px;
   top: 195px;
 }
 

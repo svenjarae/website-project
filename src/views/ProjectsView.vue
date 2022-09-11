@@ -7,28 +7,28 @@
   <div class="about" id="parentAbout">
     <div class="grid-container">
       <div>
-        <router-link to="/projects/uw-plants">
-          <NewsCard title="UWPLANTS" subtitle="" :icon-src=titleImgPlants></NewsCard>
+        <router-link to="/projects/onistudio">
+          <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
+        </router-link>
+      </div>
+      <div>
+        <router-link to="/projects/glowingturts">
+          <NewsCard title="GLOWING TURTS" :icon-src=titleImgGlowTurts></NewsCard>
         </router-link>
       </div>
       <div>
         <router-link to="/projects/galapagos">
-          <NewsCard title="GALAPAGOS" subtitle="" :icon-src=titleImgSeal></NewsCard>
+          <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
+        </router-link>
+      </div>
+      <div>
+        <router-link to="/projects/uw-plants">
+          <NewsCard title="UWPLANTS" :icon-src=titleImgPlants></NewsCard>
         </router-link>
       </div>
       <div>
         <router-link to="/projects/project">
-          <NewsCard title="hello" subtitle="subhello" icon-src="require('../assets/logo')"></NewsCard>
-        </router-link>
-      </div>
-      <div>
-        <router-link to="/projects/project">
-          <NewsCard title="hello" subtitle="subhello" icon-src="require('../assets/logo')"></NewsCard>
-        </router-link>
-      </div>
-      <div>
-        <router-link to="/projects/project">
-          <NewsCard title="hello" subtitle="subhello" icon-src="require('../assets/logo')"></NewsCard>
+          <NewsCard title="hello" icon-src="require('../assets/logo')"></NewsCard>
         </router-link>
       </div>
       <div>
@@ -85,6 +85,8 @@ import NewsCard from "@/components/news/NewsCard";
 import titleImgPlants from "/././././././src/assets/images/projects/uw-plants/titleImg.png";
 
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
+import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence5-Stil1.png";
+import titleImgGlowTurts from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
 
 export default {
   name: 'ProjectsView',
@@ -95,6 +97,8 @@ export default {
     return{
       titleImgPlants: titleImgPlants,
       titleImgSeal: titleImgSeal,
+      titleImgOni: titleImgOni,
+      titleImgGlowTurts: titleImgGlowTurts,
     }
   },
   methods:{
@@ -107,7 +111,7 @@ export default {
 #parentAbout {
   position: absolute;
   top: 20px;
-  left: 60px;
+  left: 70px;
   right: 20px;
   bottom: 20px;
 }
@@ -129,7 +133,7 @@ export default {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 20px;
+  gap: 15px;
   background-color: var(--bright);
   overflow: auto;
 }
