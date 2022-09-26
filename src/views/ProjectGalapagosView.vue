@@ -45,9 +45,6 @@
               class="img-responsive"
               :src="puertoVillamil"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <a
             data-lg-size="1400-1400"
@@ -59,9 +56,6 @@
               class="img-responsive"
               :src="iDive"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <a
             data-lg-size="1400-1400"
@@ -73,9 +67,6 @@
               class="img-responsive"
               :src="galapagosShark"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <a
             data-lg-size="1400-1400"
@@ -87,9 +78,6 @@
               class="img-responsive"
               :src="manta"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <a
             data-lg-size="1400-1400"
@@ -101,9 +89,6 @@
               class="img-responsive"
               :src="sealionsCuddle"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <a
             data-lg-size="1400-1400"
@@ -115,9 +100,6 @@
               class="img-responsive"
               :src="island"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <a
             data-lg-size="1400-1400"
@@ -129,9 +111,6 @@
               class="img-responsive"
               :src="sharkFin"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -146,9 +125,6 @@
               class="img-responsive"
               :src="sealion"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -163,9 +139,6 @@
               class="img-responsive"
               :src="pingu"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -180,9 +153,6 @@
               class="img-responsive"
               :src="sharksWhiteTips"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -197,9 +167,6 @@
               class="img-responsive"
               :src="whiteTips"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -214,9 +181,6 @@
               class="img-responsive"
               :src="islandSealions"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -231,9 +195,6 @@
               class="img-responsive"
               :src="fish"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
       </lightgallery>
     </div>
@@ -319,8 +280,8 @@ export default {
 
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 15px;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  gap: 20px;
   position: absolute;
   left: 70px;
   top: 0;
@@ -414,7 +375,6 @@ export default {
 .flexContainer{
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .flexWrapper{
@@ -451,17 +411,7 @@ iframe .vp-center {
 .galleryContainer a{
   position: relative;
 }
-.galleryContainer a:hover svg{
-  fill: orangered;
-}
-.playBtn, .imgBtn{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 2px;
-  background-color: white;
-  display: flex;
-}
+
 
 
 

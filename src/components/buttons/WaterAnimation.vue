@@ -13,22 +13,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .liquid {
   position: absolute;
-  top: -104px;
-  right: 0;
-  width: 227px;
-  height: 213px;
+  width: 100%;
+  height: 100%;
   background: orangered;
   box-shadow: inset 0 0 50px rgb(0 0 0 / 50%);
   transition: .5s;
   overflow: hidden;
+  z-index: 201;
+  border-radius: 1px;
 }
 
 .liquid::after,

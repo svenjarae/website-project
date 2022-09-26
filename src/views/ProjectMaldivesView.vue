@@ -251,8 +251,8 @@ export default {
 
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 15px;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  gap: 20px;
   position: absolute;
   left: 70px;
   top: 0;
@@ -321,7 +321,7 @@ export default {
 .flexContainer{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+
 }
 
 .mainDescriptionWrapper{

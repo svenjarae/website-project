@@ -35,6 +35,7 @@ export default defineComponent({
 <style scoped>
 .language-btn-container div{
   display: flex;
+  align-items: center;
 }
 .language-btn-container button{
   color:lightgrey;
@@ -51,7 +52,7 @@ export default defineComponent({
 .active{
   color: white;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 5px;
 }
 </style>

@@ -2,13 +2,7 @@
   <div class="news-card-container">
     <div>
       <h1 class="cardTitle">{{title}}</h1>
-      <img style="left: 50%;
-                  width: 100%;
-                  transform: translate(-50%);
-                  position: absolute;
-                  top: 0;
-                  height: 100%;
-                  object-fit: cover;" :src=iconSrc alt="">
+      <img :src=iconSrc alt="">
     </div>
   </div>
 </template>
@@ -44,8 +38,6 @@ export default {
     height: 100%;
     position: relative;
     cursor: pointer;
-    min-width: 300px;
-    min-height: 300px;
   }
 
   .cardTitle {
@@ -61,15 +53,17 @@ export default {
     fill: orangered;
   }
 
-  .contentContainer{
-    padding: 10px;
-  }
 
-  .titleContainer, .subTitleContainer{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  img{
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    transition: object-fit 330ms ease-in-out;
+    border-radius: 1px;
   }
 
   p{

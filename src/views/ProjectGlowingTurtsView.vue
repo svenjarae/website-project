@@ -7,9 +7,6 @@
         <div class="containerDownBtn">
           <DownBtn></DownBtn>
         </div>
-        <div class="backBtn">
-          <BackBtnn></BackBtnn>
-        </div>
       </div>
     </div>
     <div class="divContainer">
@@ -141,12 +138,10 @@ import DownBtn from "@/components/buttons/DownBtn";
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
-import BackBtnn from "@/components/buttons/BackBtn";
 
 export default {
   name: 'ProjectGalapagosView',
   components: {
-    BackBtnn,
     Lightgallery,
     DownBtn
   },
@@ -185,8 +180,8 @@ export default {
 
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 15px;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  gap: 20px;
   position: absolute;
   left: 70px;
   top: 0;
@@ -302,7 +297,6 @@ export default {
 .flexContainer{
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .flexWrapper{

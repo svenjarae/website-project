@@ -132,17 +132,15 @@ export default {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 15px;
+  gap: 20px;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
   background-color: var(--bright);
-  overflow: auto;
 }
 
 .grid-container > div {
   text-align: center;
   font-size: 30px;
-  border-radius: 2px;
-  min-width: 200px;
+  border-radius: 1px;
 }
 
 </style>

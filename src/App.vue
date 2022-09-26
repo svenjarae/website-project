@@ -104,7 +104,7 @@ a.router-link-exact-active .arrow-container {
 a.router-link-exact-active{
   color: white;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 5px;
 }
 
@@ -133,13 +133,13 @@ a.router-link-exact-active{
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 99;
+  z-index: 3000;
 }
 
 .leftBottom {
   position: fixed;
   left: -50px;
-  bottom: 90px;
+  bottom: 94px;
   z-index: 99;
   transform: rotate(-90deg);
 }

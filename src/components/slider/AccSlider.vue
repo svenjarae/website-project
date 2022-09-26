@@ -48,6 +48,11 @@
                       <img :src="image2" alt="image02" />
                       <input type="radio" name="radio-set" />
                       <figcaption><span>Honest Light</span></figcaption>
+
+                      <figure>
+                        <div style="background-color: white; width: 100%; height: 100%;"></div>
+                      </figure>
+
                     </figure>
 
                   </figure>
@@ -81,28 +86,28 @@ export default {
 </script>
 <style scoped>
 .ia-container {
-  margin: auto;
-  right: 0;
-  position: absolute;
-  bottom: 304px;
-  left: 30px;
-  z-index: 100;
 }
 .ia-container figure {
   position: absolute;
-  top: 0;
+  top: -16px;
   left: 0; /* width of visible piece */
-  width: 335px;
+  width: 280px;
+  height: 280px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.6);
   transition: all 0.3s ease-in-out;
 }
 .ia-container > figure {
   position: relative;
   left: 0 !important;
+  margin: 0;
 }
+
+
 .ia-container img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .ia-container input {
   position: absolute;
@@ -119,13 +124,9 @@ export default {
   -moz-appearance: none;
   appearance: none;
 }
-.ia-container input:checked{
-  width: 5px;
-  left: auto;
-  right: 0px;
-}
+
 .ia-container input:checked ~ figure {
-  left: 335px;
+  left: 240px;
   transition: all 0.7s ease-in-out;
 }
 .ia-container figcaption {
