@@ -23,7 +23,7 @@ export default {
   transition: .5s;
   overflow: hidden;
   z-index: 201;
-  border-radius: 1px;
+  border-radius: 20px;
 }
 
 .liquid::after,

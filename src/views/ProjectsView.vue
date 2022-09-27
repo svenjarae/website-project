@@ -1,7 +1,7 @@
 <template>
   <div class="leftCorner">
     <router-link to="/projects">
-      <span>/ PROJECTS</span>
+      <span>/ ALL PROJECTS</span>
     </router-link>
   </div>
   <div class="about" id="parentAbout">
@@ -124,8 +124,8 @@ export default {
 
 .leftCorner{
   position: fixed;
-  left: -20px;
-  bottom: 225px;
+  left: -37px;
+  bottom: 248px;
   z-index: 99;
   transform: rotate(-90deg);
 }

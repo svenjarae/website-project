@@ -1,28 +1,7 @@
 <template>
   <div class="skills">
-    <div style="color: orangered;">
-      <marquee-text :repeat="10" :duration="25">
-        <span>Development </span>
-        <span>Design </span>
-        <span>Digital </span>
-        <span>Content </span>
-        <span style="margin-right: 5px">Ideas </span>
-      </marquee-text>
-    </div>
     <marquee-text :repeat="10" :duration="8">
-      <span>Photoshop </span>
-      <span>Illustrator </span>
-      <span>XD </span>
-      <span>InDesign </span>
-      <span>Premiere </span>
-      <span style="margin-right: 5px">AfterEffects </span>
-    </marquee-text>
-    <marquee-text :repeat="10" :reverse="true">
-      <span>HTML </span>
-      <span>CSS </span>
-      <span>Animation </span>
-      <span>Javascript </span>
-      <span style="margin-right: 5px">Vue </span>
+      <span>{{text}}</span>
     </marquee-text>
   </div>
 </template>
@@ -34,6 +13,9 @@ export default {
   components: {
     MarqueeText
   },
+  props:{
+    text: String,
+  }
 }
 </script>
 
@@ -42,16 +24,12 @@ export default {
 .skills{
   column-gap: 0;
   text-align: center;
-  font-size: 40px;
-}
-
-.marquee-text-text{
-
-}
-
-.marquee-text-content{
-  font-size: 100px;
+  font-size: var(--bigFont);
   text-transform: uppercase;
+}
+.skills span{
+  margin-right: 30px;
+  color: var(--4thColor);
 }
 
 </style>
