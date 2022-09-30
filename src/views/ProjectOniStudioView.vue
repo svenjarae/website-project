@@ -2,15 +2,13 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-
-
         <h1 class="projectTitle">ONI STUDIO</h1>
         <img :src="sequ5stil1"/>
-        <div class="containerDownBtn">
-          <DownBtn></DownBtn>
-        </div>
       </div>
     </div>
+    <router-link to="/">
+      <BackBtn></BackBtn>
+    </router-link>
     <div class="divContainer">
       <div class="mainDescriptionWrapper">
         <h1>Title</h1>
@@ -138,14 +136,6 @@
       </lightgallery>
     </div>
   </div>
-  <div class="leftCorner">
-    <router-link to="/projects">
-      <span>/ PROJECTS</span>
-    </router-link>
-    <router-link class="currentLink" to="/projects/onistudio">
-      <span> / ONI STUDIO</span>
-    </router-link>
-  </div>
 </template>
 <script>
 
@@ -166,13 +156,13 @@ import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
-import DownBtn from "@/components/buttons/DownBtn";
+import BackBtn from "@/components/buttons/BackBtn";
 
 export default {
   name: 'ProjectOniStudio',
   components: {
+    BackBtn,
     Lightgallery,
-    DownBtn,
   },
   data: () => ({
     image: image,
@@ -214,13 +204,6 @@ export default {
   color: orangered;
 }
 
-.containerDownBtn{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%);
-}
-
 .galleryContainer a{
   position: relative;
 }
@@ -241,16 +224,19 @@ export default {
   grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
   gap: 20px;
   position: absolute;
-  left: 70px;
+  left: 0;
   top: 0;
   bottom: 20px;
   right: 0;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 100%;
+  height: 200px;
   width: 100%;
+  border-radius: 20px;
   min-width: 200px;
 }
 
@@ -282,7 +268,7 @@ export default {
 .iframeContainer{
   background-color: #007385;
   position: absolute;
-  left: 70px;
+  left: 0;
   top: 0;
   bottom: 0;
   right: 0;
@@ -303,12 +289,13 @@ export default {
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+  margin-bottom: 60px;
 }
 
 .flexContainer{
   display: flex;
   flex-direction: column;
-
+  gap: 10px;
 }
 
 .mainDescriptionWrapper{

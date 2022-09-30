@@ -40,6 +40,10 @@ export default {
     cursor: pointer;
   }
 
+  .news-card-container img{
+    border-radius: 20px;
+  }
+
   .cardTitle {
     opacity: 0;
   }
@@ -52,7 +56,6 @@ export default {
   .news-card-container:hover svg{
     fill: orangered;
   }
-
 
   img{
     left: 50%;

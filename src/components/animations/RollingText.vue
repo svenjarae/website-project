@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="skills" style="padding: 20px 0">
     <marquee-text :repeat="10" :duration="8">
       <span>{{text}}</span>
     </marquee-text>
@@ -29,7 +29,7 @@ export default {
 }
 .skills span{
   margin-right: 30px;
-  color: var(--4thColor);
+  color: var(--dark);
 }
 
 </style>
