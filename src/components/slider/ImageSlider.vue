@@ -8,15 +8,18 @@
   </div>
 </template>
 <script>
+import image1 from "/././././././src/assets/images/projects/galapagos/galleryImgs/seelions-cuddle.jpg";
+import image2 from "/././././././src/assets/images/projects/galapagos/galleryImgs/galapagos-shark.jpg";
+import image3 from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
+
 export default {
   name: "Image-Slider",
   data() {
     return {
       images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
+        image1,
+        image2,
+        image3,
       ],
       timer: null,
       currentIndex: 0
@@ -29,7 +32,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 2000);
+      this.timer = setInterval(this.next, 1500);
     },
 
     next: function() {
@@ -51,12 +54,10 @@ export default {
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.9s ease;
-  opacity: 1;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
 }
 
 img {

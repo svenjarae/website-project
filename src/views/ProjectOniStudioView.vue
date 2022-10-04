@@ -202,6 +202,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   color: orangered;
+  font-family: myFirstFont;
 }
 
 .galleryContainer a{

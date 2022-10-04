@@ -5,33 +5,34 @@
       <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;">
         <div class="bigFont flexColumn padding secondaryFont salutationWrapper layoutWrapper">
           <span>DIGITAL CONTENT MIX</span>
-        </div>
-        <div class="normalFont padding flexColumn" style="position: relative; display: inline-flex;">
-          <span>Chaotic, Daring But Above</span>
-          <span>All, Incisive</span>
           <div class="waterAnimationContainer">
             <WaterAnimation></WaterAnimation>
           </div>
-          <div class="vidContainer">
-            <video muted autoplay loop preload="auto">
-              <source :src="titleVideo" type="video/mp4">
-              Your browser does not support HTML video.
-            </video>
-          </div>
         </div>
+        <div class="normalFont padding flexColumn">
+          <span>Chaotic, Daring But Above</span>
+          <span>All, Incisive</span>
+        </div>
+        <!--
+        <div class="vidContainer">
+          <video muted autoplay loop preload="auto">
+            <source :src="titleVideo" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+        </div>-->
         <div class="layoutWrapper padding smallFont">
           <div class="flexColumn" style="align-items: flex-start; gap: 10px">
             <span>
-              <span>1</span>
-              <span class="padding">Turn your speakers up</span>
+              <span class="margin-right-small">1</span>
+              <span>Turn your speakers up</span>
             </span>
             <span>
-              <span>2</span>
-              <span class="padding">Have a look</span>
+              <span class="margin-right-small">2</span>
+              <span>Have a look</span>
             </span>
             <span>
-              <span>3</span>
-              <span class="padding">Put on a happy face</span>
+              <span class="margin-right-small">3</span>
+              <span>Put on a happy face</span>
             </span>
           </div>
         </div>
@@ -40,19 +41,21 @@
         </div>
       </div>
     </div>
-    <div>
-      <div style="height: 600px; position:relative;">
+    <div class="bgColorOrange">
+      <div class="imageSliderContainer">
         <ImageSlider></ImageSlider>
       </div>
       <div class="layoutWrapper">
-        <span>Gallery (18)</span>
         <router-link to="/projects">
-          <span>See (all / projects)</span>
+          <span>GALLERY (18)</span>
+        </router-link>
+        <router-link to="/projects">
+          <span>SEE (ALL / PROJECTS)</span>
         </router-link>
       </div>
-      <div class="padding secondaryFont">
-        <RollingText text="MAKE A HAPPY FACE"></RollingText>
-      </div>
+    </div>
+    <div class="padding secondaryFont">
+      <RollingText text="MAKE A HAPPY FACE"></RollingText>
     </div>
     <div class="ghostContainer">
       <GhostAnimation></GhostAnimation>
@@ -111,8 +114,7 @@ export default {
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  top: 60px;
-  right: -155px;
+  right: 0;
   z-index: 1;
 }
 
@@ -134,26 +136,20 @@ export default {
   }
 }
 
-.vidContainer {
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  top: 0px;
-  right: -230px;
-  border-radius: 20px;
-}
-
-.vidContainer video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
 .ghostContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.imageSliderContainer{
+  height: 600px;
+  position:relative;
+  margin: 0 40px 10px 40px;
+}
+
+.bgColorOrange{
+
 }
 
 </style>
