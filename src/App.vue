@@ -1,5 +1,5 @@
 <template>
-  <nav style="color: var(--dark); margin: 10px;">
+  <nav class="navContainer">
     <div class="layoutWrapper">
       <div class="flexColumn smallFont" style="align-items: flex-start;">
         <a href="mailto:svenjaraetzsch@gmail.com">SVENJARAETZSCH@GMAIL.COM</a>
@@ -55,7 +55,7 @@ export default {
   --bright: #fff;
   --dark:  #000;
   --1stColor: rgb(112, 158, 187);
-  --2ndColor: rgb(255, 100, 18);
+  --2ndColor: orangered;
   --5thColor: rgb(255, 168, 0);
   --6thColor: rgb(129, 74, 106);
 
@@ -117,6 +117,16 @@ a{
 }
 
 a.router-link-exact-active{
+}
+
+.navContainer{
+  color: var(--dark);
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .layoutWrapper{

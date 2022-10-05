@@ -29,7 +29,7 @@ export default {
 }
 .skills span{
   margin-right: 30px;
-  color: var(--dark);
+  color: orangered;
 }
 
 </style>

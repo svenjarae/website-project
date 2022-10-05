@@ -147,7 +147,6 @@ export default {
   font-weight: 700;
   padding: 20px;
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 .ia-container input:checked + figcaption,
 .ia-container input:checked:hover + figcaption{
