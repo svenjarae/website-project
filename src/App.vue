@@ -15,14 +15,30 @@
           </span>
         </div>
       </div>
+      <div class="socialMediaContainer">
+        <a href="https://vimeo.com/user182333690?embedded=true&source=owner_portrait&owner=182333690">
+          <span>VIMEO</span>
+        </a>
+        <div>
+          <a href="https://www.linkedin.com/in/svenja-raetzsch-9970b0205/" style="margin-right: 5px;">
+            <span>LINKEDIN</span>
+          </a>
+          <a href="https://github.com/svenjarae" style="margin-left: 5px;">
+            <span>GITHUB</span>
+          </a>
+        </div>
+      </div>
       <div class="flexColumn smallFont" style="align-items: flex-end;">
-        <span>THE_WHISPERING_SEA</span>
+        <router-link to="/" style="position: relative;" class="padding">
+          <span>HOME</span>
+        </router-link>
         <router-link to="/projects" style="position: relative;" class="padding">
-          <span>Last Project </span>
+          <span>See all Projects</span>
         </router-link>
       </div>
     </div>
   </nav>
+  <audio src="" autoplay loop></audio>
   <router-view>
   </router-view>
 </template>
@@ -98,7 +114,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: orangered;
 }
 
 /* Handle on hover */
@@ -129,12 +145,20 @@ a.router-link-exact-active{
   z-index: 1000;
 }
 
+.socialMediaContainer{
+  font-size: var(--smallFont);
+  color: var(--dark);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .layoutWrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .flexColumn{

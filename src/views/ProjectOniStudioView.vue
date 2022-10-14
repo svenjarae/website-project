@@ -4,12 +4,15 @@
       <div class="iframeContainer">
         <h1 class="projectTitle">ONI STUDIO</h1>
         <img :src="sequ5stil1"/>
+        <div class="containerDownBtn">
+          <DownBtn></DownBtn>
+        </div>
       </div>
     </div>
-    <router-link to="/">
+    <router-link class="backBtnContainer" to="/projects">
       <BackBtn></BackBtn>
     </router-link>
-    <div class="divContainer">
+    <div class="layoutWrapper" style="margin-top: 60px;margin-bottom: 60px;">
       <div class="mainDescriptionWrapper">
         <h1>Title</h1>
         <p>Content</p>
@@ -48,9 +51,6 @@
               class="img-responsive"
               :src="sequ5stil1"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -65,9 +65,6 @@
               class="img-responsive"
               :src="sequ4stil1"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -82,9 +79,6 @@
               class="img-responsive"
               :src="sequ3stil1"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
 
         <a
@@ -97,9 +91,6 @@
               class="img-responsive"
               :src="sequ2stil1"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
         <!-- VImeo Video --->
         <a
@@ -114,9 +105,6 @@
               class="img-responsive"
               :src="sequ2stil2"
           />
-          <span class="playBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M9.5,16.5v-9l7,4.5L9.5,16.5z"/></g></svg>
-          </span>
         </a>
 
         <a
@@ -129,9 +117,6 @@
               class="img-responsive"
               :src="sequ2stil3"
           />
-          <span class="imgBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-          </span>
         </a>
       </lightgallery>
     </div>
@@ -153,6 +138,7 @@ import sequ3stil1 from "/././././././src/assets/images/projects/oni-studio/Seque
 
 
 import Lightgallery from 'lightgallery/vue';
+import DownBtn from "@/components/buttons/DownBtn";
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
@@ -163,6 +149,7 @@ export default {
   components: {
     BackBtn,
     Lightgallery,
+    DownBtn
   },
   data: () => ({
     image: image,
@@ -191,7 +178,7 @@ export default {
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 
 .galleryContainer{
-  position: relative;
+  padding-bottom: 60px;
 }
 
 .projectTitle{
@@ -205,30 +192,30 @@ export default {
   font-family: myFirstFont;
 }
 
+.containerDownBtn{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .galleryContainer a{
   position: relative;
 }
 .galleryContainer a:hover svg{
   fill: orangered;
 }
-.playBtn, .imgBtn{
-  position: absolute;
+
+.backBtnContainer{
+  position: fixed;
   top: 0;
-  right: 0;
-  padding: 2px;
-  background-color: white;
-  display: flex;
+  left: 0;
 }
 
 .lightgallery-vue{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
   gap: 20px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 20px;
-  right: 0;
   max-width: 1000px;
   margin: auto;
 }
@@ -273,6 +260,7 @@ export default {
   top: 0;
   bottom: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .iframeContainer img{
@@ -290,7 +278,6 @@ export default {
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  margin-bottom: 60px;
 }
 
 .flexContainer{

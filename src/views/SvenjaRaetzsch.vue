@@ -91,6 +91,10 @@
         <div class="waterAnimationContainer">
           <WaterAnimation></WaterAnimation>
         </div>
+        <div style="margin-top: 50px;">
+          <DownBtn></DownBtn>
+        </div>
+
         <!--
         <div class="vidContainer">
           <video muted autoplay loop preload="auto">
@@ -100,6 +104,9 @@
         </div>-->
         <div class="layoutWrapper padding smallFont">
           <div class="flexColumn" style="align-items: flex-start; gap: 10px">
+            <div>
+              <CircleDots></CircleDots>
+            </div>
             <span>
               <span class="margin-right-small">1</span>
               <span>Turn your speakers up</span>
@@ -114,20 +121,21 @@
             </span>
           </div>
         </div>
-        <div>
-          <CircleDots></CircleDots>
-        </div>
+
       </div>
     </div>
-    <div class="bgColorOrange">
+    <div class="bgColorBlack">
+      <div>
+        <SkillsComponent></SkillsComponent>
+      </div>
       <div class="imageSliderContainer">
         <ImageSlider></ImageSlider>
       </div>
       <div class="layoutWrapper">
-        <router-link to="/projects">
-          <span>GALLERY (18)</span>
+        <router-link to="/projects" style="color: white">
+          <span >GALLERY (18)</span>
         </router-link>
-        <router-link to="/projects">
+        <router-link to="/projects" style="color: white">
           <span>SEE (ALL / PROJECTS)</span>
         </router-link>
       </div>
@@ -135,18 +143,13 @@
     <div class="padding secondaryFont">
       <RollingText text="MAKE A HAPPY FACE"></RollingText>
     </div>
-    <div class="ghostContainer">
-      <GhostAnimation></GhostAnimation>
-    </div>
     <div class="flexColumn padding" style="text-transform: uppercase">
       <span>Break established canons as many times as necessary.</span>
       <span>Hold the vision, trust the process.</span>
     </div>
-    <div>
-      <SkillsComponent></SkillsComponent>
+
     </div>
-    </div>
-    <div style="margin-top: 40px">
+    <div style="margin-top: 60px">
       <AllProjectsComponent></AllProjectsComponent>
     </div>
 </template>
@@ -161,14 +164,14 @@ import ImageSlider from "@/components/slider/ImageSlider";
 import CircleDots from "@/components/animations/CircleDots";
 import WaterAnimation from "@/components/buttons/WaterAnimation";
 import AllProjectsComponent from "@/components/AllProjectsComponent";
-import GhostAnimation from "@/components/animations/GhostAnimation";
 import SkillsComponent from "@/components/SkillsComponent";
+import DownBtn from "@/components/buttons/DownBtn";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
+    DownBtn,
     SkillsComponent,
-    GhostAnimation,
     AllProjectsComponent,
     WaterAnimation,
     CircleDots,
@@ -224,16 +227,15 @@ export default {
   }
 }
 
-.ghostContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .imageSliderContainer{
   height: 600px;
   position:relative;
   margin: 0 40px 10px 40px;
+}
+
+.bgColorBlack{
+  background-color: black;
+  padding: 40px;
 }
 
 

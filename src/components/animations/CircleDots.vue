@@ -51,8 +51,8 @@ export default {
 }
 .b_circle {
   position: relative;
-  right: 10px;
-  top: 20px;
+  right: -75px;
+  top: -60px;
   border-radius: 50%;
 }
 .s_circle {

@@ -2,17 +2,20 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <h1 class="projectTitle">Galapagos</h1>
+        <h1 class="projectTitle">World Natural Heritage</h1>
         <img :src="sealion"/>
         <div class="containerDownBtn">
           <DownBtn></DownBtn>
         </div>
       </div>
     </div>
-    <div class="divContainer">
+    <router-link class="backBtnContainer" to="/projects">
+      <BackBtn></BackBtn>
+    </router-link>
+    <div class="layoutWrapper" style="margin-top: 60px;margin-bottom: 60px;">
       <div class="mainDescriptionWrapper">
-        <h1>Title</h1>
-        <p>Content</p>
+        <h1>World Natural Heritage</h1>
+        <p>Galapagos islands</p>
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
@@ -199,14 +202,6 @@
       </lightgallery>
     </div>
   </div>
-  <div class="leftCorner">
-    <router-link to="/projects">
-      <span>/ PROJECTS</span>
-    </router-link>
-    <router-link class="currentLink" to="/projects/galapagos">
-      <span> / GALAPAGOS</span>
-    </router-link>
-  </div>
 </template>
 <script>
 
@@ -228,7 +223,7 @@ import whiteTips from "/././././././src/assets/images/projects/galapagos/gallery
 
 
 import DownBtn from "@/components/buttons/DownBtn";
-
+import BackBtn from "@/components/buttons/BackBtn";
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
@@ -237,7 +232,8 @@ export default {
   name: 'ProjectGalapagosView',
   components: {
     Lightgallery,
-    DownBtn
+    DownBtn,
+    BackBtn
   },
   props:{
 
@@ -270,29 +266,60 @@ export default {
   },
 }
 </script>
-<style scoped>@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
+
+<style scoped>
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 
 .galleryContainer{
+  padding-bottom: 60px;
+}
+
+.projectTitle{
+  position: absolute;
+  font-size: 100px;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: orangered;
+  font-family: myFirstFont;
+}
+
+.containerDownBtn{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.galleryContainer a{
   position: relative;
+}
+.galleryContainer a:hover svg{
+  fill: orangered;
+}
+
+.backBtnContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .lightgallery-vue{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
   gap: 20px;
-  position: absolute;
-  left: 70px;
-  top: 0;
-  bottom: 20px;
-  right: 0;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 100%;
+  height: 200px;
   width: 100%;
+  border-radius: 20px;
   min-width: 200px;
 }
 
@@ -313,44 +340,20 @@ export default {
   padding: 60px;
 }
 
-.leftCorner {
-  position: fixed;
-  left: -81px;
-  bottom: 286px;
-  z-index: 99;
-  transform: rotate(-90deg);
-}
-
 .iframeContainer{
   background-color: #007385;
   position: absolute;
-  left: 70px;
+  left: 0;
   top: 0;
   bottom: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .iframeContainer img{
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-
-.projectTitle{
-  position: absolute;
-  font-size: 100px;
-  text-transform: uppercase;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: orangered;
-}
-
-.containerDownBtn{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 .divContainer{
@@ -364,17 +367,18 @@ export default {
   grid-template-rows: auto;
 }
 
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .mainDescriptionWrapper{
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.flexContainer{
-  display: flex;
-  flex-direction: column;
 }
 
 .flexWrapper{
@@ -407,12 +411,6 @@ iframe .vp-center {
 .currentLink{
   margin-left: 5px;
 }
-
-.galleryContainer a{
-  position: relative;
-}
-
-
 
 
 

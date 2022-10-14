@@ -54,6 +54,7 @@ body{
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  padding: 20px;
 }
 svg{
   font-weight:bold;
