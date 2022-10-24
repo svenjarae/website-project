@@ -2,7 +2,7 @@
   <div>
     <div style="height: calc(100vh);">
       <div class="acidContainer">
-        <svg viewBox="0 0 72 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 72 44" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path d="M71.6376 22.135L49.5312 21.9579L71.4867 24.5441C71.5805 23.7444 71.6309 22.9402 71.6376 22.135Z" fill="currentColor"></path>
           <path d="M40.2812 1.96024L49.5299 21.9581L42.5329 1.07263C41.7664 1.32662 41.0147 1.62295 40.2812 1.96024Z" fill="currentColor"></path>
           <path d="M35.819 4.69846C35.2644 4.26182 34.6917 3.84722 34.0963 3.46327L22.1064 21.9578L29.2515 13.2108C29.1828 13.3698 29.1088 13.5249 29.0434 13.6858L30.4672 14.2603L32.2143 12.6516L30.4724 11.7161L32.4055 9.35011L34.2919 10.7395L35.819 9.33288L33.8787 7.54614L35.819 5.17054L37.7597 7.54614L35.819 9.33288L37.346 10.7395L39.2329 9.35011L41.166 11.7161L39.4241 12.6516L41.1708 14.2603L42.595 13.6858C42.5296 13.5259 42.4556 13.3698 42.3869 13.2118L49.5315 21.9578L37.542 3.46326C36.9462 3.84722 36.3734 4.26182 35.819 4.69846Z" fill="currentColor"></path>
@@ -83,27 +83,24 @@
           <path d="M27.4402 22.5936L27.44 22.5868L27.4326 22.5859L27.4328 22.5928L27.4402 22.5936Z" fill="currentColor"></path>
         </svg>
       </div>
+      <div class="imageSliderContainer">
+        <ImageSlider></ImageSlider>
+      </div>
       <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; z-index: 2;">
-        <div class="flexColumn padding secondaryFont salutationWrapper layoutWrapper" style="font-size: 100px; text-transform: uppercase; color: orangered;">
-          <span>Chaotic, But Above</span>
-          <span>All, Daring</span>
-        </div>
-        <div class="waterAnimationContainer">
-          <WaterAnimation></WaterAnimation>
-        </div>
+          <div class="padding secondaryFont">
+            <RollingText text="MAKE A HAPPY FACE"></RollingText>
+          </div>
+
         <div style="margin-top: 50px;">
           <DownBtn></DownBtn>
         </div>
-
-        <!--
-        <div class="vidContainer">
-          <video muted autoplay loop preload="auto">
-            <source :src="titleVideo" type="video/mp4">
-            Your browser does not support HTML video.
-          </video>
-        </div>-->
+        <div>
+          <router-link to="/projects" style="font-weight: bold; color: orangered">
+            <span>EXPLORE</span>
+          </router-link>
+        </div>
         <div class="layoutWrapper padding smallFont">
-          <div class="flexColumn" style="align-items: flex-start; gap: 10px">
+          <div class="flexColumn" style="align-items: flex-start; gap: 10px; font-family: BlueScreen; font-size: 20px">
             <div>
               <CircleDots></CircleDots>
             </div>
@@ -121,37 +118,9 @@
             </span>
           </div>
         </div>
-
       </div>
     </div>
-    <div class="bgColorBlack">
-      <div>
-        <SkillsComponent></SkillsComponent>
-      </div>
-      <div class="imageSliderContainer">
-        <ImageSlider></ImageSlider>
-      </div>
-      <div class="layoutWrapper">
-        <router-link to="/projects" style="color: white">
-          <span >GALLERY (18)</span>
-        </router-link>
-        <router-link to="/projects" style="color: white">
-          <span>SEE (ALL / PROJECTS)</span>
-        </router-link>
-      </div>
-    </div>
-    <div class="padding secondaryFont">
-      <RollingText text="MAKE A HAPPY FACE"></RollingText>
-    </div>
-    <div class="flexColumn padding" style="text-transform: uppercase">
-      <span>Break established canons as many times as necessary.</span>
-      <span>Hold the vision, trust the process.</span>
-    </div>
-
-    </div>
-    <div style="margin-top: 60px">
-      <AllProjectsComponent></AllProjectsComponent>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -160,22 +129,16 @@ import titleVideo from "/././././././src/assets/videos/titlevid.mp4";
 import videoTitleImg from "/././././././src/assets/images/projects/uw-plants/titleImg.png";
 
 import RollingText from "@/components/animations/RollingText";
-import ImageSlider from "@/components/slider/ImageSlider";
 import CircleDots from "@/components/animations/CircleDots";
-import WaterAnimation from "@/components/buttons/WaterAnimation";
-import AllProjectsComponent from "@/components/AllProjectsComponent";
-import SkillsComponent from "@/components/SkillsComponent";
 import DownBtn from "@/components/buttons/DownBtn";
+import ImageSlider from "@/components/slider/ImageSlider";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
-    DownBtn,
-    SkillsComponent,
-    AllProjectsComponent,
-    WaterAnimation,
-    CircleDots,
     ImageSlider,
+    DownBtn,
+    CircleDots,
     RollingText,
   },
   data(){
@@ -189,33 +152,35 @@ export default {
 
 <style>
 
+.vidContainer{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -40px;
+  z-index: 1;
+}
+
+.vidContainer video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
 .acidContainer{
   position: absolute;
   width: 100%;
-  max-width: 1000px;
-  top: -270px;
+  max-width: 300px; /*optimize: 1000px?*/
+  opacity: 0.2;
   left: 50%;
+  top: 50%;
   z-index: 1;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
 }
 
-.waterAnimationContainer{
-  height: 150px;
-  width: 150px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-  right: 0;
-  z-index: 2;
-}
-
-.salutationWrapper{
-  filter: blur(0px);
-  transition: all 1s;
-}
-
-.salutationWrapper:hover{
-  filter: blur(10px);
+.acidContainer svg path{
+  fill: black;
 }
 
 @keyframes animate {
@@ -228,14 +193,12 @@ export default {
 }
 
 .imageSliderContainer{
-  height: 600px;
-  position:relative;
-  margin: 0 40px 10px 40px;
-}
-
-.bgColorBlack{
-  background-color: black;
-  padding: 40px;
+  height: 200px;
+  width: 200px;
+  top: -70px;
+  z-index: 1;
+  position:absolute;
+  margin: 20px;
 }
 
 

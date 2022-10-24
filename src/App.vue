@@ -1,6 +1,9 @@
 <template>
   <nav class="navContainer">
     <div class="layoutWrapper">
+      <div v-if="this.$route.name === 'svenjaraetzsch'" class="waterAnimationContainer">
+        <WaterAnimation></WaterAnimation>
+      </div>
       <div class="flexColumn smallFont" style="align-items: flex-start;">
         <a href="mailto:svenjaraetzsch@gmail.com">SVENJARAETZSCH@GMAIL.COM</a>
         <div>
@@ -38,24 +41,52 @@
       </div>
     </div>
   </nav>
-  <audio src="" autoplay loop></audio>
+  <div :class="this.$route.name === 'svenjaraetzsch' ? 'audioPlayerBig' : 'audioPlayerSmall'" style="position: fixed; top: 20px; right: 20px;">
+    <AudioPlayer></AudioPlayer>
+  </div>
   <router-view>
   </router-view>
 </template>
 
 <script>
+
+import AudioPlayer from "@/components/audio/AudioPlayer";
+import WaterAnimation from "@/components/buttons/WaterAnimation";
 export default {
   name: 'App',
   components: {
+    AudioPlayer,
+    WaterAnimation
   },
-  mounted () {
-    window.scrollTo(0, 0)
+
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    }
+  },
+  data(){
+    return{
+      homePage: true,
+    }
+  },
+  methods: {
+    mounted() {
+      window.scrollTo(0, 0)
+    }
   }
 }
 </script>
 
 
 <style>
+.audioPlayerSmall{
+  display: none;
+}
+
+.audioPlayerBig{
+  display: block;
+  z-index: 100000000000000000;
+}
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&display=swap');
 @font-face {
   font-family: myFirstFont;
@@ -99,7 +130,6 @@ html {
 body {
   cursor: url('/src/assets/logo.png'), default;
   margin: 0;
-  padding-bottom: 80px;
 }
 
 /* width */
@@ -145,6 +175,17 @@ a.router-link-exact-active{
   z-index: 1000;
 }
 
+.waterAnimationContainer{
+  height: 320px;
+  width: 320px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
+  z-index: 2;
+}
+
 .socialMediaContainer{
   font-size: var(--smallFont);
   color: var(--dark);
@@ -153,6 +194,7 @@ a.router-link-exact-active{
 }
 
 .layoutWrapper{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

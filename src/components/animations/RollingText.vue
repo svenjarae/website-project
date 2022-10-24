@@ -1,5 +1,5 @@
 <template>
-  <div class="skills" style="padding: 40px 0">
+  <div class="skills">
     <marquee-text :repeat="10" :duration="8">
       <span>{{text}}</span>
     </marquee-text>

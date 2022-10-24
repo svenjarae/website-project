@@ -377,8 +377,6 @@ export default {
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .flexWrapper{

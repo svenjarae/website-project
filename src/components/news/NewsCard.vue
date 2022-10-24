@@ -45,6 +45,7 @@ export default {
   }
 
   .cardTitle {
+    font-family: myFirstFont;
     opacity: 0;
   }
 
