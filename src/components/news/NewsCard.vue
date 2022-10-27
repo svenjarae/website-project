@@ -45,13 +45,18 @@ export default {
   }
 
   .cardTitle {
+    font-size: 40px;
     font-family: myFirstFont;
-    opacity: 0;
+    opacity: 1;
   }
 
   .news-card-container:hover .cardTitle {
     font-size: 24px;
     opacity: 1;
+  }
+
+  .news-card-container:hover img{
+    filter: grayscale(0%);
   }
 
   .news-card-container:hover svg{
@@ -66,13 +71,13 @@ export default {
     top: 0;
     height: 100%;
     object-fit: cover;
-    transition: object-fit 330ms ease-in-out;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
     border-radius: 1px;
   }
 
   p{
     font-weight: normal;
-    font-size: 12px;
   }
 
   .cardTitle{
@@ -82,7 +87,7 @@ export default {
     transform: translate(-50%, -50%);
     z-index: 1;
     color: orangered;
-    font-size: 16px;
+    font-size: 30px;
     transition: font-size 330ms ease-in-out;
   }
 

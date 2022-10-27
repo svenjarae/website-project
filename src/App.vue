@@ -1,9 +1,13 @@
 <template>
   <nav class="navContainer">
     <div class="layoutWrapper">
-      <div v-if="this.$route.name === 'svenjaraetzsch'" class="waterAnimationContainer">
-        <WaterAnimation></WaterAnimation>
-      </div>
+
+        <div v-if="this.$route.name === 'svenjaraetzsch'" class="waterAnimationContainer">
+          <router-link to="/projects">
+            <WaterAnimation val="EXPLORE"></WaterAnimation>
+          </router-link>
+        </div>
+
       <div class="flexColumn smallFont" style="align-items: flex-start;">
         <a href="mailto:svenjaraetzsch@gmail.com">SVENJARAETZSCH@GMAIL.COM</a>
         <div>
@@ -79,14 +83,6 @@ export default {
 
 
 <style>
-.audioPlayerSmall{
-  display: none;
-}
-
-.audioPlayerBig{
-  display: block;
-  z-index: 100000000000000000;
-}
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&display=swap');
 @font-face {
   font-family: myFirstFont;
@@ -160,9 +156,23 @@ h1, h2, h3, h4, h5, h6, p{
 a{
   text-decoration: underline;
   color: inherit;
+  cursor: pointer;
 }
 
 a.router-link-exact-active{
+  color: orangered;
+}
+
+.audioPlayerSmall{
+  display: none;
+  z-index: 100000000000000000;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.audioPlayerBig{
+  display: block;
+  z-index: 100000000000000000;
 }
 
 .navContainer{
@@ -260,4 +270,10 @@ a.router-link-exact-active{
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.p-heading{
+  font-weight: bold;
+}
+
+
 </style>

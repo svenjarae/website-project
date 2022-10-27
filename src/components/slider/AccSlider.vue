@@ -5,7 +5,7 @@
         <img :src="image1" alt="image01" />
         <input type="radio" name="radio-set" checked="checked" />
         <figcaption>
-          <router-link to="/projects/uw-plants">
+          <router-link to="/projects/taliarte">
             <span>Link</span>
           </router-link>
         </figcaption>
@@ -67,7 +67,7 @@
     </div>
 </template>
 <script>
-import image1 from "/././././././src/assets/images/projects/uw-plants/titleImg.png";
+import image1 from "/src/assets/images/projects/gc-sealife/titleImg.png";
 import image2 from "/././././././src/assets/images/projects/galapagos/titleImg.png";
 export default {
   name: "AccSlider",

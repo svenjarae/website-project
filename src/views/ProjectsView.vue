@@ -9,7 +9,7 @@
         <h1 style="font-family: myFirstFont">ALL PROJECTS</h1>
         <p>DIGITAL CONTENT MIX</p>
       </div>
-      <div class="flexContainer" style="font-family: BlueScreen">
+      <div class="flexContainer">
         <div>
           <span class="p-heading">VIDEOS & IMAGES</span>
         </div>

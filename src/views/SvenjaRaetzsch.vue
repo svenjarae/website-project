@@ -83,22 +83,21 @@
           <path d="M27.4402 22.5936L27.44 22.5868L27.4326 22.5859L27.4328 22.5928L27.4402 22.5936Z" fill="currentColor"></path>
         </svg>
       </div>
-      <div class="imageSliderContainer">
-        <ImageSlider></ImageSlider>
-      </div>
+      <router-link to="/projects/galapagos">
+        <div class="imageSliderContainer">
+          <ImageSlider></ImageSlider>
+        </div>
+      </router-link>
       <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; z-index: 2;">
           <div class="padding secondaryFont">
             <RollingText text="MAKE A HAPPY FACE"></RollingText>
-          </div>
-
         <div style="margin-top: 50px;">
           <DownBtn></DownBtn>
         </div>
-        <div>
-          <router-link to="/projects" style="font-weight: bold; color: orangered">
-            <span>EXPLORE</span>
-          </router-link>
-        </div>
+            <div class="secondArrow">
+              <DownBtn></DownBtn>
+            </div>
+          </div>
         <div class="layoutWrapper padding smallFont">
           <div class="flexColumn" style="align-items: flex-start; gap: 10px; font-family: BlueScreen; font-size: 20px">
             <div>
@@ -126,7 +125,6 @@
 <script>
 
 import titleVideo from "/././././././src/assets/videos/titlevid.mp4";
-import videoTitleImg from "/././././././src/assets/images/projects/uw-plants/titleImg.png";
 
 import RollingText from "@/components/animations/RollingText";
 import CircleDots from "@/components/animations/CircleDots";
@@ -144,7 +142,6 @@ export default {
   data(){
     return{
       titleVideo: titleVideo,
-      videoTitleImg: videoTitleImg,
     }
   }
 }
@@ -152,22 +149,15 @@ export default {
 
 <style>
 
-.vidContainer{
-  width: 150px;
-  height: 150px;
+.secondArrow{
+  rotate: -90deg;
+  margin-left: 100px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
-  top: -40px;
-  z-index: 1;
+  bottom: 50px;
+  transform: translate(0, -50%);
 }
 
-.vidContainer video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
 .acidContainer{
   position: absolute;
   width: 100%;

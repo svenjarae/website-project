@@ -1,10 +1,9 @@
 <template>
-
-  <div class="text-container">
-    <router-link to="/projects">
-      <h2>EXPLORE</h2>
-    </router-link>
-  </div>
+  <router-link to="/projects" style="text-decoration: none">
+    <div class="wrap">
+      <button class="button">{{val}}</button>
+    </div>
+  </router-link>
 
 </template>
 
@@ -18,30 +17,76 @@ export default {
 </script>
 
 <style scoped>
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.text-container h2{
-  color: rgba(255,255,255,.2);
-  background-image: url('https://images.unsplash.com/photo-1529641484336-ef35148bab06?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55a1e60cd6799d5761c7ec40c4954569&auto=format&fit=crop&w=500&q=60');
-  /*   background-position: center; */
-  background-size: 270px;
-  background-repeat: repeat-x;
-  -webkit-background-clip: text;
-  animation: animate 15s linear infinite;
+.button {
+  width: 100px;
+  min-height: 100px;
   font-size: 16px;
-  font-weight: bold;
+  text-transform: uppercase;
+  background: orange;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
 }
 
-@keyframes animate {
+button::before {
+  content: '';
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid orange;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
   0% {
-    background-position: left 0px top 0px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
   }
-  40% {
-    background-position: left 800px top 0px;
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
   }
-}
-
-.text-container {
-  margin-top: 40px;
-  text-align: center;
 }
 </style>

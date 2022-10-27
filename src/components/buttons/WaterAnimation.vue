@@ -1,5 +1,7 @@
 <template>
-  <div class="liquid">{{val}}</div>
+  <div class="liquid">
+    <span class="value">{{val}}</span>
+  </div>
 </template>
 
 <script>
@@ -14,6 +16,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.value{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
 .liquid {
   position: absolute;
   width: 100%;
@@ -24,6 +32,7 @@ export default {
   overflow: hidden;
   z-index: 201;
   border-radius: 20px;
+  color: white;
 }
 
 .liquid::after,

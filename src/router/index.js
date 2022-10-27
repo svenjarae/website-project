@@ -16,9 +16,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "projects" */ '../views/ProjectsView.vue')
   },
   {
-    path: '/projects/uw-plants',
-    name: 'uw-plants',
-    component: () => import(/* webpackChunkName: "uw-plants" */ '../views/ProjectUwPlantsView')
+    path: '/projects/taliarte',
+    name: 'taliarte',
+    component: () => import(/* webpackChunkName: "taliarte" */ '../views/ProjectTaliarteView')
+  },
+  {
+    path: '/projects/gcsealife',
+    name: 'gcsealife',
+    component: () => import(/* webpackChunkName: "gcsealife" */ '../views/ProjectGcSealifeView')
   },
   {
     path: '/projects/galapagos',
@@ -36,8 +41,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "onistudio" */ '../views/ProjectOniStudioView')
   },
   {
-    path: '/projects/maldives',
-    name: 'maldives',
+    path: '/projects/paradise',
+    name: 'paradise',
     component: () => import(/* webpackChunkName: "maldives" */ '../views/ProjectMaldivesView')
   },
 ]

@@ -19,8 +19,8 @@
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">THIS IS</span>
+          <span class="p-content">GLIMPSE OF THE LAST TRUE NATURAL WONDERS OF THE WORLD</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">Heading</span>
@@ -38,15 +38,41 @@
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/738656811"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="sealion"
+          />
+        </a>
+
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="puertoVillamil"
+            :data-src="waterHighSat"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
-              :src="puertoVillamil"
+              :src="waterHighSat"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="waterTurtle"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="waterTurtle"
           />
         </a>
         <a
@@ -107,6 +133,72 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
+            :data-src="puertoVillamil"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="puertoVillamil"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="landscape"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="landscape"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="birdDry"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="birdDry"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="stoneTurtle"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="stoneTurtle"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="galapagosExe"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="galapagosExe"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="pinguLandscape"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
+        >
+          <img
+              class="img-responsive"
+              :src="pinguLandscape"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
             :data-src="sharkFin"
             data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
@@ -115,20 +207,7 @@
               :src="sharkFin"
           />
         </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/738656811"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="sealion"
-          />
-        </a>
+
         <!-- VImeo Video --->
         <a
             data-lg-size="1280-720"
@@ -220,6 +299,14 @@ import sharksWhiteTips from "/././././././src/assets/images/projects/galapagos/g
 import islandSealions from "/././././././src/assets/images/projects/galapagos/galleryImgs/islandSealions.png";
 import fish from "/././././././src/assets/images/projects/galapagos/galleryImgs/fish.png";
 import whiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/whiteTips.png";
+import waterHighSat from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
+import waterTurtle from "/././././././src/assets/images/projects/glowing-turts/water-turtle.jpg";
+
+import birdDry from "/././././././src/assets/images/projects/galapagos/galleryImgs/birdDry.jpg";
+import galapagosExe from "/src/assets/images/projects/galapagos/galleryImgs/galapagosExe.jpg";
+import landscape from "/src/assets/images/projects/galapagos/galleryImgs/landscape.jpg";
+import pinguLandscape from "/src/assets/images/projects/galapagos/galleryImgs/pinguLandscape.jpg";
+import stoneTurtle from "/././././././src/assets/images/projects/galapagos/galleryImgs/stoneTurtle.jpg";
 
 
 import DownBtn from "@/components/buttons/DownBtn";
@@ -253,6 +340,14 @@ export default {
     puertoVillamil: puertoVillamil,
     sealion: sealion,
     pingu: pingu,
+    waterHighSat: waterHighSat,
+    waterTurtle: waterTurtle,
+
+    birdDry: birdDry,
+    galapagosExe: galapagosExe,
+    landscape: landscape,
+    pinguLandscape: pinguLandscape,
+    stoneTurtle: stoneTurtle,
 
     plugins: [lgZoom, lgVideo],
   }),
@@ -309,7 +404,7 @@ export default {
 
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
   gap: 20px;
   max-width: 1000px;
   margin: auto;
@@ -317,7 +412,7 @@ export default {
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 200px;
+  height: 300px;
   width: 100%;
   border-radius: 20px;
   min-width: 200px;

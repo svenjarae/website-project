@@ -1,13 +1,18 @@
 <template>
   <div class="grid-container">
     <div>
-      <router-link to="/projects/onistudio">
-        <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
+      <router-link to="/projects/taliarte">
+        <NewsCard title="TALIARTE" :icon-src=ivonOne></NewsCard>
       </router-link>
     </div>
     <div>
-      <router-link to="/projects/glowingturts">
-        <NewsCard title="GLOWING TURTS" :icon-src=titleImgGlowTurts></NewsCard>
+      <router-link to="/projects/gcsealife">
+        <NewsCard title="GC SEALIFE" :icon-src=squid1></NewsCard>
+      </router-link>
+    </div>
+    <div>
+      <router-link to="/projects/onistudio">
+        <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
       </router-link>
     </div>
     <div>
@@ -16,8 +21,8 @@
       </router-link>
     </div>
     <div>
-      <router-link to="/projects/uw-plants">
-        <NewsCard title="UWPLANTS" :icon-src=titleImgPlants></NewsCard>
+      <router-link to="/projects/paradise">
+        <NewsCard title="ސުވަރުގެ" :icon-src=titleImgSeal></NewsCard>
       </router-link>
     </div>
   </div>
@@ -25,10 +30,11 @@
 <script>
 import NewsCard from "@/components/news/NewsCard";
 
-import titleImgPlants from "/././././././src/assets/images/projects/uw-plants/titleImg.png";
+import ivonOne from "/././././././src/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
-import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence5-Stil1.png";
-import titleImgGlowTurts from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
+import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
+
+import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
 
 export default {
   name: 'AllProjectsComponent',
@@ -37,10 +43,10 @@ export default {
   },
   data(){
     return{
-      titleImgPlants: titleImgPlants,
+      ivonOne: ivonOne,
       titleImgSeal: titleImgSeal,
       titleImgOni: titleImgOni,
-      titleImgGlowTurts: titleImgGlowTurts,
+      squid1: squid1,
     }
   },
   methods:{
@@ -53,17 +59,18 @@ export default {
 .grid-container {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
   background-color: var(--bright);
-  margin: auto;
+  margin: auto auto 60px auto;;
   max-width: 1000px;
+
 }
 
 .grid-container div {
   text-align: center;
   font-size: 30px;
   border-radius: 20px;
-  height: 200px;
+  height: 300px;
 }
 
 </style>

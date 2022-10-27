@@ -3,7 +3,7 @@
     <div class="pageOne">
       <div class="iframeContainer">
         <h1 class="projectTitle">ONI STUDIO</h1>
-        <img :src="sequ5stil1"/>
+        <img :src="sequ2stil1"/>
         <div class="containerDownBtn">
           <DownBtn></DownBtn>
         </div>
@@ -14,21 +14,22 @@
     </router-link>
     <div class="layoutWrapper" style="margin-top: 60px;margin-bottom: 60px;">
       <div class="mainDescriptionWrapper">
-        <h1>Title</h1>
-        <p>Content</p>
+        <h1>ONI STUDIO</h1>
+        <p>Jewellery, designed and crafted in Berlin.</p>
+        <a href="https://www.oni-studio.com/">Link to website</a>
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">WHO</span>
+          <span class="p-content">CARLA & TONI</span>
         </div>
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">WHEN</span>
+          <span class="p-content">07/2022</span>
         </div>
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">WHAT</span>
+          <span class="p-content">PLAYING WITH SOME LIGHT, WATER & JEWELLERY</span>
         </div>
       </div>
     </div>
@@ -38,34 +39,18 @@
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
-        <!-- VImeo Video --->
         <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/740775943"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="sequ2stil1"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
-              width="300"
-              height="100"
               class="img-responsive"
-              :src="sequ5stil1"
+              :src="sequ2stil1"
           />
         </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/740779236"
-            data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="sequ4stil1"
-          />
-        </a>
+
         <!-- VImeo Video --->
         <a
             data-lg-size="1280-720"
@@ -80,16 +65,18 @@
               :src="sequ3stil1"
           />
         </a>
-
+        <!-- VImeo Video --->
         <a
-            data-lg-size="1406-1390"
-            class="gallery-item"
-            :data-src="sequ2stil1"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/740775943"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
+              width="300"
+              height="100"
               class="img-responsive"
-              :src="sequ2stil1"
+              :src="sequ5stil1"
           />
         </a>
         <!-- VImeo Video --->
@@ -118,6 +105,152 @@
               :src="sequ2stil3"
           />
         </a>
+
+
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="carla2"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="carla2"
+          />
+        </a>
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="carla"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="carla"
+          />
+        </a>
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="carla3"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="carla3"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/740779271"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="titleimgsequenz6"
+          />
+        </a>
+
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="imageW"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="imageW"
+          />
+        </a>
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="imgSequenz7"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="imgSequenz7"
+          />
+        </a>
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="redBlue2"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="redBlue2"
+          />
+        </a>
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="toni"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="toni"
+          />
+        </a>
+
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="toni2"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="toni2"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/740789436"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="titleimgsequenz1"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="https://vimeo.com/740789047"
+            data-poster=""
+            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="bwTitleImg"
+          />
+        </a>
+        <a
+            data-lg-size="1406-1390"
+            class="gallery-item"
+            :data-src="titleImgSequ8"
+            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+        >
+          <img
+              class="img-responsive"
+              :src="titleImgSequ8"
+          />
+        </a>
+
       </lightgallery>
     </div>
   </div>
@@ -133,9 +266,23 @@ import sequ2stil2 from "/././././././src/assets/images/projects/oni-studio/Seque
 import sequ2stil3 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil3.jpg";
 
 import sequ5stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence5-Stil1.png";
-import sequ4stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence4-Stil1.png";
 import sequ3stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence3-Stil1.jpg";
 
+import titleimgsequenz1 from "/././././././src/assets/images/projects/oni-studio/titelimg-sequenz1.jpg";
+
+import carla from "/././././././src/assets/images/projects/oni-studio/carla.png";
+import carla2 from "/././././././src/assets/images/projects/oni-studio/carla2.jpg";
+import carla3 from "/././././././src/assets/images/projects/oni-studio/carla3.jpg";
+import toni from "/././././././src/assets/images/projects/oni-studio/toni.jpg";
+import toni2 from "/././././././src/assets/images/projects/oni-studio/toni2.jpg";
+
+import imageW from "/././././././src/assets/images/projects/oni-studio/image.jpg";
+import imgSequenz7 from "/././././././src/assets/images/projects/oni-studio/image-sequenz7.jpg";
+import titleImgSequ8 from "/././././././src/assets/images/projects/oni-studio/titleimg-sequenz8.jpg";
+import titleimgsequenz6 from "/././././././src/assets/images/projects/oni-studio/titleimg-sequenz6.png";
+import redBlue2 from "/src/assets/images/projects/oni-studio/red-blue2.jpg";
+
+import bwTitleImg from "/src/assets/images/projects/oni-studio/bw-titleimg.png";
 
 import Lightgallery from 'lightgallery/vue';
 import DownBtn from "@/components/buttons/DownBtn";
@@ -158,7 +305,18 @@ export default {
     sequ2stil3: sequ2stil3,
     sequ5stil1: sequ5stil1,
     sequ3stil1: sequ3stil1,
-    sequ4stil1: sequ4stil1,
+    titleImgSequ8: titleImgSequ8,
+    titleimgsequenz6: titleimgsequenz6,
+    titleimgsequenz1: titleimgsequenz1,
+    carla: carla,
+    carla2: carla2,
+    carla3: carla3,
+    toni: toni,
+    toni2: toni2,
+    redBlue2: redBlue2,
+    imageW: imageW,
+    imgSequenz7:imgSequenz7,
+    bwTitleImg: bwTitleImg,
 
     plugins: [lgZoom, lgVideo],
   }),
@@ -214,7 +372,7 @@ export default {
 
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
   gap: 20px;
   max-width: 1000px;
   margin: auto;
@@ -222,7 +380,7 @@ export default {
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 200px;
+  height: 300px;
   width: 100%;
   border-radius: 20px;
   min-width: 200px;
