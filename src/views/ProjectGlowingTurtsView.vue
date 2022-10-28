@@ -16,8 +16,8 @@
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">UW</span>
+          <span class="p-content">PHOTOS & VIDEO</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">Heading</span>

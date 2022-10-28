@@ -20,15 +20,15 @@
       <div class="flexContainer">
         <div class="flexWrapper">
           <span class="p-heading">THIS IS</span>
-          <span class="p-content">GLIMPSE OF THE LAST TRUE NATURAL WONDERS OF THE WORLD</span>
+          <span class="p-content">INSIGHT OF THE LAST TRUE NATURAL WONDERS OF THE WORLD</span>
         </div>
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">I DID</span>
+          <span class="p-content">NOTHING BUT TRYING TO NOT WIGGLE THE CAM</span>
         </div>
         <div class="flexWrapper">
-          <span class="p-heading">Heading</span>
-          <span class="p-content">Description</span>
+          <span class="p-heading">CRAZY DIVERSITY OF LIFE</span>
+          <span class="p-content">PENGUINS, TURTLES, SEALS & IGUANAS</span>
         </div>
       </div>
     </div>

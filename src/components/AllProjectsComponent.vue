@@ -11,8 +11,8 @@
       </router-link>
     </div>
     <div>
-      <router-link to="/projects/onistudio">
-        <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
+      <router-link to="/projects/animations/trip">
+        <NewsCard title="TRIP" :icon-src=titleImgTrip></NewsCard>
       </router-link>
     </div>
     <div>
@@ -21,13 +21,18 @@
       </router-link>
     </div>
     <div>
-      <router-link to="/projects/galapagos">
-        <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
+      <router-link to="/projects/onistudio">
+        <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
       </router-link>
     </div>
     <div>
-      <router-link to="/projects/animations/trip">
-        <NewsCard title="TRIP" :icon-src=titleImgTrip></NewsCard>
+      <router-link to="/projects/animations/pixelgrid">
+        <NewsCard title="3D GRID" :icon-src=pixelGridTitleImg></NewsCard>
+      </router-link>
+    </div>
+    <div>
+      <router-link to="/projects/galapagos">
+        <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
       </router-link>
     </div>
     <!--
@@ -48,6 +53,7 @@ import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequ
 import titleImgBird from "/././././././src/assets/images/projects/animations/bird/bird-titleimg.png";
 import titleImgTrip from "/././././././src/assets/images/projects/animations/trip/titleimg-trip.png";
 import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
+import pixelGridTitleImg from "/././././././src/assets/images/projects/animations/pixel-grid/pixelGridTitleImg.png";
 
 export default {
   name: 'AllProjectsComponent',
@@ -62,6 +68,7 @@ export default {
       squid1: squid1,
       titleImgBird: titleImgBird,
       titleImgTrip: titleImgTrip,
+      pixelGridTitleImg: pixelGridTitleImg,
     }
   },
   methods:{
