@@ -2,8 +2,10 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <h1 class="projectTitle">GC SEALIFE</h1>
-        <img :src="squid1"/>
+        <h1 class="projectTitle">TRIP</h1>
+        <div style="margin: 60px auto;">
+        <TripAnimation></TripAnimation>
+        </div>
         <div class="containerDownBtn">
           <DownBtn></DownBtn>
         </div>
@@ -14,100 +16,26 @@
     </router-link>
     <div class="layoutWrapper" style="margin-top: 60px;margin-bottom: 60px;">
       <div class="mainDescriptionWrapper">
-        <h1>El Cabron, Tufia, Sardina del Norte, El Barco</h1>
-        <p>Gran Canaria</p>
+        <h1>TRIP</h1>
+        <p>Animation</p>
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
-          <span class="p-heading">ATLANTIC</span>
-          <span class="p-content">OCEAN</span>
+          <span class="p-heading">WHAT</span>
+          <span class="p-content">A SIMPLE BIRD ANIMATION</span>
+        </div>
+        <div class="flexWrapper">
+          <span class="p-heading">HOW</span>
+          <span class="p-content">MADE WITH CSS & JS</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">WHEN</span>
-          <span class="p-content">09,10/2022</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">WHAT</span>
-          <span class="p-content">UW-VIDS & PHOTOGRAPHY</span>
+          <span class="p-content">01/2021</span>
         </div>
       </div>
     </div>
     <div class="galleryContainer">
-      <lightgallery
-          :settings="{ speed: 500, plugins: plugins }"
-          :onInit="onInit"
-          :onBeforeSlide="onBeforeSlide"
-      >
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="squid1"
-            data-sub-html="<h4>Photos & Videos taken & edited by SR - </h4><p>Squids</p>"
-        >
-          <img
-              class="img-responsive"
-              :src="squid1"
-          />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="squid2"
-        >
-          <img
-              class="img-responsive"
-              :src="squid2"
-          />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="squid3"
-        >
-          <img
-              class="img-responsive"
-              :src="squid3"
-          />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="ray"
-        >
-          <img
-              class="img-responsive"
-              :src="ray"
-          />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="fishGrumpy"
-        >
-          <img
-              class="img-responsive"
-              :src="fishGrumpy"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/764578319"
-            data-poster=""
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="titleImgVideo"
-          />
-        </a>
-      </lightgallery>
+
     </div>
   </div>
 </template>
@@ -115,25 +43,25 @@
 
 // images
 import image from "/src/assets/logo.png";
-import squid2 from "/src/assets/images/projects/gc-sealife/squid2.png";
-import squid1 from "/src/assets/images/projects/gc-sealife/squid1.png";
-import squid3 from "/src/assets/images/projects/gc-sealife/squid3.png";
-
-import fishGrumpy from "/src/assets/images/projects/gc-sealife/fishGrumpy.png";
-import ray from "/src/assets/images/projects/gc-sealife/ray.png";
-import titleImgVideo from "/src/assets/images/projects/gc-sealife/titleimgVideoGcSealife.png";
+import ivonOne from "/src/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
+import ivonTwo from "/src/assets/images/projects/taliarte/P1033667.00_00_02_20.Still004.jpg";
+import ivonThree from "/src/assets/images/projects/taliarte/P1033667.00_00_01_08.Still005.jpg";
+import ivonFour from "/src/assets/images/projects/taliarte/Sequence 01.00_00_08_31.Still005.jpg";
+import water from "/src/assets/images/projects/taliarte/P1044050.MOV.05_59_46_44.Still001.jpg";
+import lilly from "/src/assets/images/projects/taliarte/Sequence 01.00_03_10_00.Still005.jpg";
+import bgWater from "/src/assets/images/projects/taliarte/Sequence 01.00_00_09_34.Still016.jpg";
 
 
 import DownBtn from "@/components/buttons/DownBtn";
 import BackBtn from "@/components/buttons/BackBtn";
-import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
+import TripAnimation from "@/components/animations/TripAnimation";
 
 export default {
-  name: 'GcSealifeView',
+  name: 'ProjectTripView',
   components: {
-    Lightgallery,
+    TripAnimation,
     DownBtn,
     BackBtn
   },
@@ -142,12 +70,13 @@ export default {
   },
   data: () => ({
     image: image,
-    squid1: squid1,
-    squid2: squid2,
-    squid3: squid3,
-    fishGrumpy: fishGrumpy,
-    ray: ray,
-    titleImgVideo: titleImgVideo,
+    ivonOne: ivonOne,
+    ivonTwo: ivonTwo,
+    ivonThree: ivonThree,
+    ivonFour: ivonFour,
+    water: water,
+    lilly: lilly,
+    bgWater: bgWater,
 
     plugins: [lgZoom, lgVideo],
   }),
@@ -236,7 +165,7 @@ export default {
 }
 
 .iframeContainer{
-  background-color: #007385;
+  background-color: #000;
   position: absolute;
   left: 0;
   top: 0;

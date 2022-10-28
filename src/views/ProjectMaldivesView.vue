@@ -43,7 +43,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonOne"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -55,7 +54,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonTwo"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -67,7 +65,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonThree"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -79,7 +76,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonFour"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -91,7 +87,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="water"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -103,7 +98,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="lilly"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -115,7 +109,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="bgWater"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -128,7 +121,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/738656811"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"

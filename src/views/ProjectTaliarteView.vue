@@ -43,7 +43,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonOne"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -55,7 +54,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonTwo"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -67,7 +65,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonThree"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -79,7 +76,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonFour"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -91,7 +87,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="water"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -103,7 +98,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="lilly"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -115,7 +109,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="bgWater"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -124,16 +117,15 @@
         </a>
         <!-- VImeo Video --->
         <a
-        data-lg-size="1280-720"
-        data-src="//vimeo.com/764521178"
-        data-poster=""
-        data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
+          data-lg-size="1280-720"
+          data-src="//vimeo.com/764521178"
+          data-poster=""
         >
         <img
             width="300"
             height="100"
             class="img-responsive"
-            src=""
+            :src="titleImgAgua"
         />
         </a>
       </lightgallery>
@@ -151,6 +143,7 @@ import ivonFour from "/src/assets/images/projects/taliarte/Sequence 01.00_00_08_
 import water from "/src/assets/images/projects/taliarte/P1044050.MOV.05_59_46_44.Still001.jpg";
 import lilly from "/src/assets/images/projects/taliarte/Sequence 01.00_03_10_00.Still005.jpg";
 import bgWater from "/src/assets/images/projects/taliarte/Sequence 01.00_00_09_34.Still016.jpg";
+import titleImgAgua from "/src/assets/images/projects/taliarte/aguaTitleimg.png";
 
 
 import DownBtn from "@/components/buttons/DownBtn";
@@ -178,6 +171,7 @@ export default {
     water: water,
     lilly: lilly,
     bgWater: bgWater,
+    titleImgAgua: titleImgAgua,
 
     plugins: [lgZoom, lgVideo],
   }),

@@ -43,7 +43,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/738656811"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -57,7 +56,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="waterHighSat"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -68,7 +66,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="waterTurtle"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -79,7 +76,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="iDive"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -90,7 +86,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="galapagosShark"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -101,7 +96,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="manta"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -112,7 +106,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="sealionsCuddle"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -123,7 +116,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="island"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -134,7 +126,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="puertoVillamil"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -145,7 +136,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="landscape"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -156,7 +146,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="birdDry"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -167,7 +156,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="stoneTurtle"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -178,7 +166,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="galapagosExe"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -189,7 +176,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="pinguLandscape"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -200,7 +186,6 @@
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="sharkFin"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>"
         >
           <img
               class="img-responsive"
@@ -213,7 +198,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/741586500"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -227,7 +211,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/741586539"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -241,7 +224,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/741586552"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -255,7 +237,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/741586442"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -269,7 +250,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/741586482"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"

@@ -43,7 +43,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="sequ2stil1"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -56,7 +55,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/740767794"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -70,7 +68,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/740775943"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -84,7 +81,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/740764055"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -98,7 +94,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="sequ2stil3"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -111,7 +106,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="carla2"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -122,7 +116,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="carla"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -133,7 +126,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="carla3"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -145,7 +137,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/740779271"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -159,7 +150,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="imageW"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -170,7 +160,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="imgSequenz7"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -181,7 +170,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="redBlue2"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -192,7 +180,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="toni"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -204,7 +191,6 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="toni2"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
@@ -216,7 +202,6 @@
             data-lg-size="1280-720"
             data-src="//vimeo.com/740789436"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -230,7 +215,6 @@
             data-lg-size="1280-720"
             data-src="https://vimeo.com/740789047"
             data-poster=""
-            data-sub-html="<h4>Nature</h4><p>Video by <a target='_blank' href='https://vimeo.com/charliekaye'>Charlie Kaye</a></p>"
         >
           <img
               width="300"
@@ -243,14 +227,12 @@
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="titleImgSequ8"
-            data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
         >
           <img
               class="img-responsive"
               :src="titleImgSequ8"
           />
         </a>
-
       </lightgallery>
     </div>
   </div>

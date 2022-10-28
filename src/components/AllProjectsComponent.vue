@@ -25,6 +25,11 @@
         <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
       </router-link>
     </div>
+    <div>
+      <router-link to="/projects/animations/trip">
+        <NewsCard title="TRIP" :icon-src=titleImgTrip></NewsCard>
+      </router-link>
+    </div>
     <!--
     <div>
       <router-link to="/projects/paradise">
@@ -41,8 +46,7 @@ import ivonOne from "/././././././src/assets/images/projects/taliarte/P1033667.0
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
 import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
 import titleImgBird from "/././././././src/assets/images/projects/animations/bird/bird-titleimg.png";
-
-
+import titleImgTrip from "/././././././src/assets/images/projects/animations/trip/titleimg-trip.png";
 import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
 
 export default {
@@ -57,6 +61,7 @@ export default {
       titleImgOni: titleImgOni,
       squid1: squid1,
       titleImgBird: titleImgBird,
+      titleImgTrip: titleImgTrip,
     }
   },
   methods:{
@@ -65,6 +70,17 @@ export default {
 }
 </script>
 <style scoped>
+
+.title-animation{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: myFirstFont;
+  opacity: 1;
+  color: orangered;
+}
 
 .grid-container {
   display: grid;
