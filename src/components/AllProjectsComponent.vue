@@ -16,15 +16,22 @@
       </router-link>
     </div>
     <div>
+      <router-link to="/projects/animations/bird">
+        <NewsCard title="BIRD" :icon-src=titleImgBird></NewsCard>
+      </router-link>
+    </div>
+    <div>
       <router-link to="/projects/galapagos">
         <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
       </router-link>
     </div>
+    <!--
     <div>
       <router-link to="/projects/paradise">
         <NewsCard title="ސުވަރުގެ" :icon-src=titleImgSeal></NewsCard>
       </router-link>
     </div>
+    -->
   </div>
 </template>
 <script>
@@ -33,6 +40,8 @@ import NewsCard from "@/components/news/NewsCard";
 import ivonOne from "/././././././src/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
 import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
+import titleImgBird from "/././././././src/assets/images/projects/animations/bird/bird-titleimg.png";
+
 
 import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
 
@@ -47,6 +56,7 @@ export default {
       titleImgSeal: titleImgSeal,
       titleImgOni: titleImgOni,
       squid1: squid1,
+      titleImgBird: titleImgBird,
     }
   },
   methods:{

@@ -24,13 +24,8 @@ HTML {
 }
 
 DIV {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: auto;
-  width: 400px;
+  max-width: 400px;
   height: 400px;
   background-color: black;
   background-image: url(https://img-fotki.yandex.ru/get/3111/5091629.a2/0_85f54_7fb379e6_orig),
