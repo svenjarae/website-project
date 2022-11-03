@@ -1,13 +1,9 @@
 <template>
   <nav class="navContainer">
     <div class="layoutWrapper">
-
         <div v-if="this.$route.name === 'svenjaraetzsch'" class="waterAnimationContainer">
-          <router-link to="/projects">
-            <WaterAnimation val="EXPLORE"></WaterAnimation>
-          </router-link>
+          <WaterAnimation val=""></WaterAnimation>
         </div>
-
       <div class="flexColumn smallFont" style="align-items: flex-start;">
         <a href="mailto:svenjaraetzsch@gmail.com">SVENJARAETZSCH@GMAIL.COM</a>
         <div>
@@ -40,14 +36,15 @@
           <span>HOME</span>
         </router-link>
         <router-link to="/projects" style="position: relative;" class="padding">
-          <span>See all Projects</span>
+          <span>EXPLORE PROJECTS</span>
         </router-link>
+      </div>
+      <div :class="this.$route.name === 'svenjaraetzsch' ? 'audioPlayerBig' : 'audioPlayerSmall'">
+        <AudioPlayer></AudioPlayer>
       </div>
     </div>
   </nav>
-  <div :class="this.$route.name === 'svenjaraetzsch' ? 'audioPlayerBig' : 'audioPlayerSmall'" style="position: fixed; top: 20px; right: 20px;">
-    <AudioPlayer></AudioPlayer>
-  </div>
+
   <router-view>
   </router-view>
 </template>
@@ -173,6 +170,8 @@ a.router-link-exact-active{
 .audioPlayerBig{
   display: block;
   z-index: 100000000000000000;
+  position: absolute;
+  bottom: 70px;
 }
 
 .navContainer{

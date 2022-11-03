@@ -22,11 +22,11 @@
       <div class="flexContainer">
         <div class="flexWrapper">
           <span class="p-heading">WHAT</span>
-          <span class="p-content">A SIMPLE BIRD ANIMATION</span>
+          <span class="p-content">-</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">HOW</span>
-          <span class="p-content">MADE WITH CSS & JS</span>
+          <span class="p-content">ONLY CSS</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">WHEN</span>

@@ -2,7 +2,7 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <h1 class="projectTitle">World Natural Heritage</h1>
+        <h1 class="projectTitle">GALAPAGOS</h1>
         <img :src="sealion"/>
         <div class="containerDownBtn">
           <DownBtn></DownBtn>
@@ -14,13 +14,13 @@
     </router-link>
     <div class="layoutWrapper" style="margin-top: 60px;margin-bottom: 60px;">
       <div class="mainDescriptionWrapper">
-        <h1>World Natural Heritage</h1>
+        <h1>GALAPAGOS</h1>
         <p>Galapagos islands</p>
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
           <span class="p-heading">THIS IS</span>
-          <span class="p-content">INSIGHT OF THE LAST TRUE NATURAL WONDERS OF THE WORLD</span>
+          <span class="p-content">INSIGHT OF A TRUE NATURAL WONDER</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">I DID</span>
@@ -28,7 +28,7 @@
         </div>
         <div class="flexWrapper">
           <span class="p-heading">CRAZY DIVERSITY OF LIFE</span>
-          <span class="p-content">PENGUINS, TURTLES, SEALS & IGUANAS</span>
+          <span class="p-content">SHARKS, PENGUINS, TURTLES, SEALS & IGUANAS</span>
         </div>
       </div>
     </div>
@@ -155,16 +155,6 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="stoneTurtle"
-        >
-          <img
-              class="img-responsive"
-              :src="stoneTurtle"
-          />
-        </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
             :data-src="galapagosExe"
         >
           <img
@@ -232,32 +222,6 @@
               :src="whiteTips"
           />
         </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586442"
-            data-poster=""
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="islandSealions"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586482"
-            data-poster=""
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="fish"
-          />
-        </a>
       </lightgallery>
     </div>
   </div>
@@ -276,8 +240,6 @@ import sealionsCuddle from "/././././././src/assets/images/projects/galapagos/ga
 import sharkFin from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharkfin.jpg";
 import pingu from "/././././././src/assets/images/projects/galapagos/galleryImgs/piingu.png";
 import sharksWhiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharksWhiteTips.png";
-import islandSealions from "/././././././src/assets/images/projects/galapagos/galleryImgs/islandSealions.png";
-import fish from "/././././././src/assets/images/projects/galapagos/galleryImgs/fish.png";
 import whiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/whiteTips.png";
 import waterHighSat from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
 import waterTurtle from "/././././././src/assets/images/projects/glowing-turts/water-turtle.jpg";
@@ -286,8 +248,6 @@ import birdDry from "/././././././src/assets/images/projects/galapagos/galleryIm
 import galapagosExe from "/src/assets/images/projects/galapagos/galleryImgs/galapagosExe.jpg";
 import landscape from "/src/assets/images/projects/galapagos/galleryImgs/landscape.jpg";
 import pinguLandscape from "/src/assets/images/projects/galapagos/galleryImgs/pinguLandscape.jpg";
-import stoneTurtle from "/././././././src/assets/images/projects/galapagos/galleryImgs/stoneTurtle.jpg";
-
 
 import DownBtn from "@/components/buttons/DownBtn";
 import BackBtn from "@/components/buttons/BackBtn";
@@ -311,11 +271,9 @@ export default {
     whiteTips: whiteTips,
     sharkFin: sharkFin,
     sharksWhiteTips: sharksWhiteTips,
-    fish: fish,
     manta: manta,
     island: island,
     galapagosShark: galapagosShark,
-    islandSealions: islandSealions,
     iDive: iDive,
     puertoVillamil: puertoVillamil,
     sealion: sealion,
@@ -327,7 +285,6 @@ export default {
     galapagosExe: galapagosExe,
     landscape: landscape,
     pinguLandscape: pinguLandscape,
-    stoneTurtle: stoneTurtle,
 
     plugins: [lgZoom, lgVideo],
   }),

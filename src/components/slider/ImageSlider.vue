@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
@@ -32,7 +32,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 1500);
+      this.timer = setInterval(this.next, 500);
     },
 
     next: function() {
@@ -61,7 +61,7 @@ export default {
 }
 
 img {
-  height:200px;
+  height:180px;
   width: 100%;
   max-width: 1000px;
   object-fit: cover;
@@ -70,4 +70,5 @@ img {
   transform: translate(-50%);
   border-radius: 30px;
 }
+
 </style>

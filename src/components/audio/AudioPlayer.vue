@@ -235,7 +235,9 @@ export default {
 
 .cover img {
   object-fit: cover;
-  border-radius: 50%;
+  width: 70px;
+  border-radius: 10px;
+  height: 70px;
 }
 
 .info {
@@ -266,7 +268,6 @@ export default {
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: center;
   z-index: 1;
 }
 
@@ -276,6 +277,7 @@ export default {
   color: #b2b3b9;
   font-size: 20px;
   cursor: pointer;
+  padding: 0;
 }
 
 .action-btn.action-btn-big {

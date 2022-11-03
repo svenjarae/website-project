@@ -51,7 +51,7 @@ export default {
 }
 .b_circle {
   position: relative;
-  right: -75px;
+  right: -25px;
   top: -60px;
   border-radius: 50%;
 }
@@ -60,7 +60,7 @@ export default {
   height: 20px;
   width: 20px;
   background: var(--2ndColor);
-  border-radius: 50%;
+  border-radius: 2px;
 }
 .s_circle:nth-child(1) {
    animation: orbit1 4s linear infinite;

@@ -83,20 +83,17 @@
           <path d="M27.4402 22.5936L27.44 22.5868L27.4326 22.5859L27.4328 22.5928L27.4402 22.5936Z" fill="currentColor"></path>
         </svg>
       </div>
-      <router-link to="/projects/galapagos">
-        <div class="imageSliderContainer">
-          <ImageSlider></ImageSlider>
-        </div>
-      </router-link>
+      <div class="padding secondaryFont">
+        <RollingText text="MAKE A HAPPY FACE"></RollingText>
+      </div>
       <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; z-index: 2;">
           <div class="padding secondaryFont">
-            <RollingText text="MAKE A HAPPY FACE"></RollingText>
-        <div style="margin-top: 50px;">
-          <DownBtn></DownBtn>
-        </div>
-            <div class="secondArrow">
+            <div>
               <DownBtn></DownBtn>
             </div>
+            <router-link to="/projects">
+              <button class="exploreBtn">EXPLORE</button>
+            </router-link>
           </div>
         <div class="layoutWrapper padding smallFont">
           <div class="flexColumn" style="align-items: flex-start; gap: 10px; font-family: BlueScreen; font-size: 20px">
@@ -129,12 +126,10 @@ import titleVideo from "/././././././src/assets/videos/titlevid.mp4";
 import RollingText from "@/components/animations/RollingText";
 import CircleDots from "@/components/animations/CircleDots";
 import DownBtn from "@/components/buttons/DownBtn";
-import ImageSlider from "@/components/slider/ImageSlider";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
-    ImageSlider,
     DownBtn,
     CircleDots,
     RollingText,
@@ -148,15 +143,6 @@ export default {
 </script>
 
 <style>
-
-.secondArrow{
-  rotate: -90deg;
-  margin-left: 100px;
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-  transform: translate(0, -50%);
-}
 
 .acidContainer{
   position: absolute;
@@ -173,6 +159,16 @@ export default {
   fill: black;
 }
 
+.exploreBtn{
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  border: none;
+  background-color: orangered;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 @keyframes animate {
   from{
     filter: blur(0);
@@ -180,15 +176,6 @@ export default {
   to{
     filter: blur(5px);
   }
-}
-
-.imageSliderContainer{
-  height: 200px;
-  width: 200px;
-  top: -70px;
-  z-index: 1;
-  position:absolute;
-  margin: 20px;
 }
 
 

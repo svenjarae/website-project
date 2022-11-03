@@ -1,16 +1,20 @@
 <template>
   <div class="skills">
-    <marquee-text :repeat="10" :duration="8">
+    <marquee-text :repeat="15" :duration="15">
       <span>{{text}}</span>
+
+
     </marquee-text>
   </div>
 </template>
 
 <script>
 import MarqueeText from "vue-marquee-text-component";
+
 export default {
   name: "RollingText",
   components: {
+
     MarqueeText
   },
   props:{
@@ -24,7 +28,7 @@ export default {
 .skills{
   column-gap: 0;
   text-align: center;
-  font-size: var(--bigFont);
+  font-size: 200px;
   text-transform: uppercase;
 }
 .skills span{
