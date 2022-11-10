@@ -274,5 +274,20 @@ a.router-link-exact-active{
   font-weight: bold;
 }
 
+@media screen and (max-width: 720px) {
+  .waterAnimationContainer{
+    height: 100px;
+    width: 100px;
+  }
+
+  .audioPlayerBig, .audioPlayerSmall{
+    display: none;
+  }
+
+  .layoutWrapper{
+    display: block;
+  }
+}
+
 
 </style>

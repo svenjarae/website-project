@@ -12,7 +12,7 @@
     <router-link class="backBtnContainer" to="/projects">
       <BackBtn></BackBtn>
     </router-link>
-    <div class="layoutWrapper" style="margin-top: 60px;margin-bottom: 60px;">
+    <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
       <div class="mainDescriptionWrapper">
         <h1>ONI STUDIO</h1>
         <p>Jewellery, designed and crafted in Berlin.</p>
@@ -350,6 +350,10 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 1000;
 }
 
 .lightgallery-vue{

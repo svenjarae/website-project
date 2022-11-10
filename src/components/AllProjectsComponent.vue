@@ -94,7 +94,7 @@ export default {
   gap: 20px;
   grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
   background-color: var(--bright);
-  margin: auto auto 60px auto;;
+  margin: auto auto 80px auto;;
   max-width: 1000px;
 
 }
@@ -105,5 +105,12 @@ export default {
   border-radius: 20px;
   height: 300px;
 }
+
+@media screen and (max-width: 720px) {
+.grid-container{
+  margin-bottom: 150px;
+}
+}
+
 
 </style>
