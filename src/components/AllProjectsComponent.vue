@@ -11,8 +11,8 @@
       </router-link>
     </div>
     <div>
-      <router-link to="/projects/animations/trip">
-        <NewsCard title="TRIP" :icon-src=titleImgTrip></NewsCard>
+      <router-link to="/projects/animations/triangle">
+        <NewsCard title="TRIANGLE" :icon-src=titleImgTrip></NewsCard>
       </router-link>
     </div>
     <div>

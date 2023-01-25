@@ -334,10 +334,6 @@ export default {
 }
 
 .backBtnContainer{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: white;
   border-radius: 2px;
   z-index: 1000;
@@ -413,6 +409,12 @@ export default {
   text-align: left;
   display: flex;
   flex-direction: column;
+}
+
+.mainDescriptionWrapper h1{
+  font-family: MyFirstFont;
+  font-size: 4em;
+  text-transform: uppercase;
 }
 
 .flexWrapper{

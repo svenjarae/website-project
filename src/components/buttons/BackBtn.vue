@@ -25,9 +25,10 @@ export default {
   display: flex;
   cursor: pointer;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
+  z-index: 10000;
 }
 .button:hover .button__border-circle{
   transform: translateX(60px);

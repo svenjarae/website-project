@@ -51,8 +51,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "bird" */ '../views/ProjectBirdView')
   },
   {
-    path: '/projects/animations/trip',
-    name: 'trip',
+    path: '/projects/animations/triangle',
+    name: 'triangle',
     component: () => import(/* webpackChunkName: "trip" */ '../views/ProjectTripView')
   },
   {

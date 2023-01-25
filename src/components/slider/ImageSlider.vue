@@ -32,7 +32,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 500);
+      this.timer = setInterval(this.next, 1000);
     },
 
     next: function() {
@@ -61,7 +61,7 @@ export default {
 }
 
 img {
-  height:180px;
+  height:300px;
   width: 100%;
   max-width: 1000px;
   object-fit: cover;

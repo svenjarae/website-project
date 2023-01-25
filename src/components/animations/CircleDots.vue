@@ -59,8 +59,8 @@ export default {
   position: absolute;
   height: 20px;
   width: 20px;
-  background: var(--2ndColor);
-  border-radius: 2px;
+  background: blue;
+  border-radius: 50%;
 }
 .s_circle:nth-child(1) {
    animation: orbit1 4s linear infinite;

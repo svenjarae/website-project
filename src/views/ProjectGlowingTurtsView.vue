@@ -287,6 +287,12 @@ export default {
   flex-direction: column;
 }
 
+.mainDescriptionWrapper h1{
+  font-family: MyFirstFont;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
 .flexContainer{
   display: flex;
   flex-direction: column;

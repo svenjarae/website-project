@@ -1,63 +1,56 @@
 <template>
-  <nav class="navContainer">
-    <div class="layoutWrapper">
-        <div v-if="this.$route.name === 'svenjaraetzsch'" class="waterAnimationContainer">
-          <WaterAnimation val=""></WaterAnimation>
-        </div>
-      <div class="flexColumn smallFont" style="align-items: flex-start;">
-        <a href="mailto:svenjaraetzsch@gmail.com">SVENJARAETZSCH@GMAIL.COM</a>
-        <div>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--dark)"><path d="M17 16.99c-1.35 0-2.2.42-2.95.8-.65.33-1.18.6-2.05.6-.9 0-1.4-.25-2.05-.6-.75-.38-1.57-.8-2.95-.8s-2.2.42-2.95.8c-.65.33-1.17.6-2.05.6v1.95c1.35 0 2.2-.42 2.95-.8.65-.33 1.17-.6 2.05-.6s1.4.25 2.05.6c.75.38 1.57.8 2.95.8s2.2-.42 2.95-.8c.65-.33 1.18-.6 2.05-.6.9 0 1.4.25 2.05.6.75.38 1.58.8 2.95.8v-1.95c-.9 0-1.4-.25-2.05-.6-.75-.38-1.6-.8-2.95-.8zm0-4.45c-1.35 0-2.2.43-2.95.8-.65.32-1.18.6-2.05.6-.9 0-1.4-.25-2.05-.6-.75-.38-1.57-.8-2.95-.8s-2.2.43-2.95.8c-.65.32-1.17.6-2.05.6v1.95c1.35 0 2.2-.43 2.95-.8.65-.35 1.15-.6 2.05-.6s1.4.25 2.05.6c.75.38 1.57.8 2.95.8s2.2-.43 2.95-.8c.65-.35 1.15-.6 2.05-.6s1.4.25 2.05.6c.75.38 1.58.8 2.95.8v-1.95c-.9 0-1.4-.25-2.05-.6-.75-.38-1.6-.8-2.95-.8zm2.95-8.08c-.75-.38-1.58-.8-2.95-.8s-2.2.42-2.95.8c-.65.32-1.18.6-2.05.6-.9 0-1.4-.25-2.05-.6-.75-.37-1.57-.8-2.95-.8s-2.2.42-2.95.8c-.65.33-1.17.6-2.05.6v1.93c1.35 0 2.2-.43 2.95-.8.65-.33 1.17-.6 2.05-.6s1.4.25 2.05.6c.75.38 1.57.8 2.95.8s2.2-.43 2.95-.8c.65-.32 1.18-.6 2.05-.6.9 0 1.4.25 2.05.6.75.38 1.58.8 2.95.8V5.04c-.9 0-1.4-.25-2.05-.58zM17 8.09c-1.35 0-2.2.43-2.95.8-.65.35-1.15.6-2.05.6s-1.4-.25-2.05-.6c-.75-.38-1.57-.8-2.95-.8s-2.2.43-2.95.8c-.65.35-1.15.6-2.05.6v1.95c1.35 0 2.2-.43 2.95-.8.65-.32 1.18-.6 2.05-.6s1.4.25 2.05.6c.75.38 1.57.8 2.95.8s2.2-.43 2.95-.8c.65-.32 1.18-.6 2.05-.6.9 0 1.4.25 2.05.6.75.38 1.58.8 2.95.8V9.49c-.9 0-1.4-.25-2.05-.6-.75-.38-1.6-.8-2.95-.8z"/></svg>
+    <!--
+    <nav class="navContainer">
+      <div class="navigation">
+            <div style="display: flex; align-items: center;  margin-bottom: 20px;">
+          <span style="background-color: black; display: flex; border-radius: 4px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"/></svg>
           </span>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--dark)"><path d="M0 0h24v24H0z" fill="none"/><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
-          </span>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--dark)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-          </span>
-        </div>
-      </div>
-      <div class="socialMediaContainer">
-        <a href="https://vimeo.com/user182333690?embedded=true&source=owner_portrait&owner=182333690">
-          <span>VIMEO</span>
-        </a>
-        <div>
-          <a href="https://www.linkedin.com/in/svenja-raetzsch-9970b0205/" style="margin-right: 5px;">
-            <span>LINKEDIN</span>
-          </a>
-          <a href="https://github.com/svenjarae" style="margin-left: 5px;">
-            <span>GITHUB</span>
-          </a>
-        </div>
-      </div>
-      <div class="flexColumn smallFont" style="align-items: flex-end;">
-        <router-link to="/" style="position: relative;" class="padding">
-          <span>HOME</span>
-        </router-link>
-        <router-link to="/projects" style="position: relative;" class="padding">
-          <span>EXPLORE PROJECTS</span>
-        </router-link>
-      </div>
-      <div :class="this.$route.name === 'svenjaraetzsch' ? 'audioPlayerBig' : 'audioPlayerSmall'">
-        <AudioPlayer></AudioPlayer>
-      </div>
-    </div>
-  </nav>
+              <span style="margin-left: 5px">/HAVE A LOOK</span>
+            </div>
+            <div style="font-size: 20px;">
+              <div style="display: flex; flex-direction: column; text-align: left; margin-bottom: 20px;">
+                <router-link to="/">
+                  <span>HOME</span>
+                </router-link>
+                <router-link to="/projects">PROJECTS</router-link>
+                <router-link to="/info">INFO</router-link>
+              </div>
+              <div style="display: flex; flex-direction: column; text-align: left; margin-bottom: 20px;">
+                <a href="https://vimeo.com/user182333690?embedded=true&source=owner_portrait&owner=182333690">
+                  <span>VIMEO</span>
+                </a>
+                <a href="https://www.linkedin.com/in/svenja-raetzsch-9970b0205/" style="margin-right: 5px;">
+                  <span>LINKEDIN</span>
+                </a>
+                <a href="https://github.com/svenjarae">
+                  <span>GITHUB</span>
+                </a>
+              </div>
+              <a href="mailto:svenjaraetzsch@gmail.com">
+                <span>SAY HELLO</span>
+              </a>
+              <div style="display: flex; justify-content: right;">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M23,17c0,3.31-2.69,6-6,6v-1.5c2.48,0,4.5-2.02,4.5-4.5H23z M1,7c0-3.31,2.69-6,6-6v1.5C4.52,2.5,2.5,4.52,2.5,7H1z M8.01,4.32l-4.6,4.6c-3.22,3.22-3.22,8.45,0,11.67s8.45,3.22,11.67,0l7.07-7.07c0.49-0.49,0.49-1.28,0-1.77 c-0.49-0.49-1.28-0.49-1.77,0l-4.42,4.42l-0.71-0.71l6.54-6.54c0.49-0.49,0.49-1.28,0-1.77s-1.28-0.49-1.77,0l-5.83,5.83l-0.71-0.71 l6.89-6.89c0.49-0.49,0.49-1.28,0-1.77s-1.28-0.49-1.77,0l-6.89,6.89L11.02,9.8l5.48-5.48c0.49-0.49,0.49-1.28,0-1.77 s-1.28-0.49-1.77,0l-7.62,7.62c1.22,1.57,1.11,3.84-0.33,5.28l-0.71-0.71c1.17-1.17,1.17-3.07,0-4.24l-0.35-0.35l4.07-4.07 c0.49-0.49,0.49-1.28,0-1.77C9.29,3.83,8.5,3.83,8.01,4.32z"/></svg>
+              </div>
+            </div>
+          </div>
+          </nav>
+    -->
 
-  <router-view>
-  </router-view>
+    <router-view>
+    </router-view>
+
 </template>
 
 <script>
 
-import AudioPlayer from "@/components/audio/AudioPlayer";
-import WaterAnimation from "@/components/buttons/WaterAnimation";
+//import AudioPlayer from "@/components/audio/AudioPlayer";
+
 export default {
   name: 'App',
   components: {
-    AudioPlayer,
-    WaterAnimation
+    //AudioPlayer
   },
 
   computed: {
@@ -86,11 +79,6 @@ export default {
   src: url("/src/assets/fonts/FHGiselle-Light.ttf");
 }
 
-@font-face {
-  font-family: BlueScreen;
-  src: url("/src/assets/fonts/BlueScreen.ttf");
-}
-
 :root {
   --bright: #fff;
   --dark:  #000;
@@ -99,7 +87,7 @@ export default {
   --5thColor: rgb(255, 168, 0);
   --6thColor: rgb(129, 74, 106);
 
-  --primaryFont: 'Montserrat', sans-serif;
+  --primaryFont: Montserrat, serif;
   --secondaryFont: 'myFirstFont', serif;
 
   --bigFont: 150px;
@@ -121,8 +109,8 @@ html {
 }
 
 body {
-  cursor: url('/src/assets/logo.png'), default;
   margin: 0;
+
 }
 
 /* width */
@@ -176,24 +164,10 @@ a.router-link-exact-active{
 
 .navContainer{
   color: var(--dark);
-  position: fixed;
-  bottom: 0;
-  background-color: white;
-  left: 0;
-  right: 0;
   z-index: 1000;
 }
 
-.waterAnimationContainer{
-  height: 320px;
-  width: 320px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-  right: 20px;
-  bottom: 80px;
-  z-index: 2;
-}
+
 
 .socialMediaContainer{
   font-size: var(--smallFont);
@@ -255,7 +229,7 @@ a.router-link-exact-active{
 }
 .mediumFont{
   font-size: var(--mediumFont);
-  font-family: BlueScreen;
+  font-family: monospace;
   color: var(--1stColor);
 }
 .normalFont{

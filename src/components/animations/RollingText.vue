@@ -1,9 +1,7 @@
 <template>
   <div class="skills">
-    <marquee-text :repeat="15" :duration="15">
-      <span>{{text}}</span>
-
-
+    <marquee-text :repeat="10" :duration="8">
+      <span class="small">HTML CSS/SASS JS VUE GREENSOCKS ANIMATION ILLUSTRATOR PHOTOSHOP PREMIERE</span>
     </marquee-text>
   </div>
 </template>
@@ -27,13 +25,23 @@ export default {
 
 .skills{
   column-gap: 0;
+  padding: 20px 0;
   text-align: center;
-  font-size: 200px;
   text-transform: uppercase;
 }
-.skills span{
-  margin-right: 30px;
+.skills .big{
+  margin-right: 5px;
+  margin-left: 5px;
   color: black;
+  font-size: 60px;
+}
+
+.skills .small{
+  margin-right: 5px;
+  margin-left: 5px;
+  color: black;
+  font-size: 22px;
+  font-family: monospace;
 }
 
 </style>

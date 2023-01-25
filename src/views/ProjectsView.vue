@@ -4,21 +4,13 @@
       <BackBtn></BackBtn>
     </router-link>
 
-    <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
+    <div class="layoutWrapper" style="margin-bottom: 40px;">
       <div class="mainDescriptionWrapper">
-        <h1 style="font-family: myFirstFont">ALL PROJECTS</h1>
+        <h1 style="    font-family: MyFirstFont;
+    font-size: 4em;">ALL PROJECTS</h1>
         <p>DIGITAL CONTENT MIX</p>
       </div>
       <div class="flexContainer">
-        <div>
-          <span class="p-heading">VIDEOS & IMAGES</span>
-        </div>
-        <div>
-          <span class="p-heading">ANIMATIONS & GRAPHIC ARTS</span>
-        </div>
-        <div>
-          <span class="p-heading">PROGRAMMED & ILLUSTRATED</span>
-        </div>
       </div>
     </div>
 
@@ -46,10 +38,6 @@ export default {
 </script>
 <style scoped>
   .backBtnContainer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: white;
     border-radius: 2px;
     z-index: 1000;
@@ -66,6 +54,11 @@ export default {
     display: flex;
     flex-direction: column;
     width: 50%;
+    border-radius: 50px;
   }
-
+  .mainDescriptionWrapper h1{
+    font-family: MyFirstFont;
+    font-size: 4em;
+    text-transform: uppercase;
+  }
 </style>

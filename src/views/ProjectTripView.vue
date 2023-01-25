@@ -2,7 +2,7 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <h1 class="projectTitle">TRIP</h1>
+        <h1 class="projectTitle">TRIANGLE</h1>
         <div style="margin: 60px auto;">
         <TripAnimation></TripAnimation>
         </div>
@@ -16,7 +16,7 @@
     </router-link>
     <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
       <div class="mainDescriptionWrapper">
-        <h1>TRIP</h1>
+        <h1>TRIANGLE</h1>
         <p>Animation</p>
       </div>
       <div class="flexContainer">
@@ -126,10 +126,6 @@ export default {
 }
 
 .backBtnContainer{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: white;
   border-radius: 2px;
   z-index: 1000;
@@ -205,6 +201,12 @@ export default {
   text-align: left;
   display: flex;
   flex-direction: column;
+}
+
+.mainDescriptionWrapper h1{
+  font-family: MyFirstFont;
+  font-size: 4em;
+  text-transform: uppercase;
 }
 
 .flexWrapper{

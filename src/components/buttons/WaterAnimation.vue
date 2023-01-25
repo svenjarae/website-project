@@ -26,7 +26,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: orangered;
+  background: linear-gradient(90deg, rgb(109, 103, 238) 0%, rgb(167, 187, 252) 35%, rgba(194,245,255,1) 100%);;
   box-shadow: inset 0 0 50px rgb(0 0 0 / 50%);
   transition: .5s;
   overflow: hidden;
