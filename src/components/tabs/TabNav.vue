@@ -37,7 +37,6 @@ export default {
   display: flex;
   text-decoration: none;
   list-style: none;
-  overflow: auto;
 }
 .nav-list li {
   padding-right: 24px;
@@ -45,16 +44,22 @@ export default {
 
 a:hover{
   cursor: pointer;
-  /*color: var(--primary-color);*/
+  background-color: orangered!important;
 }
 
 a{
-  color: var(--darkBlue);
-  text-decoration: underline;
+  text-decoration: none;
+  color: black;
+  border-radius: 1000px;
+  background-color: transparent;
+  border: 2px solid orangered;
+  font-size: 14px;
+  font-family: monospace;
+  padding: 0 8px;
+  height: 24px;
 }
 
 .active {
-  color: black;
-  text-decoration: none;
+  background-color: orangered!important;
 }
 </style>

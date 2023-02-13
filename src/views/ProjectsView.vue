@@ -8,7 +8,7 @@
       <div class="mainDescriptionWrapper">
         <h1 style="    font-family: MyFirstFont;
     font-size: 4em;">ALL PROJECTS</h1>
-        <p>DIGITAL CONTENT MIX</p>
+        <p>SORTED BY DATE</p>
       </div>
       <div class="flexContainer">
       </div>
@@ -41,6 +41,9 @@ export default {
     background-color: white;
     border-radius: 2px;
     z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   .flexContainer{

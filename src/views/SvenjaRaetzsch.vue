@@ -1,21 +1,9 @@
 <template>
-  <div style="transform: rotate(-180deg); position:absolute; right: 20px; z-index: 1000000;">
-    <router-link to="/projects" style="z-index: 1000">
-      <BackBtn></BackBtn>
-    </router-link>
-  </div>
-
-  <div style="position: absolute;
-    bottom: 0;
-    right: 0;
-    top: 100px;
-    max-width: 800px;
-opacity: 0.8">
+  <div class="bgImgContainer">
     <img :src="image7" alt="image01" />
   </div>
   <div class="home__wrapper">
     <div class="sky">
-
       <!-- We are making divisions, every div.
       represent a single roundabout balls -->
       <div class="star"></div>
@@ -29,7 +17,7 @@ opacity: 0.8">
     <div class="about">
       <div style="display:flex;">
         <div class="flexRowWrapper">
-            <div style="position:absolute; top: -10px;">
+            <div style="position:absolute; top: -8px;">
               <span>FRONTEND</span>
             </div>
             <div style="display: flex; align-items: center;">
@@ -50,10 +38,6 @@ opacity: 0.8">
             <span style="letter-spacing: 4px;">CONTENT CREATION</span>
           </div>
         </div>
-      </div>
-      
-      <div class="waterAnimeContainer">
-        <WaterAnimation></WaterAnimation>
       </div>
       <div>
         <RollingText></RollingText>
@@ -86,16 +70,12 @@ import bg1 from "/././././././src/assets/images/bg/AdobeStock_503185672.jpeg";
 
 import gsap from 'gsap'
 import RollingText from "@/components/animations/RollingText";
-import WaterAnimation from "@/components/buttons/WaterAnimation";
-import BackBtn from "@/components/buttons/BackBtn";
 import TextAnime from "@/components/animations/TextAnime";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
     TextAnime,
-    BackBtn,
-    WaterAnimation,
     RollingText
   },
   data(){
@@ -154,23 +134,13 @@ export default {
   transform: translate(-50%, -50%);
 }
 
-.subtitle{
-  font-family: MyFirstFont;
-  font-size: 5em;
+.bgImgContainer{
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  top: 0;
+  opacity: 0.6; z-index: -1;
 }
-
-.mainWrapper{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.imgContainer{
-  width: 60px;
-  height: 60px;
-  margin: 0 10px;
-}
-
 img{
   box-sizing: border-box;
   border-radius: 20px;
