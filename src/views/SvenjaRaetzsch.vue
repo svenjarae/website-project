@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="flexRowWrapper" style="text-align: right; margin-top: -10px;">
-          <span style="font-size: 90px;">UI/UX</span>
+          <span style="    font-size: 90px;font-family: 'myFirstFont', serif; letter-spacing: 3px;">UI/UX</span>
           <div style="margin-top: -5px; display: flex; flex-direction: column">
             <span style="font-size: 34px; ">PROTOTYPING</span>
             <span style="letter-spacing: 6px; font-size: 14px;font-weight: bold;">CONTENT CREATION</span>
