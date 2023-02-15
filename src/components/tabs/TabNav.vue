@@ -35,11 +35,10 @@ export default {
 
 .nav-list {
   display: flex;
+  justify-content: flex-end;
   text-decoration: none;
   list-style: none;
-}
-.nav-list li {
-  padding-right: 24px;
+  gap: 20px;
 }
 
 a:hover{
