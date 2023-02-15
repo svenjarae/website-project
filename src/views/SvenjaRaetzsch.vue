@@ -3,23 +3,9 @@
     <img :src="image7" alt="image01" />
   </div>
   <div class="home__wrapper">
-    <div class="sky">
-      <!-- We are making divisions, every div.
-      represent a single roundabout balls -->
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-    </div>
     <div class="about">
       <div style="display:flex;">
         <div class="flexRowWrapper">
-            <div style="position:absolute; top: -8px;">
-              <span>FRONTEND</span>
-            </div>
             <div style="display: flex; align-items: center;">
               <span style="font-size: 80px; font-family: myFirstFont;">DEVELOPMENT</span>
               <div style="display: flex; flex-direction: column; justify-content: center">
@@ -28,19 +14,19 @@
               </div>
             </div>
             <div style="display: flex">
-              <span style="font-size: 64px; margin-top: -9px">PHOTOGRAPHY & FILM</span>
+              <span style="font-size: 63px; margin-top: -9px">PHOTOGRAPHY & FILM</span>
             </div>
         </div>
         <div class="flexRowWrapper" style="text-align: right; margin-top: -10px;">
-          <span style="font-size: 85px;">UI/UX</span>
+          <span style="font-size: 90px;">UI/UX</span>
           <div style="margin-top: -5px; display: flex; flex-direction: column">
-            <span style="font-size: 32px; ">PROTOTYPING</span>
-            <span style="letter-spacing: 4px;">CONTENT CREATION</span>
+            <span style="font-size: 34px; ">PROTOTYPING</span>
+            <span style="letter-spacing: 6px; font-size: 14px;font-weight: bold;">CONTENT CREATION</span>
           </div>
         </div>
       </div>
-      <div>
-        <RollingText></RollingText>
+      <div style="max-width: 1000px;">
+        <RollingText repeat="10" textBig="HTML CSS/SASS JS VUE GREENSOCKS ANIMATION SEO/SEA" textSmall="XD ILLUSTRATOR PHOTOSHOP PREMIERE AFTEREFFECTS INDESIGN"></RollingText>
       </div>
       <router-link to="/projects">
         <div style="text-align: left">
@@ -152,7 +138,7 @@ img{
 .flexRowWrapper{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .waterAnimeContainer{
@@ -170,222 +156,6 @@ img{
   }
   to{
     filter: blur(5px);
-  }
-}
-
-/* Here using -webkit, we make angle
-of 45 degree of falling star */
-.sky {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-}
-
-/* Here we are making roundabout balls  */
-.star {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 2px;
-  border-radius: 885px;
-  background: linear-gradient(-45deg,
-  #eef0f5, rgba(0, 0, 255, 0));
-
-  -webkit-filter: drop-shadow(0 0 6px #eef1f8);
-  filter: drop-shadow(0 0 6px #d7dff0);
-  -webkit-animation: tail 3000ms ease-in-out infinite,
-  shooting 3000ms ease-in-out infinite;
-  animation: tail 3000ms ease-in-out infinite,
-  shooting 3000ms ease-in-out infinite;
-}
-
-/* Here we add before and after effect to star */
-.star::before,
-.star::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 0;
-  height: 2px;
-  background: linear-gradient(
-      -45deg,
-      rgba(0, 0, 255, 0),
-      #eaeef8,
-      rgba(0, 0, 255, 0)
-  );
-  -webkit-transform: translateX(50%) rotateZ(45deg);
-  transform: translateX(50%) rotateZ(45deg);
-  border-radius: 100%;
-  -webkit-animation: shining 3000ms ease-in-out infinite;
-  animation: shining 3000ms ease-in-out infinite;
-}
-.star::after {
-  -webkit-transform: translateX(50%) rotateZ(-45deg);
-  transform: translateX(50%) rotateZ(-45deg);
-}
-
-/* Here we are adding location of each
-   nth-child, animations, delays, and
-   before and after effects to each
-   and every balls(stars) */
-.star:nth-child(1) {
-  top: calc(50% - -119px);
-  left: calc(50% - 43px);
-  -webkit-animation-delay: 4000ms;
-  animation-delay: 4000ms;
-}
-.star:nth-child(1)::before,
-.star:nth-child(1)::after {
-  -webkit-animation-delay: 4000ms;
-  animation-delay: 4000ms;
-}
-.star:nth-child(2) {
-  top: calc(50% - -43px);
-  left: calc(50% - 37px);
-  -webkit-animation-delay: 5000ms;
-  animation-delay: 5000ms;
-}
-.star:nth-child(2)::before,
-.star:nth-child(2)::after {
-  -webkit-animation-delay: 5000ms;
-  animation-delay: 5000ms;
-}
-.star:nth-child(3) {
-  top: calc(50% - -40px);
-  left: calc(50% - 222px);
-  -webkit-animation-delay: 7000ms;
-  animation-delay: 7000ms;
-}
-.star:nth-child(3)::before,
-.star:nth-child(3)::after {
-  -webkit-animation-delay: 7000ms;
-  animation-delay: 7000ms;
-}
-.star:nth-child(4) {
-  top: calc(50% - -29px);
-  left: calc(50% - 113px);
-  -webkit-animation-delay: 7000ms;
-  animation-delay: 7000ms;
-}
-.star:nth-child(4)::before,
-.star:nth-child(4)::after {
-  -webkit-animation-delay: 7000ms;
-  animation-delay: 7000ms;
-}
-.star:nth-child(5) {
-  top: calc(50% - 146px);
-  left: calc(50% - 112px);
-  -webkit-animation-delay: 3000ms;
-  animation-delay: 3000ms;
-}
-.star:nth-child(5)::before,
-.star:nth-child(5)::after {
-  -webkit-animation-delay: 3000ms;
-  animation-delay: 3000ms;
-}
-.star:nth-child(6) {
-  top: calc(50% - -108px);
-  left: calc(50% - 160px);
-  -webkit-animation-delay: 3000ms;
-  animation-delay: 3000ms;
-}
-.star:nth-child(6)::before,
-.star:nth-child(6)::after {
-  -webkit-animation-delay: 3000ms;
-  animation-delay: 3000ms;
-}
-.star:nth-child(7) {
-  top: calc(50% - 52px);
-  left: calc(50% - 72px);
-  -webkit-animation-delay: 7000ms;
-  animation-delay: 7000ms;
-}
-.star:nth-child(7)::before,
-.star:nth-child(7)::after {
-  -webkit-animation-delay: 7000ms;
-  animation-delay: 7000ms;
-}
-
-/* This code will help to generate
-effect in tail of star */
-@keyframes tail {
-  0% {
-    width: 0;
-  }
-  30% {
-    width: 100px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/* This code will generate shining
-effect in head of star */
-@keyframes shining {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 30px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/* Here we are adding webkit-animation
-to head of star for shining */
-@-webkit-keyframes shining {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 30px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/* Here we are adding webkit-animation
-to tail of star */
-@-webkit-keyframes tail {
-  0% {
-    width: 0;
-  }
-  30% {
-    width: 100px;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/* Here we are adding webkit-animation
-for shooting effect */
-@-webkit-keyframes shooting {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(270px);
-    transform: translateX(270px);
-  }
-}
-
-/* Here we make shooting effect */
-@keyframes shooting {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(270px);
-    transform: translateX(270px);
   }
 }
 

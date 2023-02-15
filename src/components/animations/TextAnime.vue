@@ -24,6 +24,7 @@ export default {
 .wrap {
   margin-top: 60px;
   margin-left: -5px;
+  display: inline-block;
 }
 
 .button {
