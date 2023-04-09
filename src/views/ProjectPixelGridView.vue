@@ -2,7 +2,7 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <h1 class="projectTitle">3D GRID</h1>
+        <h1 class="projectTitle">3DGRID</h1>
         <div style="margin: 60px auto;">
         <PixelGrid></PixelGrid>
         </div>
@@ -16,13 +16,13 @@
     </router-link>
     <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
       <div class="mainDescriptionWrapper">
-        <h1>3D GRID</h1>
+        <h1>3DGRID</h1>
         <p>ILLUSTRATION</p>
       </div>
       <div class="flexContainer">
         <div class="flexWrapper">
           <span class="p-heading">WHAT</span>
-          <span class="p-content">A 3D GRID ILLUSTRATION</span>
+          <span class="p-content">A 3DGRID ILLUSTRATION</span>
         </div>
         <div class="flexWrapper">
           <span class="p-heading">WHY</span>

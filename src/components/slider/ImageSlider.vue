@@ -1,19 +1,27 @@
 <template>
-  <div class="">
+  <div>
     <transition-group name="fade" tag="div">
-      <div v-for="i in [currentIndex]" :key="i">
+      <div class="imgContainer" v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
     </transition-group>
+    <div class="prev" @click="prev">
+      <BackBtn></BackBtn>
+    </div>
+    <div class="next" @click="next" style="transform: rotate(180deg)">
+      <BackBtn></BackBtn>
+    </div>
   </div>
 </template>
 <script>
 import image1 from "/././././././src/assets/images/projects/galapagos/galleryImgs/seelions-cuddle.jpg";
 import image2 from "/././././././src/assets/images/projects/galapagos/galleryImgs/galapagos-shark.jpg";
 import image3 from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
+import BackBtn from "@/components/buttons/BackBtn";
 
 export default {
   name: "Image-Slider",
+  components: {BackBtn},
   data() {
     return {
       images: [
@@ -26,15 +34,7 @@ export default {
     };
   },
 
-  mounted: function() {
-    this.startSlide();
-  },
-
   methods: {
-    startSlide: function() {
-      this.timer = setInterval(this.next, 1000);
-    },
-
     next: function() {
       this.currentIndex += 1;
     },
@@ -53,22 +53,42 @@ export default {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.9s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  height: 0%;
 }
 
 .fade-enter,
 .fade-leave-to {
+  transform: scale(1.5);
+}
+
+.imgContainer{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  height: 500px;
+  width: 500px;
 }
 
 img {
-  height:300px;
+  height:100%;
   width: 100%;
-  max-width: 1000px;
   object-fit: cover;
+}
+
+.prev{
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  border-radius: 30px;
+  left: 100px;
+  top: 50%;
+}
+
+.next{
+  position: absolute;
+  right: 100px;
+  top: 50%;
 }
 
 </style>

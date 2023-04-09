@@ -1,7 +1,4 @@
 <template>
-  <TabNav :selected="selected" :tabs="['all', 'animation', 'photo/video']"
-          @selected="setSelected">
-    <TabContent :is-selected="selected === 'all' ">
       <div class="grid-container">
         <div>
           <router-link to="/projects/taliarte">
@@ -13,59 +10,6 @@
             <NewsCard title="GC SEALIFE" :icon-src=squid1></NewsCard>
           </router-link>
         </div>
-        <div class="2" v-show="selected === 'all' || 'animation'">
-          <router-link to="/projects/animations/triangle">
-            <NewsCard title="TRIANGLE" :icon-src=titleImgTrip></NewsCard>
-          </router-link>
-        </div>
-        <div class="2" v-show="selected === 'all' || 'animation'">
-          <router-link to="/projects/animations/bird">
-            <NewsCard title="BIRD" :icon-src=titleImgBird></NewsCard>
-          </router-link>
-        </div>
-        <div class="1" v-show="selected === 'all' || 'photo/video'">
-          <router-link to="/projects/onistudio">
-            <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
-          </router-link>
-        </div>
-        <div class="2" v-show="showAnime">
-          <router-link to="/projects/animations/pixelgrid">
-            <NewsCard title="3D GRID" :icon-src=pixelGridTitleImg></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/galapagos">
-            <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
-          </router-link>
-        </div>
-      </div>
-    </TabContent>
-    <TabContent :is-selected="selected === 'photo/video' ">
-      <div class="grid-container">
-        <div class="1" v-if="selected === 'all' || 'photo/video'">
-          <router-link to="/projects/taliarte">
-            <NewsCard title="TALIARTE" :icon-src=ivonOne></NewsCard>
-          </router-link>
-        </div>
-        <div class="1" v-if="selected === 'all' || 'photo/video'">
-          <router-link to="/projects/gcsealife">
-            <NewsCard title="GC SEALIFE" :icon-src=squid1></NewsCard>
-          </router-link>
-        </div>
-        <div class="1" v-show="selected === 'all' || 'photo/video'">
-          <router-link to="/projects/onistudio">
-            <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
-          </router-link>
-        </div>
-        <div class="1" v-show="selected === 'all' || 'photo/video'">
-          <router-link to="/projects/galapagos">
-            <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
-          </router-link>
-        </div>
-      </div>
-    </TabContent>
-    <TabContent :is-selected="selected === 'animation' ">
-      <div class="grid-container">
         <div>
           <router-link to="/projects/animations/triangle">
             <NewsCard title="TRIANGLE" :icon-src=titleImgTrip></NewsCard>
@@ -77,16 +21,21 @@
           </router-link>
         </div>
         <div>
-          <router-link to="/projects/animations/pixelgrid">
-            <NewsCard title="3D GRID" :icon-src=pixelGridTitleImg></NewsCard>
+          <router-link to="/projects/onistudio">
+            <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
           </router-link>
         </div>
-
+        <div>
+          <router-link to="/projects/animations/pixelgrid">
+            <NewsCard title="3DGRID" :icon-src=pixelGridTitleImg></NewsCard>
+          </router-link>
+        </div>
+        <div>
+          <router-link to="/projects/galapagos">
+            <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
+          </router-link>
+        </div>
       </div>
-    </TabContent>
-  </TabNav>
-
-
 </template>
 <script>
 import NewsCard from "@/components/news/NewsCard";
@@ -98,14 +47,11 @@ import titleImgBird from "/././././././src/assets/images/projects/animations/bir
 import titleImgTrip from "/././././././src/assets/images/projects/animations/trip/titleimg-trip.png";
 import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
 import pixelGridTitleImg from "/././././././src/assets/images/projects/animations/pixel-grid/pixelGridTitleImg.png";
-import TabNav from "@/components/tabs/TabNav";
-import TabContent from "@/components/tabs/TabContent";
 
 export default {
   name: 'AllProjectsComponent',
   components: {
-    TabContent,
-    TabNav,
+
     NewsCard
   },
   data(){
@@ -134,17 +80,6 @@ export default {
 </script>
 <style scoped>
 
-.title-animation{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  font-family: myFirstFont;
-  opacity: 1;
-  color: orangered;
-}
-
 .filterContainer button{
   border-radius: 1000px;
   background-color: transparent;
@@ -159,24 +94,15 @@ export default {
   background-color: orangered;
 }
 
-.active{
-  background-color: orangered!important;
-}
-
 .grid-container {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-  background-color: var(--bright);
-  margin: auto auto 80px auto;;
-  max-width: 1000px;
-
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  grid-gap: clamp(1rem, 2vw, 1rem);
 }
 
 .grid-container div {
   text-align: center;
   font-size: 30px;
-  border-radius: 20px;
   height: 300px;
 }
 

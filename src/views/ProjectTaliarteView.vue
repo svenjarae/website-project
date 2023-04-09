@@ -9,27 +9,23 @@
         </div>
       </div>
     </div>
-    <router-link class="backBtnContainer" to="/projects">
-      <BackBtn></BackBtn>
-    </router-link>
-    <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
-      <div class="mainDescriptionWrapper">
-        <h1>Taliarte</h1>
-        <p>Gran Canaria</p>
+    <div class="projectContentContainer">
+      <div>
+        <div>
+          <span>WHERE</span>
+          <span>bdbfhdb</span>
+        </div>
+        <div>
+          <span>WHO</span>
+          <span>bdbfhdb</span>
+        </div>
+        <div>
+          <span>WHAT</span>
+          <span>bdbfhdb</span>
+        </div>
       </div>
-      <div class="flexContainer">
-        <div class="flexWrapper">
-          <span class="p-heading">WHO</span>
-          <span class="p-content">IVON & LILLY</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">WHEN</span>
-          <span class="p-content">10/2022</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">WHAT</span>
-          <span class="p-content">UW-VIDS & PHOTOGRAPHY</span>
-        </div>
+      <div>
+        card
       </div>
     </div>
     <div class="galleryContainer">
@@ -147,7 +143,6 @@ import titleImgAgua from "/src/assets/images/projects/taliarte/aguaTitleimg.png"
 
 
 import DownBtn from "@/components/buttons/DownBtn";
-import BackBtn from "@/components/buttons/BackBtn";
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
@@ -157,7 +152,6 @@ export default {
   components: {
     Lightgallery,
     DownBtn,
-    BackBtn
   },
   props:{
 
@@ -192,18 +186,20 @@ export default {
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 
 .galleryContainer{
-  padding-bottom: 60px;
+  margin: auto;
+  padding: 80px;
 }
 
 .projectTitle{
   position: absolute;
-  font-size: 100px;
+  font-size: 150px;
   text-transform: uppercase;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: orangered;
   font-family: myFirstFont;
+  letter-spacing: 20px;
 }
 
 .containerDownBtn{
@@ -220,26 +216,22 @@ export default {
   fill: orangered;
 }
 
-.backBtnContainer{
-  background-color: white;
-  border-radius: 2px;
-  z-index: 1000;
-}
-
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  grid-gap: clamp(1rem, 2vw, 1rem)
 }
 
 .lightgallery-vue img{
   object-fit: cover;
   height: 300px;
   width: 100%;
-  border-radius: 20px;
   min-width: 200px;
+}
+
+.projectContentContainer{
+  height: 100vh;
+  background-color: orangered;
 }
 
 #parent {

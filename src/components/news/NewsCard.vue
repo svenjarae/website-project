@@ -38,29 +38,31 @@ export default {
     height: 100%;
     position: relative;
     cursor: pointer;
-  }
-
-  .news-card-container img{
-    border-radius: 20px;
+    background-color: black;
   }
 
   .cardTitle {
-    font-size: 40px;
+    font-size: 20px;
     font-family: myFirstFont;
-    opacity: 1;
+    font-weight: 500;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: orangered;
+    transition: all 330ms ease-in-out;
+    letter-spacing: 10px;
   }
 
   .news-card-container:hover .cardTitle {
-    font-size: 24px;
+    font-size: 30px;
     opacity: 1;
   }
 
   .news-card-container:hover img{
-    filter: grayscale(0%);
-  }
-
-  .news-card-container:hover svg{
-    fill: orangered;
+    opacity: 0.2;
   }
 
   img{
@@ -71,24 +73,12 @@ export default {
     top: 0;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     border-radius: 1px;
   }
 
   p{
     font-weight: normal;
-  }
-
-  .cardTitle{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: orangered;
-    font-size: 30px;
-    transition: font-size 330ms ease-in-out;
   }
 
 </style>
