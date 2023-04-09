@@ -1,14 +1,17 @@
 <template>
   <div class="outerContainer">
-    <div class="innerContainer">
-      <img :src="image1" alt="image01" />
+    <div class="innerContainer" style="background-color: whitesmoke;">
+      <!--<img :src="image1" alt="image01" />-->
+      <div class="heartContainer">
+        <BeatingHeart></BeatingHeart>
+      </div>
     </div>
-    <div class="innerContainer">
+    <div class="innerContainer" style="background-color: white;">
       <div class="imgSliderContainer">
         <image-slider></image-slider>
       </div>
       <div>
-        <h2 class="imageText">IMAGES</h2>
+        <h2 class="imageText">GALLERY</h2>
       </div>
     </div>
     <div class="innerContainer" style="background-color: black;">
@@ -18,7 +21,7 @@
         </video>
       </div>
       <div>
-        <h2 class="videoText">VIDEOS</h2>
+        <h2 class="videoText">FILM</h2>
       </div>
     </div>
   </div>
@@ -28,10 +31,12 @@
 
 import image1 from "/././././././src/assets/images/projects/animations/trip/titleimg-trip.png";
 import ImageSlider from "@/components/slider/ImageSlider";
+import BeatingHeart from "@/components/animations/BeatingHeart";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
+    BeatingHeart,
     ImageSlider
 
   },
@@ -52,6 +57,13 @@ export default {
     height: calc(100vh + 20px);
     width: 100%;
     position: relative;
+  }
+
+  .heartContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .videoContainer{

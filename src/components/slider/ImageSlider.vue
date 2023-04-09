@@ -77,6 +77,7 @@ img {
   height:100%;
   width: 100%;
   object-fit: cover;
+  box-shadow: lightgray 0px 0px 0px 0px, lightgrey 0px 4px 4px;
 }
 
 .prev{
