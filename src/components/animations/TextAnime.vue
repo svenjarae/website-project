@@ -75,7 +75,7 @@ button::after {
   border-radius: 100%;
   border: 6px solid rgba(255, 50, 50, 0.93);
   position: absolute;
-  z-index: -1;
+  z-index: 11;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -27,22 +27,7 @@
           </svg>
         </a>
         <a href="mailto:svenjaraetzsch@gmail.com">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 24 24" version="1.1">
-            <title>Mail</title>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Mail">
-                <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24">
-
-                </rect>
-                <rect id="Rectangle" stroke="#0C0310" stroke-width="2" stroke-linecap="round" x="4" y="5" width="16" height="14" rx="2">
-
-                </rect>
-                <path d="M20,7 L12.3,12.775 C12.1222,12.9083 11.8778,12.9083 11.7,12.775 L4,7" id="Path" stroke="#0C0310" stroke-width="2" stroke-linecap="round">
-
-                </path>
-              </g>
-            </g>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M480 976q-83 0-156-31.5T197 859q-54-54-85.5-127T80 576q0-83 31.5-156T197 293q54-54 127-85.5T480 176q83 0 156 31.5T763 293q54 54 85.5 127T880 576v53q0 56-39.5 94.5T744 762q-36 0-68-17.5T627 695q-26 34-65 50.5T480 762q-78 0-132.5-54T293 576q0-78 54.5-133T480 388q78 0 132.5 55T667 576v53q0 31 22.5 52t54.5 21q31 0 53.5-21t22.5-52v-53q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99h214v60H480Zm0-274q53 0 90-36.5t37-89.5q0-54-37-91t-90-37q-53 0-90 37t-37 91q0 53 37 89.5t90 36.5Z"/></svg>
         </a>
       </div>
     </div>
@@ -101,23 +86,25 @@ export default {
   }
 
   .logoContainer{
-    letter-spacing: 0.8em;
+    letter-spacing: 10px;
     margin: 16px 24px;
     font-weight: 500;
+    font-family: var(--secondaryFont);
   }
 
   svg{
     width: 20px;
     height: 20px;
+    fill: darkgray;
   }
 
   a{
-    color: black;
+    color: darkgray;;
   }
 
   a.router-link-exact-active{
+    color: white;
     font-weight: 500;
-    color: red;
   }
 
 </style>

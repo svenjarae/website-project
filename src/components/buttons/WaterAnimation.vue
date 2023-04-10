@@ -31,7 +31,6 @@ export default {
   transition: .5s;
   overflow: hidden;
   z-index: 201;
-  border-radius: 20px;
   color: white;
 }
 

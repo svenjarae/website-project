@@ -22,5 +22,6 @@ export default {
   .projectsContainer{
     margin: auto;
     padding: 80px;
+    background-color: #1e1f24;
   }
 </style>

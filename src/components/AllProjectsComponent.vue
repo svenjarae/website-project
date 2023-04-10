@@ -104,13 +104,12 @@ export default {
   text-align: center;
   font-size: 30px;
   height: 300px;
-  box-shadow: lightgray 0px 0px 0px 0px, lightgrey 0px 4px 4px;
 }
 
 @media screen and (max-width: 720px) {
-.grid-container{
-  margin-bottom: 150px;
-}
+  .grid-container{
+    margin-bottom: 150px;
+  }
 }
 
 
