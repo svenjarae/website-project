@@ -28,15 +28,14 @@ export default {
 }
 
 .button {
-  font-family: monospace;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
   min-width: 300px;
   min-height: 60px;
-  font-size: 22px;
   text-transform: uppercase;
-  letter-spacing: 1.3px;
   color: #313133;
-  background: orangered;
-  background: linear-gradient(90deg, rgb(220, 119, 88) 0%, orangered 100%);
+  background: white;
   border: none;
   border-radius: 1000px;
   transition: all 0.3s ease-in-out 0s;
@@ -51,7 +50,7 @@ button::before {
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
-  border: 6px solid orangered;
+  border: 6px solid rgb(26, 26, 147);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,7 +72,7 @@ button::after {
   content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
-  border: 6px solid rgba(255, 50, 50, 0.93);
+  border: 6px solid blue;
   position: absolute;
   z-index: 11;
   top: 50%;

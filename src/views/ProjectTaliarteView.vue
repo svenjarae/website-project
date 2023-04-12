@@ -2,14 +2,14 @@
   <div id="parent">
     <div class="pageOne">
       <div class="iframeContainer">
-        <h1 class="projectTitle">Taliarte</h1>
         <img :src="ivonOne"/>
-        <div class="containerDownBtn">
+        <div class="containerDownBtn" @click="goto('page2')">
+          <h1 class="projectTitle">SCROLL DOWN</h1>
           <DownBtn></DownBtn>
         </div>
       </div>
     </div>
-    <div class="projectContentContainer">
+    <div ref="page2" class="projectContentContainer">
       <div>
         <div>
           <span>WHERE</span>
@@ -176,6 +176,11 @@ export default {
     onBeforeSlide: () => {
       console.log('calling before slide');
     },
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    }
   },
 }
 </script>
@@ -191,15 +196,11 @@ export default {
 }
 
 .projectTitle{
-  position: absolute;
-  font-size: 150px;
-  text-transform: uppercase;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: orangered;
-  font-family: myFirstFont;
-  letter-spacing: 20px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
 .containerDownBtn{
@@ -207,6 +208,7 @@ export default {
   bottom: 60px;
   left: 50%;
   transform: translate(-50%);
+  cursor: pointer;
 }
 
 .galleryContainer a{
@@ -231,7 +233,7 @@ export default {
 
 .projectContentContainer{
   height: 100vh;
-  background-color: orangered;
+  background-color: #202023;
 }
 
 #parent {
@@ -252,7 +254,7 @@ export default {
 }
 
 .iframeContainer{
-  background-color: #007385;
+  background-color: black;
   position: absolute;
   left: 0;
   top: 0;

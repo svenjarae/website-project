@@ -54,8 +54,8 @@ export default {
   padding: 0;
   width: 8px;
   height: 8px;
-  border-top: 2px solid orangered;
-  border-right: 2px solid orangered;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
 
   -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
@@ -83,7 +83,7 @@ export default {
   margin-left: -1px;
   width: 2px;
   height: 90px;
-  background: orangered;
+  background: white;
   content: ' ';
 }
 @-webkit-keyframes elasticus {

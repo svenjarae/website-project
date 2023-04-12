@@ -80,20 +80,6 @@ export default {
 </script>
 <style scoped>
 
-.filterContainer button{
-  border-radius: 1000px;
-  background-color: transparent;
-  border: 2px solid orangered;
-  font-size: 14px;
-  font-family: monospace;
-  padding: 0 8px;
-  height: 24px;
-}
-
-.filterContainer button:hover{
-  background-color: orangered;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));

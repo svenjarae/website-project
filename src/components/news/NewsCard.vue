@@ -51,7 +51,7 @@ export default {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: orangered;
+    color: white;
     transition: all 330ms ease-in-out;
     letter-spacing: 10px;
   }
