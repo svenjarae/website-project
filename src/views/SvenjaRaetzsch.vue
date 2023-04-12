@@ -1,34 +1,18 @@
 <template>
   <div class="outerContainer">
     <div class="innerContainer" style="background-color: #202023;">
-      <div class="ocean">
-        <div class="bubble bubble--1"></div>
-        <div class="bubble bubble--2"></div>
-        <div class="bubble bubble--3"></div>
-        <div class="bubble bubble--4"></div>
-        <div class="bubble bubble--5"></div>
-        <div class="bubble bubble--6"></div>
-        <div class="bubble bubble--7"></div>
-        <div class="bubble bubble--8"></div>
-        <div class="bubble bubble--9"></div>
-        <div class="bubble bubble--10"></div>
-        <div class="bubble bubble--11"></div>
-        <div class="bubble bubble--12"></div>
-        <div id="octocat"></div>
-      </div>
-      <div class="animationContainer">
-        <WaterAnimation></WaterAnimation>
-      </div>
-    </div>
-    <div class="innerContainer" style="background-color: #17191CFF;">
+      <ul class="factsContainer">
+        <li>
+          <h2>RANDOM FACTS</h2>
+        </li>
+        <li>First: Make a happy face</li>
+        <li>This website presents a mix of my previous works</li>
+        <li>Sharks are damn cool and I recommend to spend as much time underwater as you can</li>
+        <li>Currently working at <a style="text-decoration: underline;" href="https://codevance.de/">CODEVANCE</a> as Frontend Developer</li>
+      </ul>
       <router-link to="/projects" class="buttonContainer">
         <TextAnime></TextAnime>
       </router-link>
-    </div>
-    <div class="innerContainer" style="background-color: black;">
-      <div class="heartContainer">
-        <BeatingHeart></BeatingHeart>
-      </div>
     </div>
   </div>
 </template>
@@ -38,16 +22,12 @@
 import image1 from "/././././././src/assets/images/bg/AdobeStock_533955412.png";
 import image2 from "/././././././src/assets/images/bg/AdobeStock_533955453.png";
 import video1 from "/././././././src/assets/videos/titlevid.mp4";
-import BeatingHeart from "@/components/animations/BeatingHeart";
-import WaterAnimation from "@/components/buttons/WaterAnimation";
 import TextAnime from "@/components/animations/TextAnime";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
     TextAnime,
-    WaterAnimation,
-    BeatingHeart,
 
   },
   data(){
@@ -64,6 +44,30 @@ export default {
 </script>
 
 <style scoped>
+.factsContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 300px;
+  text-align: left;
+  color: darkgray;
+  text-transform: uppercase;
+  z-index: 100;
+  padding-inline-start: 0;
+  padding: 80px;
+  letter-spacing: 0.1em;
+}
+
+.factsContainer h2{
+  color: white;
+  font-weight: 500;
+}
+
+.factsContainer li{
+  list-style: none;
+  margin: 8px 0;
+}
+
 @keyframes animateSprite {
   0% {
     background-position: -600px; /* Starting position moving left sprite */
@@ -255,22 +259,6 @@ export default {
     height: calc(100vh + 20px);
     width: 100%;
     position: relative;
-  }
-
-  .heartContainer{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .animationContainer{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 300px;
-    width: 300px;
   }
 
   .buttonContainer{

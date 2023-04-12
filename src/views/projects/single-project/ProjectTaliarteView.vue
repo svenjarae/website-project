@@ -1,31 +1,37 @@
 <template>
-  <div id="parent">
-    <div class="pageOne">
-      <div class="iframeContainer">
-        <img :src="ivonOne"/>
-        <div class="containerDownBtn" @click="goto('page2')">
-          <h1 class="projectTitle">SCROLL DOWN</h1>
-          <DownBtn></DownBtn>
-        </div>
+  <div>
+    <div class="iframeContainer">
+      <img :src="ivonOne"/>
+      <div class="containerDownBtn" @click="goto('page2')">
+        <div>SCROLL DOWN</div>
+        <DownBtn></DownBtn>
       </div>
     </div>
+    <div style="height: 100vh; width: 100vw;"></div>
     <div ref="page2" class="projectContentContainer">
-      <div>
-        <div>
-          <span>WHERE</span>
-          <span>bdbfhdb</span>
-        </div>
-        <div>
-          <span>WHO</span>
-          <span>bdbfhdb</span>
-        </div>
-        <div>
-          <span>WHAT</span>
-          <span>bdbfhdb</span>
-        </div>
-      </div>
-      <div>
-        card
+      <h1 class="projectTitle">TALIARTE</h1>
+      <div class="factsContainer">
+        <ul>
+          <li>
+            <h2>Where</h2>
+          </li>
+          <li>First: Make a happy face</li>
+          <li>This website presents a mix of my previous works</li>
+        </ul>
+        <ul>
+          <li>
+            <h2>Who</h2>
+          </li>
+          <li>First: Make a happy face</li>
+          <li>This website presents a mix of my previous works</li>
+        </ul>
+        <ul>
+          <li>
+            <h2>What</h2>
+          </li>
+          <li>First: Make a happy face</li>
+          <li>This website presents a mix of my previous works</li>
+        </ul>
       </div>
     </div>
     <div class="galleryContainer">
@@ -170,17 +176,17 @@ export default {
     plugins: [lgZoom, lgVideo],
   }),
   methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    },
     onInit: () => {
       console.log('lightGallery has been initialized');
     },
     onBeforeSlide: () => {
       console.log('calling before slide');
     },
-    goto(refName) {
-      var element = this.$refs[refName];
-      var top = element.offsetTop;
-      window.scrollTo(0, top);
-    }
   },
 }
 </script>
@@ -192,23 +198,34 @@ export default {
 
 .galleryContainer{
   margin: auto;
-  padding: 80px;
+  padding: 120px 80px;
+  background-color: #17191CFF;
 }
 
 .projectTitle{
   color: white;
-  font-size: 16px;
+  font-size: 100px;
   letter-spacing: 0.1em;
   font-weight: 500;
-  margin-bottom: 24px;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: var(--secondaryFont);
 }
 
 .containerDownBtn{
   position: absolute;
-  bottom: 60px;
+  bottom: 24px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, 0);
   cursor: pointer;
+  color: white;
+}
+
+.containerDownBtn div{
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
 }
 
 .galleryContainer a{
@@ -234,23 +251,31 @@ export default {
 .projectContentContainer{
   height: 100vh;
   background-color: #202023;
+  position: relative;
 }
 
-#parent {
+.factsContainer {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
+  max-width: 300px;
+  text-align: left;
+  color: darkgray;
+  text-transform: uppercase;
+  z-index: 100;
+  padding-inline-start: 0;
+  padding: 80px;
+  letter-spacing: 0.1em;
 }
 
-#parent > div:nth-child(1) {
-  height: 100%;
-  width: 100%;
+.factsContainer h2{
+  color: white;
+  font-weight: 500;
 }
-#parent > div:nth-child(2) {
-  padding: 60px;
+
+.factsContainer li{
+  list-style: none;
+  margin: 8px 0;
 }
 
 .iframeContainer{
@@ -269,39 +294,6 @@ export default {
   width: 100%;
 }
 
-.divContainer{
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 4.86em;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
-}
-
-.flexContainer{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mainDescriptionWrapper{
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-.mainDescriptionWrapper h1{
-  font-family: MyFirstFont;
-  font-size: 4em;
-  text-transform: uppercase;
-}
-.flexWrapper{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
 iframe{
   display: block;
   justify-content: inherit !important;
@@ -315,17 +307,5 @@ iframe .vp-center {
 
   align-items: center;
 }
-
-.vp-center {
-  display: block;
-  justify-content: inherit !important;
-
-  align-items: center;
-}
-
-.currentLink{
-  margin-left: 5px;
-}
-
 
 </style>

@@ -1,38 +1,39 @@
 <template>
-  <div id="parent">
-    <div class="pageOne">
-      <div class="iframeContainer">
-        <h1 class="projectTitle">ONI STUDIO</h1>
-        <img :src="sequ2stil1"/>
-        <div class="containerDownBtn">
-          <DownBtn></DownBtn>
-        </div>
+  <div>
+    <div class="iframeContainer">
+      <img :src="sequ2stil1"/>
+      <div class="containerDownBtn" @click="goto('page2')">
+        <div>SCROLL DOWN</div>
+        <DownBtn></DownBtn>
       </div>
     </div>
-    <router-link class="backBtnContainer" to="/projects">
-      <BackBtn></BackBtn>
-    </router-link>
-    <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
-      <div class="mainDescriptionWrapper">
-        <h1>ONI STUDIO</h1>
-        <p>Jewellery, designed and crafted in Berlin.</p>
-        <a href="https://www.oni-studio.com/">Link to website</a>
-      </div>
-      <div class="flexContainer">
-        <div class="flexWrapper">
-          <span class="p-heading">WHO</span>
-          <span class="p-content">CARLA & TONI</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">WHEN</span>
-          <span class="p-content">07/2022</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">WHAT</span>
-          <span class="p-content">PLAYING WITH SOME LIGHT, WATER & JEWELLERY</span>
-        </div>
+    <div style="height: 100vh; width: 100vw;"></div>
+    <div ref="page2" class="projectContentContainer">
+      <h1 class="projectTitle">ONI STUDIO</h1>
+      <div class="factsContainer">
+        <ul>
+          <li>
+            <h2>Where</h2>
+          </li>
+          <li>First: Make a happy face</li>
+          <li>07/2022</li>
+        </ul>
+        <ul>
+          <li>
+            <h2>Who</h2>
+          </li>
+          <li>ONI STUDIO</li>
+          <li href="https://www.oni-studio.com/">Link to website</li>
+        </ul>
+        <ul>
+          <li>
+            <h2>What</h2>
+          </li>
+          <li>Jewellery, designed and crafted in Berlin.</li>
+        </ul>
       </div>
     </div>
+
     <div class="galleryContainer">
       <lightgallery
           :settings="{ speed: 500, plugins: plugins }"
@@ -271,12 +272,9 @@ import DownBtn from "@/components/buttons/DownBtn";
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
-import BackBtn from "@/components/buttons/BackBtn";
-
 export default {
   name: 'ProjectOniStudio',
   components: {
-    BackBtn,
     Lightgallery,
     DownBtn
   },
@@ -303,6 +301,11 @@ export default {
     plugins: [lgZoom, lgVideo],
   }),
   methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    },
     onInit: () => {
       console.log('lightGallery has been initialized');
     },
@@ -312,31 +315,42 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 
 .galleryContainer{
-  padding-bottom: 60px;
+  margin: auto;
+  padding: 120px 80px;
+  background-color: #17191CFF;
 }
 
 .projectTitle{
-  position: absolute;
+  color: white;
   font-size: 100px;
-  text-transform: uppercase;
-  top: 50%;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  position: absolute;
+  top: 80px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: orangered;
-  font-family: myFirstFont;
+  transform: translate(-50%, 0);
+  font-family: var(--secondaryFont);
 }
 
 .containerDownBtn{
   position: absolute;
-  bottom: 60px;
+  bottom: 24px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  color: white;
+}
+
+.containerDownBtn div{
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
 }
 
 .galleryContainer a{
@@ -346,55 +360,51 @@ export default {
   fill: orangered;
 }
 
-.backBtnContainer{
-  background-color: white;
-  border-radius: 2px;
-  z-index: 1000;
-}
-
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  grid-gap: clamp(1rem, 2vw, 1rem)
 }
 
 .lightgallery-vue img{
   object-fit: cover;
   height: 300px;
   width: 100%;
-  border-radius: 20px;
   min-width: 200px;
 }
 
-#parent {
+.projectContentContainer{
+  height: 100vh;
+  background-color: #202023;
+  position: relative;
+}
+
+.factsContainer {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
+  max-width: 300px;
+  text-align: left;
+  color: darkgray;
+  text-transform: uppercase;
+  z-index: 100;
+  padding-inline-start: 0;
+  padding: 80px;
+  letter-spacing: 0.1em;
 }
 
-#parent > div:nth-child(1) {
-  height: 100%;
-  width: 100%;
-}
-#parent > div:nth-child(2) {
-  padding: 60px;
+.factsContainer h2{
+  color: white;
+  font-weight: 500;
 }
 
-.leftCorner{
-  position: fixed;
-  left: -79px;
-  bottom: 285px;
-  z-index: 99;
-  transform: rotate(-90deg);
+.factsContainer li{
+  list-style: none;
+  margin: 8px 0;
 }
 
 .iframeContainer{
-  background-color: #007385;
+  background-color: black;
   position: absolute;
   left: 0;
   top: 0;
@@ -407,40 +417,6 @@ export default {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-
-.divContainer{
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 4.86em;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
-}
-
-.flexContainer{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mainDescriptionWrapper{
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-.mainDescriptionWrapper h1{
-  font-family: MyFirstFont;
-  font-size: 4em;
-  text-transform: uppercase;
-}
-
-.flexWrapper{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
 }
 
 iframe{
@@ -456,18 +432,5 @@ iframe .vp-center {
 
   align-items: center;
 }
-
-.vp-center {
-  display: block;
-  justify-content: inherit !important;
-
-  align-items: center;
-}
-
-.currentLink{
-  margin-left: 5px;
-}
-
-
 
 </style>

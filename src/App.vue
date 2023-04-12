@@ -3,8 +3,18 @@
     <nav>
       <main-nav></main-nav>
     </nav>
-    <router-view>
+    <router-view v-slot="{ Component }">
+      <transition>
+        <component :is="Component" />
+      </transition>
     </router-view>
+    <footer>
+      <div class="innerContainer" style="background-color: #17191CFF;">
+        <div class="heartContainer">
+          <BeatingHeart></BeatingHeart>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -13,9 +23,11 @@
 //import AudioPlayer from "@/components/audio/AudioPlayer";
 
 import MainNav from "@/components/nav/mainNav";
+import BeatingHeart from "@/components/animations/BeatingHeart";
 export default {
   name: 'App',
   components: {
+    BeatingHeart,
     MainNav
     //AudioPlayer
   },
@@ -106,10 +118,38 @@ h1, h2, h3, h4, h5, h6, p{
   font-weight: inherit;
   font-size: inherit;
   padding: inherit;
+  margin-block-start: inherit;
+  margin-block-end: inherit;
+  padding-inline-start: 0;
 }
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+}
+
 
 a{
   text-decoration: none;
   color: inherit;
 }
+
+.innerContainer{
+  height: calc(100vh + 20px);
+  width: 100%;
+  position: relative;
+}
+
+.heartContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 </style>

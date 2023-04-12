@@ -18,47 +18,42 @@ const routes = [
   {
     path: '/projects/taliarte',
     name: 'taliarte',
-    component: () => import(/* webpackChunkName: "taliarte" */ '../views/ProjectTaliarteView')
+    component: () => import(/* webpackChunkName: "taliarte" */ '../views/projects/single-project/ProjectTaliarteView')
   },
   {
     path: '/projects/gcsealife',
     name: 'gcsealife',
-    component: () => import(/* webpackChunkName: "gcsealife" */ '../views/ProjectGcSealifeView')
+    component: () => import(/* webpackChunkName: "gcsealife" */ '../views/projects/single-project/ProjectGcSealifeView')
   },
   {
     path: '/projects/galapagos',
     name: 'galapagos',
-    component: () => import(/* webpackChunkName: "galapagos" */ '../views/ProjectGalapagosView')
-  },
-  {
-    path: '/projects/glowingturts',
-    name: 'glowingturts',
-    component: () => import(/* webpackChunkName: "galapagos" */ '../views/ProjectGlowingTurtsView')
+    component: () => import(/* webpackChunkName: "galapagos" */ '../views/projects/single-project/ProjectGalapagosView')
   },
   {
     path: '/projects/onistudio',
     name: 'onistudio',
-    component: () => import(/* webpackChunkName: "onistudio" */ '../views/ProjectOniStudioView')
+    component: () => import(/* webpackChunkName: "onistudio" */ '../views/projects/single-project/ProjectOniStudioView')
   },
   {
     path: '/projects/paradise',
     name: 'paradise',
-    component: () => import(/* webpackChunkName: "maldives" */ '../views/ProjectMaldivesView')
+    component: () => import(/* webpackChunkName: "maldives" */ '../views/projects/single-project/ProjectMaldivesView')
   },
   {
     path: '/projects/animations/bird',
     name: 'bird',
-    component: () => import(/* webpackChunkName: "bird" */ '../views/ProjectBirdView')
+    component: () => import(/* webpackChunkName: "bird" */ '../views/projects/single-project/ProjectBirdView')
   },
   {
     path: '/projects/animations/triangle',
     name: 'triangle',
-    component: () => import(/* webpackChunkName: "trip" */ '../views/ProjectTripView')
+    component: () => import(/* webpackChunkName: "trip" */ '../views/projects/single-project/ProjectTripView')
   },
   {
     path: '/projects/animations/pixelgrid',
     name: 'pixelgrid',
-    component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/ProjectPixelGridView')
+    component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/projects/single-project/ProjectPixelGridView')
   },
 ]
 

@@ -29,14 +29,6 @@
 
 export default {
   name: 'TripAnimation',
-  data(){
-    return{
-    }
-  },
-  props: {
-
-  }
-
 }
 </script>
 
@@ -49,10 +41,7 @@ body {
   background: #642B73;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 }
-
 .wrapper {
   overflow: hidden;
   position: absolute;
@@ -61,7 +50,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .triangle-canvas {
   position: absolute;
   left: 50%;
@@ -70,7 +58,6 @@ body {
   height: 100%;
   transform: translate(-50%, -50%);
 }
-
 .triangle {
   fill: none;
   stroke: #fff;
@@ -138,17 +125,14 @@ body {
 .triangle-20 {
   animation-delay: -9.5s;
 }
-
 @keyframes triangle-animation{
   0%{
     transform: scale(0) rotate(0deg);
     opacity: 1;
   }
-
   100%{
     transform: scale(3) rotate(45deg);
     opacity: 0;
   }
 }
-
 </style>
