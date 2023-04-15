@@ -55,6 +55,16 @@ const routes = [
     name: 'pixelgrid',
     component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/projects/single-project/ProjectPixelGridView')
   },
+  {
+    path: '/skills',
+    name: 'skills',
+    component: () => import(/* webpackChunkName: "skills" */ '../views/SkillsView')
+  },
+  {
+    path: '/philo',
+    name: 'philo',
+    component: () => import(/* webpackChunkName: "philo" */ '../views/PhiloView')
+  },
 ]
 
 const router = createRouter({

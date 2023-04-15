@@ -21,7 +21,7 @@
           <li>
             <h2>Description</h2>
           </li>
-          <li>Of course you can get all kinds of crazy with CSS and only one element. The triangle is just always particularly compelling because it’s so practical</li>
+          <li>Birds flying loop Animation</li>
         </ul>
       </div>
     </div>

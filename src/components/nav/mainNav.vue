@@ -35,9 +35,9 @@
     <div class="mainNav">
       <router-link to="/">START</router-link>
       <router-link to="/projects">PROJECTS</router-link>
+      <router-link to="/skills">SKILLS</router-link>
       <router-link to="/philo">PHILO</router-link>
     </div>
-
   </div>
 
 </template>

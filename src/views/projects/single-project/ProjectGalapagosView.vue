@@ -13,24 +13,17 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Where</h2>
+            <h2>Info</h2>
           </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
+          <li>Galapagos Island</li>
+          <li>Best experience I had in life so far</li>
+          <li>10/2018</li>
         </ul>
         <ul>
           <li>
-            <h2>Who</h2>
+            <h2>Description</h2>
           </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>What</h2>
-          </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
+          <li>The Galápagos are best known for their diverse array of plant and animal species. Many species are not found anywhere else in the world. </li>
         </ul>
       </div>
     </div>

@@ -13,24 +13,17 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Where</h2>
+            <h2>Info</h2>
           </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
+          <li>Gran Canaria, Taliarte</li>
+          <li>Ivon, Lilly</li>
+          <li>09/2022</li>
         </ul>
         <ul>
           <li>
-            <h2>Who</h2>
+            <h2>Description</h2>
           </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>What</h2>
-          </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
+          <li>every single day the Telde coastline is the setting for a fantastic colourful dawn. The early hours are the ideal moment to enjoy the beautiful morning sea which provides very good visibility to take great pictures and videos.</li>
         </ul>
       </div>
     </div>

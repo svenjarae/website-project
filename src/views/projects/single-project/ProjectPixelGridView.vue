@@ -13,15 +13,16 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>What</h2>
+            <h2>Info</h2>
           </li>
           <li>CSS ANIMATION</li>
+          <li>03/2022</li>
         </ul>
         <ul>
           <li>
             <h2>Description</h2>
           </li>
-          <li>Of course you can get all kinds of crazy with CSS and only one element. The triangle is just always particularly compelling because it’s so practical</li>
+          <li>CSS Grid isn’t just for creating flat, 2D layouts — we can make the most of the CSS grid and combine it with other CSS properties to do a lot of amazing things, like 3D layouts (and also some great shapes too).</li>
         </ul>
       </div>
     </div>

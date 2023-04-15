@@ -13,23 +13,11 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Where</h2>
-          </li>
-          <li>First: Make a happy face</li>
-          <li>07/2022</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>Who</h2>
-          </li>
-          <li>ONI STUDIO</li>
-          <li href="https://www.oni-studio.com/">Link to website</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>What</h2>
+            <h2>Info</h2>
           </li>
           <li>Jewellery, designed and crafted in Berlin.</li>
+          <li style="text-decoration: underline"><a href="https://www.oni-studio.com/">Link to website</a></li>
+          <li>07/2022</li>
         </ul>
       </div>
     </div>

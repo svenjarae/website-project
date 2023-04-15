@@ -13,24 +13,13 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Where</h2>
+            <h2>Info</h2>
           </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>Who</h2>
+          <li>TUFIA, EL CABRON & SARDINA DEL NORTE</li>
+          <li>Scuba Diving with
+            <a href="https://www.karapatdive.com/">Karapat Dive</a>
           </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
-        </ul>
-        <ul>
-          <li>
-            <h2>What</h2>
-          </li>
-          <li>First: Make a happy face</li>
-          <li>This website presents a mix of my previous works</li>
+          <li>The marine life found in the Canary Islands is interesting, being a combination of North Atlantic, Mediterranean, and endemic species.</li>
         </ul>
       </div>
     </div>
