@@ -304,7 +304,6 @@ iframe{
 iframe .vp-center {
   display: block;
   justify-content: inherit !important;
-
   align-items: center;
 }
 

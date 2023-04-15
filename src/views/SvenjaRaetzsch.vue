@@ -7,7 +7,7 @@
         </li>
         <li>First: Make a happy face</li>
         <li>This website presents a mix of my previous works</li>
-        <li>Sharks are damn cool and I recommend to spend as much time underwater as you can</li>
+        <li>Sharks are cool and I recommend to spend as much time underwater as you can</li>
         <li>Currently working at <a style="text-decoration: underline;" href="https://codevance.de/">CODEVANCE</a> as Frontend Developer</li>
       </ul>
       <router-link to="/projects" class="buttonContainer">

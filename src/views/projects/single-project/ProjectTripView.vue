@@ -29,7 +29,7 @@
     <div class="codeContainer">
       <h3 style="letter-spacing: 0.1em; font-size: 16px; padding: 0">HTML</h3>
       <pre><code>{{htmlCodeSample}}</code></pre>
-      <h3>CSS</h3>
+      <h3 style="letter-spacing: 0.1em; font-size: 16px; padding: 0">CSS</h3>
       <pre><code>{{cssCodeSample}}</code></pre>
     </div>
 
