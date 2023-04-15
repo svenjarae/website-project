@@ -3,7 +3,7 @@
     <div class="iframeContainer">
       <img :src="sealion"/>
       <div class="containerDownBtn" @click="goto('page2')">
-        <div>SCROLL DOWN</div>
+        <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
       </div>
     </div>

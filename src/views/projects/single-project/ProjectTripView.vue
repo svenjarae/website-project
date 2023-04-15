@@ -1,10 +1,9 @@
 <template>
   <div>
-
     <div class="iframeContainer">
       <TripAnimation></TripAnimation>
       <div class="containerDownBtn" @click="goto('page2')">
-        <div>SCROLL DOWN</div>
+        <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
       </div>
     </div>
@@ -32,7 +31,6 @@
       <h3 style="letter-spacing: 0.1em; font-size: 16px; padding: 0">CSS</h3>
       <pre><code>{{cssCodeSample}}</code></pre>
     </div>
-
   </div>
 </template>
 <script>

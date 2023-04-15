@@ -44,19 +44,15 @@
 
 export default {
   name: 'PixelGrid',
-  data(){
-    return{
-    }
-  },
-  props: {
-
-  }
-
 }
 </script>
 
-<style scoped>*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box }
-
+<style scoped>
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   /* scene set-up */
   [scene], [rotation], [center-z] { display: grid }
@@ -105,4 +101,5 @@ export default {
   /*lighting*/
   [pixel]::before { background-image: linear-gradient(rgb(255 255 255 / .25) 100%, transparent) }/*left*/
   [pixel] > span::before { background-image: linear-gradient(rgb(255 255 255 / .375) 100%, transparent) }/*top*/
+
 </style>

@@ -1,41 +1,33 @@
 <template>
-  <div id="parent">
-    <div class="pageOne">
-      <div class="iframeContainer">
-        <h1 class="projectTitle">BIRD</h1>
-        <div style="margin: 60px auto;">
-        <BirdAnimation></BirdAnimation>
-        </div>
-        <div class="containerDownBtn">
-          <DownBtn></DownBtn>
-        </div>
+  <div>
+    <div class="iframeContainer">
+      <BirdAnimation></BirdAnimation>
+      <div class="containerDownBtn" @click="goto('page2')">
+        <div>CLICK TO SCROLL</div>
+        <DownBtn></DownBtn>
       </div>
     </div>
-    <router-link class="backBtnContainer" to="/projects">
-      <BackBtn></BackBtn>
-    </router-link>
-    <div class="layoutWrapper" style="margin-top: 80px;margin-bottom: 80px;">
-      <div class="mainDescriptionWrapper">
-        <h1>BIRD</h1>
-        <p>Animation</p>
-      </div>
-      <div class="flexContainer">
-        <div class="flexWrapper">
-          <span class="p-heading">WHAT</span>
-          <span class="p-content">A SIMPLE BIRD ANIMATION</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">HOW</span>
-          <span class="p-content">MADE WITH CSS & JS</span>
-        </div>
-        <div class="flexWrapper">
-          <span class="p-heading">WHEN</span>
-          <span class="p-content">01/2021</span>
-        </div>
+    <div style="height: 100vh; width: 100vw;"></div>
+    <div ref="page2" class="projectContentContainer">
+      <h1 class="projectTitle">BIRD</h1>
+      <div class="factsContainer">
+        <ul>
+          <li>
+            <h2>What</h2>
+          </li>
+          <li>CSS ANIMATION</li>
+        </ul>
+        <ul>
+          <li>
+            <h2>Description</h2>
+          </li>
+          <li>Of course you can get all kinds of crazy with CSS and only one element. The triangle is just always particularly compelling because it’s so practical</li>
+        </ul>
       </div>
     </div>
-    <div class="galleryContainer">
-
+    <div class="codeContainer">
+      <h3 style="letter-spacing: 0.1em; font-size: 16px; padding: 0">CSS</h3>
+      <pre><code>{{cssCodeSample}}</code></pre>
     </div>
   </div>
 </template>
@@ -53,7 +45,6 @@ import bgWater from "/src/assets/images/projects/taliarte/Sequence 01.00_00_09_3
 
 
 import DownBtn from "@/components/buttons/DownBtn";
-import BackBtn from "@/components/buttons/BackBtn";
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 import BirdAnimation from "@/components/animations/BirdAnimation";
@@ -63,7 +54,6 @@ export default {
   components: {
     BirdAnimation,
     DownBtn,
-    BackBtn
   },
   props:{
 
@@ -77,10 +67,72 @@ export default {
     water: water,
     lilly: lilly,
     bgWater: bgWater,
+    cssCodeSample:`
+    <style scoped>
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      /* scene set-up */
+      [scene], [rotation], [center-z] { display: grid }
+      [scene] :not(:empty) { transform-style: preserve-3d }
+      [scene] { width: var(--size); perspective: calc(var(--size) * 2); aspect-ratio: 1 }
+
+      /* rotate/animate scene  */
+      [rotation][animate="true"] { animation: rotateScene 10s linear infinite }
+      @keyframes rotateScene{ to { transform: rotateY(360deg) } }
+
+      /* position contents to z-center */
+      [center-z] { transform: translateZ(calc(var(--size) * .5)) }
+
+      /* grid */
+      [grid] {
+        display: grid;
+        grid-template-columns: repeat(var(--dimension), 1fr);
+        grid-template-rows: repeat(var(--dimension), 1fr);
+      }
+
+      /* pixel */
+      [pixel] {
+        --pixel-size: calc(var(--size) / var(--dimension));
+        grid-row: calc(var(--dimension) - var(--l) + 1);
+        grid-column: var(--c);
+        transform: translateZ(calc(var(--pixel-size) * (var(--dimension) - var(--r)) * -1));
+        background-color: var(--color);
+      }
+      /* sides set up */
+      [pixel], [pixel] > span { display: grid }
+      [pixel] > span { background-color: inherit; transform-style: preserve-3d }
+      [pixel]::before, [pixel]::after, [pixel] > span::before, [pixel] > span::after { content: ""; background-color: inherit }
+      [pixel]::before, [pixel]::after, [pixel] > span, [pixel] > span::before, [pixel] > span::after { grid-column: 1; grid-row: 1 }
+
+      /*sides orientation*/
+      [pixel]::before { transform-origin: left; transform: rotateY(90deg) } /*left*/
+      [pixel]::after { transform-origin: right; transform: rotateY(-90deg) } /*right*/
+      [pixel] > span { transform: translateZ(calc(var(--pixel-size) * -1)) } /*back*/
+      [pixel] > span::before { transform-origin: top; transform: rotateX(90deg) } /*top*/
+      [pixel] > span::after { transform-origin: bottom; transform: rotateX(-90deg) } /*bottom*/
+
+      /* shading */
+      [pixel]::after{ background-image: linear-gradient(rgb(0 0 0 / .25) 100%, transparent) }/*right*/
+      [pixel] > span::after { background-image: linear-gradient(rgb(0 0 0 / .375) 100%, transparent) }/*bottom*/
+
+      /*lighting*/
+      [pixel]::before { background-image: linear-gradient(rgb(255 255 255 / .25) 100%, transparent) }/*left*/
+      [pixel] > span::before { background-image: linear-gradient(rgb(255 255 255 / .375) 100%, transparent) }/*top*/
+
+    </style>
+        `,
     plugins: [lgZoom, lgVideo],
   }),
   methods: {
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    },
     onInit: () => {
       console.log('lightGallery has been initialized');
     },
@@ -96,76 +148,82 @@ export default {
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 
-.galleryContainer{
-  padding-bottom: 60px;
+pre{
+  background-color: #202023;
+  color: white;
 }
 
 .projectTitle{
-  position: absolute;
+  color: white;
   font-size: 100px;
-  text-transform: uppercase;
-  top: 50%;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  position: absolute;
+  top: 80px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: orangered;
-  font-family: myFirstFont;
+  transform: translate(-50%, 0);
+  font-family: var(--secondaryFont);
 }
 
 .containerDownBtn{
   position: absolute;
-  bottom: 60px;
+  bottom: 24px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  color: white;
 }
 
-.galleryContainer a{
-  position: relative;
-}
-.galleryContainer a:hover svg{
-  fill: orangered;
-}
-
-.backBtnContainer{
-  background-color: white;
-  border-radius: 2px;
-  z-index: 1000;
+.containerDownBtn div{
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
 }
 
 .lightgallery-vue{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  grid-gap: clamp(1rem, 2vw, 1rem)
 }
 
 .lightgallery-vue img{
   object-fit: cover;
   height: 300px;
   width: 100%;
-  border-radius: 20px;
   min-width: 200px;
 }
 
-#parent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
+.projectContentContainer{
+  height: 100vh;
+  background-color: #202023;
+  position: relative;
 }
 
-#parent > div:nth-child(1) {
-  height: 100%;
-  width: 100%;
+.factsContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 300px;
+  text-align: left;
+  color: darkgray;
+  text-transform: uppercase;
+  z-index: 100;
+  padding-inline-start: 0;
+  padding: 80px;
+  letter-spacing: 0.1em;
 }
-#parent > div:nth-child(2) {
-  padding: 60px;
+
+.factsContainer h2{
+  color: white;
+  font-weight: 500;
+}
+
+.factsContainer li{
+  list-style: none;
+  margin: 8px 0;
 }
 
 .iframeContainer{
-  background-color: #000;
+  background-color: black;
   position: absolute;
   left: 0;
   top: 0;
@@ -178,41 +236,6 @@ export default {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-
-.divContainer{
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 4.86em;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
-}
-
-.flexContainer{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mainDescriptionWrapper{
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-
-.mainDescriptionWrapper h1{
-  font-family: MyFirstFont;
-  font-size: 4em;
-  text-transform: uppercase;
-}
-
-.flexWrapper{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
 }
 
 iframe{
@@ -229,16 +252,9 @@ iframe .vp-center {
   align-items: center;
 }
 
-.vp-center {
-  display: block;
-  justify-content: inherit !important;
-
-  align-items: center;
+.codeContainer{
+  text-align: left;
+  padding: 80px;
 }
-
-.currentLink{
-  margin-left: 5px;
-}
-
 
 </style>

@@ -3,7 +3,7 @@
     <div class="iframeContainer">
       <img :src="sequ2stil1"/>
       <div class="containerDownBtn" @click="goto('page2')">
-        <div>SCROLL DOWN</div>
+        <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
       </div>
     </div>
