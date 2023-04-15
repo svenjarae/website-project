@@ -1,6 +1,16 @@
 <template>
       <div class="grid-container">
         <div>
+          <router-link to="/projects/descents">
+            <NewsCard title="Descents" :icon-src=pop></NewsCard>
+          </router-link>
+        </div>
+        <div>
+          <router-link to="/projects/buceo-nocturno">
+            <NewsCard title="BUCEO NOCTURNO" :icon-src=oct1></NewsCard>
+          </router-link>
+        </div>
+        <div>
           <router-link to="/projects/taliarte">
             <NewsCard title="TALIARTE" :icon-src=ivonOne></NewsCard>
           </router-link>
@@ -40,6 +50,8 @@
 <script>
 import NewsCard from "@/components/news/NewsCard";
 
+import pop from "/././././././src/assets/images/projects/descents/pop.jpg";
+import oct1 from "/././././././src/assets/images/projects/buceo-nocturno/pulpo.jpg";
 import ivonOne from "/././././././src/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
 import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
@@ -56,6 +68,8 @@ export default {
   },
   data(){
     return{
+      pop:pop,
+      oct1:oct1,
       ivonOne: ivonOne,
       titleImgSeal: titleImgSeal,
       titleImgOni: titleImgOni,

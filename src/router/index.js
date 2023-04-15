@@ -16,6 +16,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "projects" */ '../views/projects/ProjectsView')
   },
   {
+    path: '/projects/descents',
+    name: 'descents',
+    component: () => import(/* webpackChunkName: "descents" */ '../views/projects/single-project/ProjectDescentView')
+  },
+  {
+    path: '/projects/buceo-nocturno',
+    name: 'buceo-nocturno',
+    component: () => import(/* webpackChunkName: "buceo-nocturno" */ '../views/projects/single-project/ProjectBuceoNocturnoView')
+  },
+  {
     path: '/projects/taliarte',
     name: 'taliarte',
     component: () => import(/* webpackChunkName: "taliarte" */ '../views/projects/single-project/ProjectTaliarteView')
