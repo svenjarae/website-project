@@ -16,14 +16,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "projects" */ '../views/projects/ProjectsView')
   },
   {
-    path: '/projects/descents',
-    name: 'descents',
-    component: () => import(/* webpackChunkName: "descents" */ '../views/projects/single-project/ProjectDescentView')
+    path: '/projects/sub',
+    name: 'sub',
+    component: () => import(/* webpackChunkName: "sub" */ '../views/projects/single-project/ProjectSubView')
   },
   {
-    path: '/projects/buceo-nocturno',
-    name: 'buceo-nocturno',
-    component: () => import(/* webpackChunkName: "buceo-nocturno" */ '../views/projects/single-project/ProjectBuceoNocturnoView')
+    path: '/projects/nocturno',
+    name: 'nocturno',
+    component: () => import(/* webpackChunkName: "nocturno" */ '../views/projects/single-project/ProjectBuceoNocturnoView')
   },
   {
     path: '/projects/taliarte',
@@ -66,8 +66,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/projects/single-project/ProjectPixelGridView')
   },
   {
-    path: '/skills',
-    name: 'skills',
+    path: '/who',
+    name: 'who',
     component: () => import(/* webpackChunkName: "skills" */ '../views/SkillsView')
   },
   {

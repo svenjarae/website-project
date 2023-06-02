@@ -75,6 +75,7 @@ export default {
     object-fit: cover;
     transition: all 0.5s ease-in-out;
     border-radius: 1px;
+    /*filter: grayscale(1);*/
   }
 
   p{

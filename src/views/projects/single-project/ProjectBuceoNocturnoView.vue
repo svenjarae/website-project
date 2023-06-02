@@ -9,7 +9,7 @@
     </div>
     <div style="height: 100vh; width: 100vw;"></div>
     <div ref="page2" class="projectContentContainer">
-      <h1 class="projectTitle">Buceo Nocturno</h1>
+      <h1 class="projectTitle">NOCTURNO</h1>
       <div class="factsContainer">
         <ul>
           <li>
@@ -269,7 +269,12 @@ iframe{
 iframe .vp-center {
   display: block;
   justify-content: inherit !important;
-
   align-items: center;
+}
+
+@media only screen and (max-width: 720px){
+  .projectTitle{
+    font-size: 30px;
+  }
 }
 </style>

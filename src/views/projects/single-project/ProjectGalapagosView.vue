@@ -16,14 +16,13 @@
             <h2>Info</h2>
           </li>
           <li>Galapagos Island</li>
-          <li>Best experience I had in life so far</li>
           <li>10/2018</li>
         </ul>
         <ul>
           <li>
             <h2>Description</h2>
           </li>
-          <li>The Galápagos are best known for their diverse array of plant and animal species. Many species are not found anywhere else in the world. </li>
+        <li>Perfect example of evolution & unique wildlife.</li>
         </ul>
       </div>
     </div>
@@ -67,14 +66,15 @@
               :src="waterTurtle"
           />
         </a>
+
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="iDive"
+            :data-src="sealionsCuddle"
         >
           <img
               class="img-responsive"
-              :src="iDive"
+              :src="sealionsCuddle"
           />
         </a>
         <a
@@ -97,14 +97,25 @@
               :src="manta"
           />
         </a>
+
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="sealionsCuddle"
+            :data-src="turtle"
         >
           <img
               class="img-responsive"
-              :src="sealionsCuddle"
+              :src="turtle"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="bwWhitetips"
+        >
+          <img
+              class="img-responsive"
+              :src="bwWhitetips"
           />
         </a>
         <a
@@ -150,6 +161,26 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
+            :data-src="iguana"
+        >
+          <img
+              class="img-responsive"
+              :src="iguana"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="iguanas"
+        >
+          <img
+              class="img-responsive"
+              :src="iguanas"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
             :data-src="galapagosExe"
         >
           <img
@@ -160,11 +191,31 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="pinguLandscape"
+            :data-src="turtles"
         >
           <img
               class="img-responsive"
-              :src="pinguLandscape"
+              :src="turtles"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="mobulas"
+        >
+          <img
+              class="img-responsive"
+              :src="mobulas"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="whitetip"
+        >
+          <img
+              class="img-responsive"
+              :src="whitetip"
           />
         </a>
         <a
@@ -177,7 +228,26 @@
               :src="sharkFin"
           />
         </a>
-
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="iDive"
+        >
+          <img
+              class="img-responsive"
+              :src="iDive"
+          />
+        </a>
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="molamola"
+        >
+          <img
+              class="img-responsive"
+              :src="molamola"
+          />
+        </a>
         <!-- VImeo Video --->
         <a
             data-lg-size="1280-720"
@@ -189,32 +259,6 @@
               height="100"
               class="img-responsive"
               :src="pingu"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586539"
-            data-poster=""
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="sharksWhiteTips"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586552"
-            data-poster=""
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="whiteTips"
           />
         </a>
       </lightgallery>
@@ -234,15 +278,21 @@ import manta from "/././././././src/assets/images/projects/galapagos/galleryImgs
 import sealionsCuddle from "/././././././src/assets/images/projects/galapagos/galleryImgs/seelions-cuddle.jpg";
 import sharkFin from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharkfin.jpg";
 import pingu from "/././././././src/assets/images/projects/galapagos/galleryImgs/piingu.png";
-import sharksWhiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharksWhiteTips.png";
-import whiteTips from "/././././././src/assets/images/projects/galapagos/galleryImgs/whiteTips.png";
 import waterHighSat from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
 import waterTurtle from "/././././././src/assets/images/projects/glowing-turts/water-turtle.jpg";
-
 import birdDry from "/././././././src/assets/images/projects/galapagos/galleryImgs/birdDry.jpg";
 import galapagosExe from "/src/assets/images/projects/galapagos/galleryImgs/galapagosExe.jpg";
 import landscape from "/src/assets/images/projects/galapagos/galleryImgs/landscape.jpg";
-import pinguLandscape from "/src/assets/images/projects/galapagos/galleryImgs/pinguLandscape.jpg";
+
+
+import bwWhitetips from "/src/assets/images/projects/galapagos/galleryImgs/bw-whitetips.jpg";
+import whitetip from "/src/assets/images/projects/galapagos/galleryImgs/whitetip.jpg";
+import iguana from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-iguana.jpg";
+import iguanas from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-iguanas.jpg";
+import turtle from "/src/assets/images/projects/galapagos/galleryImgs/galapagos_turtle.jpg";
+import turtles from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-turtles.jpg";
+import molamola from "/src/assets/images/projects/galapagos/galleryImgs/molamola.jpg";
+import mobulas from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-mobulas.jpg";
 
 import DownBtn from "@/components/buttons/DownBtn";
 import Lightgallery from 'lightgallery/vue';
@@ -261,9 +311,7 @@ export default {
   data: () => ({
     image: image,
     sealionsCuddle: sealionsCuddle,
-    whiteTips: whiteTips,
     sharkFin: sharkFin,
-    sharksWhiteTips: sharksWhiteTips,
     manta: manta,
     island: island,
     galapagosShark: galapagosShark,
@@ -273,11 +321,18 @@ export default {
     pingu: pingu,
     waterHighSat: waterHighSat,
     waterTurtle: waterTurtle,
-
     birdDry: birdDry,
     galapagosExe: galapagosExe,
     landscape: landscape,
-    pinguLandscape: pinguLandscape,
+
+    bwWhitetips: bwWhitetips,
+    iguana: iguana,
+    iguanas: iguanas,
+    mobulas: mobulas,
+    turtle: turtle,
+    turtles: turtles,
+    molamola: molamola,
+    whitetip: whitetip,
 
     plugins: [lgZoom, lgVideo],
   }),

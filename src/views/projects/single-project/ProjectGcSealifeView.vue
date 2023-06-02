@@ -19,7 +19,7 @@
           <li>Scuba Diving with
             <a href="https://www.karapatdive.com/">Karapat Dive</a>
           </li>
-          <li>The marine life found in the Canary Islands is interesting, being a combination of North Atlantic, Mediterranean, and endemic species.</li>
+          <li>A combination of North Atlantic, Mediterranean, and endemic species.</li>
         </ul>
       </div>
     </div>
@@ -63,39 +63,87 @@
               :src="squid3"
           />
         </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="ray"
-        >
-          <img
-              class="img-responsive"
-              :src="ray"
-          />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="fishGrumpy"
-        >
-          <img
-              class="img-responsive"
-              :src="fishGrumpy"
-          />
-        </a>
         <!-- VImeo Video --->
         <a
             data-lg-size="1280-720"
-            data-src="//vimeo.com/764578319"
+            data-src="//vimeo.com/826681609"
             data-poster=""
         >
           <img
               width="300"
               height="100"
               class="img-responsive"
-              :src="titleImgVideo"
+              :src="titleImgVideoCuttlefish"
+          />
+        </a>
+        <!-- Image --->
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="glow"
+        >
+          <img
+              class="img-responsive"
+              :src="glow"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/826688340"
+            data-poster=""
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="titleImgVideoAngelshark"
+          />
+        </a>
+        <!-- Image --->
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="part1"
+        >
+          <img
+              class="img-responsive"
+              :src="part1"
+          />
+        </a>
+        <!-- Image --->
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="part2"
+        >
+          <img
+              class="img-responsive"
+              :src="part2"
+          />
+        </a>
+        <!-- VImeo Video --->
+        <a
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/826704970"
+            data-poster=""
+        >
+          <img
+              width="300"
+              height="100"
+              class="img-responsive"
+              :src="titleImgVideoMorrena"
+          />
+        </a>
+        <!-- Image --->
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="fishColors"
+        >
+          <img
+              class="img-responsive"
+              :src="fishColors"
           />
         </a>
       </lightgallery>
@@ -109,10 +157,14 @@ import image from "/src/assets/logo.png";
 import squid2 from "/src/assets/images/projects/gc-sealife/squid2.png";
 import squid1 from "/src/assets/images/projects/gc-sealife/squid1.png";
 import squid3 from "/src/assets/images/projects/gc-sealife/squid3.png";
+import titleImgVideoCuttlefish from "/src/assets/images/projects/gc-sealife/cuttleTitleimg.jpg";
+import titleImgVideoMorrena from "/src/assets/images/projects/gc-sealife/morrenaTitleimg.jpg";
+import titleImgVideoAngelshark from "/src/assets/images/projects/gc-sealife/angelsharkTitleimg.jpg";
 
-import fishGrumpy from "/src/assets/images/projects/gc-sealife/fishGrumpy.png";
-import ray from "/src/assets/images/projects/gc-sealife/ray.png";
-import titleImgVideo from "/src/assets/images/projects/gc-sealife/titleimgVideoGcSealife.png";
+import part1 from "/src/assets/images/projects/gc-sealife/part1.jpg";
+import part2 from "/src/assets/images/projects/gc-sealife/part2.jpg";
+import glow from "/src/assets/images/projects/gc-sealife/glow.png";
+import fishColors from "/src/assets/images/projects/gc-sealife/fishColors.png";
 
 
 import DownBtn from "@/components/buttons/DownBtn";
@@ -134,9 +186,13 @@ export default {
     squid1: squid1,
     squid2: squid2,
     squid3: squid3,
-    fishGrumpy: fishGrumpy,
-    ray: ray,
-    titleImgVideo: titleImgVideo,
+    part1: part1,
+    part2: part2,
+    glow: glow,
+    fishColors: fishColors,
+    titleImgVideoCuttlefish: titleImgVideoCuttlefish,
+    titleImgVideoMorrena: titleImgVideoMorrena,
+    titleImgVideoAngelshark: titleImgVideoAngelshark,
 
     plugins: [lgZoom, lgVideo],
   }),

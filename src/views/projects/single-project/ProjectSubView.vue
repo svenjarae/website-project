@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="iframeContainer">
-      <img :src="pop"/>
+      <img :src="bubble2"/>
       <div class="containerDownBtn" @click="goto('page2')">
         <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
@@ -9,16 +9,13 @@
     </div>
     <div style="height: 100vh; width: 100vw;"></div>
     <div ref="page2" class="projectContentContainer">
-      <h1 class="projectTitle">Descents</h1>
+      <h1 class="projectTitle">SUB</h1>
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Info</h2>
+            <h2>It seems big enough to contain everything anyone could ever feel.</h2>
           </li>
-          <li>The ocean, despite being saltwater, is also considered surface water</li>
-          <li>The ocean covers 70 percent of Earth's surface</li>
-          <li>The oceans contain 97% of Earth's water</li>
-          <li>Ocean currents govern the world's weather</li>
+          <li>It contains so many colors. Silver at dawn, green at noon, dark blue in the evening. Sometimes it looks almost red. Or it will turn the color of old coins.</li>
         </ul>
       </div>
     </div>
@@ -32,11 +29,11 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="pop"
+            :data-src="bubble2"
         >
           <img
               class="img-responsive"
-              :src="pop"
+              :src="bubble2"
           />
         </a>
         <!-- Image --->
@@ -54,11 +51,11 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="bubble2"
+            :data-src="bubble3"
         >
           <img
               class="img-responsive"
-              :src="bubble2"
+              :src="bubble3"
           />
         </a>
         <!-- Image --->
@@ -105,19 +102,28 @@
               :src="wave"
           />
         </a>
-        <!-- VImeo Video
+        <!-- Image --->
         <a
-          data-lg-size="1280-720"
-          data-src="//vimeo.com/764521178"
-          data-poster=""
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="one"
         >
-        <img
-            width="300"
-            height="100"
-            class="img-responsive"
-            :src="titleImgAgua"
-        />
-        </a>--->
+          <img
+              class="img-responsive"
+              :src="one"
+          />
+        </a>
+        <!-- Image --->
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="two"
+        >
+          <img
+              class="img-responsive"
+              :src="two"
+          />
+        </a>
       </lightgallery>
     </div>
   </div>
@@ -125,14 +131,19 @@
 <script>
 
 // images
-import bg from "/src/assets/images/projects/descents/bg.jpg";
-import bubble from "/src/assets/images/projects/descents/bubble.jpg";
-import bubble2 from "/src/assets/images/projects/descents/bubble2.jpg";
-import pop from "/src/assets/images/projects/descents/pop.jpg";
-import shallow from "/src/assets/images/projects/descents/shallow.jpg";
-import sparks from "/src/assets/images/projects/descents/sparks.jpg";
-import wave from "/src/assets/images/projects/descents/wave.jpg";
-//import titleImgAgua from "/src/assets/images/projects/descents/wave.jpg";
+
+import bg from "/src/assets/images/projects/sub/bg.jpg";
+import bubble from "/src/assets/images/projects/sub/bubble.jpg";
+import bubble2 from "/src/assets/images/projects/sub/bubble2.jpg";
+import bubble3 from "/src/assets/images/projects/sub/bubble3.png";
+import pop from "/src/assets/images/projects/sub/pop.jpg";
+import shallow from "/src/assets/images/projects/sub/shallow.jpg";
+import sparks from "/src/assets/images/projects/sub/sparks.jpg";
+import wave from "/src/assets/images/projects/sub/wave.jpg";
+import one from "/src/assets/images/projects/sub/1-1.jpg";
+import two from "/src/assets/images/projects/sub/1-2.jpg";
+
+//import titleImgAgua from "/src/assets/images/projects/sub/wave.jpg";
 
 
 import DownBtn from "@/components/buttons/DownBtn";
@@ -141,7 +152,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
 export default {
-  name: 'ProjectGalapagosView',
+  name: 'ProjectSubView',
   components: {
     Lightgallery,
     DownBtn,
@@ -150,13 +161,19 @@ export default {
 
   },
   data: () => ({
+
     bg: bg,
     bubble: bubble,
     bubble2: bubble2,
+    bubble3: bubble3,
+
     pop: pop,
     shallow: shallow,
     sparks: sparks,
     wave: wave,
+    one: one,
+    two: two,
+
     //titleImgAgua: titleImgAgua,
 
     plugins: [lgZoom, lgVideo],

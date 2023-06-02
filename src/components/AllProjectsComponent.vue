@@ -1,13 +1,8 @@
 <template>
       <div class="grid-container">
         <div>
-          <router-link to="/projects/descents">
-            <NewsCard title="Descents" :icon-src=pop></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/buceo-nocturno">
-            <NewsCard title="BUCEO NOCTURNO" :icon-src=oct1></NewsCard>
+          <router-link to="/projects/nocturno">
+            <NewsCard title="NOCTURNO" :icon-src=oct1></NewsCard>
           </router-link>
         </div>
         <div>
@@ -41,6 +36,11 @@
           </router-link>
         </div>
         <div>
+          <router-link to="/projects/sub">
+            <NewsCard title="SUB" :icon-src=bubble2></NewsCard>
+          </router-link>
+        </div>
+        <div>
           <router-link to="/projects/galapagos">
             <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
           </router-link>
@@ -50,7 +50,7 @@
 <script>
 import NewsCard from "@/components/news/NewsCard";
 
-import pop from "/././././././src/assets/images/projects/descents/pop.jpg";
+import bubble2 from "/././././././src/assets/images/projects/sub/bubble2.jpg";
 import oct1 from "/././././././src/assets/images/projects/buceo-nocturno/pulpo.jpg";
 import ivonOne from "/././././././src/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
@@ -68,7 +68,7 @@ export default {
   },
   data(){
     return{
-      pop:pop,
+      bubble2:bubble2,
       oct1:oct1,
       ivonOne: ivonOne,
       titleImgSeal: titleImgSeal,

@@ -1,7 +1,12 @@
 <template>
   <div>
     <nav>
-      <main-nav></main-nav>
+      <div class="mainNavContainer">
+        <main-nav></main-nav>
+      </div>
+      <div class="mobileNavContainer">
+        <MobileNavigation></MobileNavigation>
+      </div>
     </nav>
     <router-view v-slot="{ Component }">
       <transition>
@@ -24,9 +29,11 @@
 
 import MainNav from "@/components/nav/mainNav";
 import BeatingHeart from "@/components/animations/BeatingHeart";
+import MobileNavigation from "@/components/nav/MobileNavigation";
 export default {
   name: 'App',
   components: {
+    MobileNavigation,
     BeatingHeart,
     MainNav
     //AudioPlayer
@@ -133,10 +140,17 @@ ul {
   padding-inline-start: 0;
 }
 
-
 a{
   text-decoration: none;
   color: inherit;
+}
+
+.mainNavContainer{
+  display: block;
+}
+
+.mobileNavContainer{
+  display: none;
 }
 
 .innerContainer{
@@ -150,6 +164,16 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 720px) {
+  .mainNavContainer{
+    display: none;
+  }
+
+  .mobileNavContainer{
+    display: block;
+  }
 }
 
 </style>

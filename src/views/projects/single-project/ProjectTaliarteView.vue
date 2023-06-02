@@ -81,17 +81,6 @@
         <a
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="water"
-        >
-          <img
-              class="img-responsive"
-              :src="water"
-          />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
             :data-src="lilly"
         >
           <img
@@ -108,6 +97,17 @@
           <img
               class="img-responsive"
               :src="bgWater"
+          />
+        </a>
+        <!-- Image --->
+        <a
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="yo"
+        >
+          <img
+              class="img-responsive"
+              :src="yo"
           />
         </a>
         <!-- VImeo Video --->
@@ -135,9 +135,9 @@ import ivonOne from "/src/assets/images/projects/taliarte/P1033667.00_00_26_02.S
 import ivonTwo from "/src/assets/images/projects/taliarte/P1033667.00_00_02_20.Still004.jpg";
 import ivonThree from "/src/assets/images/projects/taliarte/P1033667.00_00_01_08.Still005.jpg";
 import ivonFour from "/src/assets/images/projects/taliarte/Sequence 01.00_00_08_31.Still005.jpg";
-import water from "/src/assets/images/projects/taliarte/P1044050.MOV.05_59_46_44.Still001.jpg";
 import lilly from "/src/assets/images/projects/taliarte/Sequence 01.00_03_10_00.Still005.jpg";
 import bgWater from "/src/assets/images/projects/taliarte/Sequence 01.00_00_09_34.Still016.jpg";
+import yo from "/src/assets/images/projects/taliarte/yo-master.jpg";
 import titleImgAgua from "/src/assets/images/projects/taliarte/aguaTitleimg.png";
 
 
@@ -161,9 +161,9 @@ export default {
     ivonTwo: ivonTwo,
     ivonThree: ivonThree,
     ivonFour: ivonFour,
-    water: water,
     lilly: lilly,
     bgWater: bgWater,
+    yo:yo,
     titleImgAgua: titleImgAgua,
 
     plugins: [lgZoom, lgVideo],

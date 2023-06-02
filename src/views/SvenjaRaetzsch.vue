@@ -3,11 +3,10 @@
     <div class="innerContainer" style="background-color: #202023;">
       <ul class="factsContainer">
         <li>
-          <h2>RANDOM FACTS</h2>
+          <h2>Make a happy face</h2>
         </li>
-        <li>First: Make a happy face</li>
         <li>This website presents a mix of my previous works</li>
-        <li>Sharks are cool and I recommend to spend as much time underwater as you can</li>
+        <li>Spend as much time underwater as you can</li>
         <li>Currently working at <a style="text-decoration: underline;" href="https://codevance.de/">CODEVANCE</a> as Frontend Developer</li>
       </ul>
       <router-link to="/projects" class="buttonContainer">
@@ -64,7 +63,7 @@ export default {
   }
 
   .factsContainer li{
-    list-style: none;
+    list-style: decimal;
     margin: 8px 0;
   }
   .innerContainer{
@@ -86,6 +85,20 @@ export default {
     height: 100%;
     object-fit: cover;
     opacity: 0.1;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .factsContainer{
+      position: inherit;
+      max-width: inherit;
+      padding-top: 110px;
+    }
+    .buttonContainer{
+      position: inherit;
+      top: inherit;
+      left: inherit;
+      transform: inherit;
+    }
   }
 
 </style>
