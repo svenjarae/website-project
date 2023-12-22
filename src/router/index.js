@@ -51,17 +51,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "maldives" */ '../views/projects/single-project/ProjectMaldivesView')
   },
   {
-    path: '/projects/animations/bird',
+    path: '/projects/bird',
     name: 'bird',
     component: () => import(/* webpackChunkName: "bird" */ '../views/projects/single-project/ProjectBirdView')
   },
   {
-    path: '/projects/animations/triangle',
+    path: '/projects/triangle',
     name: 'triangle',
     component: () => import(/* webpackChunkName: "trip" */ '../views/projects/single-project/ProjectTripView')
   },
   {
-    path: '/projects/animations/pixelgrid',
+    path: '/projects/pixelgrid',
     name: 'pixelgrid',
     component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/projects/single-project/ProjectPixelGridView')
   },

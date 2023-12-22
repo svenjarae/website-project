@@ -1,89 +1,64 @@
 <template>
-      <div class="grid-container">
-        <div>
-          <router-link to="/projects/nocturno">
-            <NewsCard title="NOCTURNO" :icon-src=oct1></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/taliarte">
-            <NewsCard title="TALIARTE" :icon-src=ivonOne></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/gcsealife">
-            <NewsCard title="GC SEALIFE" :icon-src=squid1></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/animations/triangle">
-            <NewsCard title="TRIANGLE" :icon-src=titleImgTrip></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/animations/bird">
-            <NewsCard title="BIRD" :icon-src=titleImgBird></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/onistudio">
-            <NewsCard title="ONI STUDIO" :icon-src=titleImgOni></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/animations/pixelgrid">
-            <NewsCard title="3DGRID" :icon-src=pixelGridTitleImg></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/sub">
-            <NewsCard title="SUB" :icon-src=bubble2></NewsCard>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/projects/galapagos">
-            <NewsCard title="GALAPAGOS" :icon-src=titleImgSeal></NewsCard>
-          </router-link>
-        </div>
-      </div>
+  <!-- Filter-Buttons -->
+  <div class="filterContainer">
+      <button @click="setSelected('all')" :class="{ 'active': selected === 'all' }">Alle</button>
+      <button @click="setSelected('film')" :class="{ 'active': selected === 'film' }">Film</button>
+      <button @click="setSelected('animation')" :class="{ 'active': selected === 'animation' }">Animation</button>
+      <button @click="setSelected('webdesign')" :class="{ 'active': selected === 'webdesign' }">Webdesign</button>
+    </div>
+  <div class="grid-container">
+    <div v-for="project in filteredProjects" :key="project.title">
+      <router-link :to="'/projects/' + project.title.toLowerCase()">
+        <NewsCard :title="project.title" :icon-src="project.iconSrc"></NewsCard>
+      </router-link>
+    </div>
+  </div>
 </template>
+
 <script>
 import NewsCard from "@/components/news/NewsCard";
 
+import oct1 from "@/assets/images/projects/buceo-nocturno/pulpo.jpg";
+import ivonOne from "@/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import bubble2 from "/././././././src/assets/images/projects/sub/bubble2.jpg";
-import oct1 from "/././././././src/assets/images/projects/buceo-nocturno/pulpo.jpg";
-import ivonOne from "/././././././src/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
 import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
 import titleImgBird from "/././././././src/assets/images/projects/animations/bird/bird-titleimg.png";
 import titleImgTrip from "/././././././src/assets/images/projects/animations/trip/titleimg-trip.png";
 import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
 import pixelGridTitleImg from "/././././././src/assets/images/projects/animations/pixel-grid/pixelGridTitleImg.png";
+// ... (weitere Bilder importieren)
 
 export default {
   name: 'AllProjectsComponent',
   components: {
-
     NewsCard
   },
-  data(){
-    return{
-      bubble2:bubble2,
-      oct1:oct1,
-      ivonOne: ivonOne,
-      titleImgSeal: titleImgSeal,
-      titleImgOni: titleImgOni,
-      squid1: squid1,
-      titleImgBird: titleImgBird,
-      titleImgTrip: titleImgTrip,
-      pixelGridTitleImg: pixelGridTitleImg,
-
-      showPhoto: false,
-      showAnime: false,
-      showAll: true,
-
+  data() {
+    return {
+      projects: [
+      { title: 'nocturno', iconSrc: oct1, category: 'film' },
+      { title: 'taliarte', iconSrc: ivonOne, category: 'film' },
+      { title: 'gcsealife', iconSrc: squid1, category: 'film' },
+      { title: 'triangle', iconSrc: titleImgTrip, category: 'animation' },
+      { title: 'bird', iconSrc: titleImgBird, category: 'animation' },
+      { title: 'onistudio', iconSrc: titleImgOni, category: 'film' },
+      { title: 'pixelgrid', iconSrc: pixelGridTitleImg, category: 'animation' },
+      { title: 'sub', iconSrc: bubble2, category: 'film' },
+      { title: 'galapagos', iconSrc: titleImgSeal, category: 'film' },
+      // Add more projects as needed
+    ],
       selected: 'all',
-    }
+    };
+  },
+  computed: {
+    filteredProjects() {
+      if (this.selected === 'all') {
+        return this.projects;
+      } else {
+        return this.projects.filter(project => project.category === this.selected);
+      }
+    },
   },
   methods: {
     setSelected(tab) {
@@ -92,8 +67,8 @@ export default {
   }
 }
 </script>
-<style scoped>
 
+<style scoped>
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
@@ -106,11 +81,47 @@ export default {
   height: 300px;
 }
 
-@media screen and (max-width: 720px) {
-  .grid-container{
-    margin-bottom: 150px;
-  }
+.filterContainer{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
+button {
+  letter-spacing: 0.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #313133;
+    background: white;
+    border: none;
+    border-radius: 1000px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
 
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@media only screen and (max-width: 720px) {
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Adjusted for mobile */
+  grid-gap: clamp(1rem, 2vw, 1rem);
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 10px;
+    margin-left: 20px;
+    position: fixed;
+    z-index: 1;
+    bottom: 40px;
+}
+}
 </style>

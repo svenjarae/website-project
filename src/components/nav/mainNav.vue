@@ -37,13 +37,19 @@
       <router-link to="/projects">PROJECTS</router-link>
       <router-link to="/who">WHO</router-link>
     </div>
+
+    <BackBtn></BackBtn>
   </div>
 
 </template>
 
 <script>
+import BackBtn from "@/components/buttons/BackBtn";
 export default {
   name: 'MainNav',
+  components: {
+    BackBtn
+  },
 }
 </script>
 

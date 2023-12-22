@@ -24,4 +24,10 @@ export default {
     padding: 80px;
     background-color: #1e1f24;
   }
+  @media screen and (max-width: 720px) {
+    .projectsContainer{
+      padding: 80px 0 0 0;
+  }
+}
+  
 </style>
