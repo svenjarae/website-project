@@ -73,6 +73,7 @@ export default {
   --2ndColor: orangered;
   --5thColor: rgb(255, 168, 0);
   --6thColor: rgb(129, 74, 106);
+  --darkgrey: #1e1f24;
 
   --primaryFont: Montserrat, serif;
   --secondaryFont: 'myFirstFont', serif;

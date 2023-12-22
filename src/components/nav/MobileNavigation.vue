@@ -58,7 +58,6 @@ export default {
 
 .outerNavContainer{
   padding: 10px 0;
-  background-color: blue;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -66,7 +65,7 @@ export default {
 }
 
 .mobile-header{
-  background-color: blue;
+  background-color: var(--darkgrey);
   height: 50px;
   position:fixed;
   width:100%;

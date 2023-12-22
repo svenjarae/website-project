@@ -1,8 +1,8 @@
 <template>
-  <div class="buttonContainer">
+  <div v-if="!isStartPage" class="buttonContainer">
     <!-- Stylischer Zurück-Button -->
     <button @click="goBack" class="back-button">
-      <span class="arrow">&larr;</span> Zurück
+      <span class="arrow">&larr;</span>
     </button>
   </div>
 </template>
@@ -16,6 +16,12 @@ export default {
     },
     // ... (Ihre anderen Methoden) ...
   },
+  computed: {
+    isStartPage() {
+      // Adjust the condition based on your actual start page route
+      return this.$route.path === '/';
+    },
+  },
 };
 </script>
 
@@ -23,20 +29,21 @@ export default {
 
 .buttonContainer{
   position: fixed;
-  bottom: 40px;
-  left: 40px;
+  bottom: 16px;
+  left: 16px;
   z-index: 1000;
 }
 .back-button {
   font-size: 16px;
-  padding: 10px 20px;
-  color: white;
+  padding: 20px;
+  color: var(--darkgrey);
   border: none;
-  border-radius: 5px;
+  border-radius: 1000px;
   cursor: pointer;
   transition: background-color 0.3s;
   background-color: transparent;
   text-transform: uppercase;
+  background-color: lightgrey;
 }
 
 .back-button:hover {
@@ -44,7 +51,4 @@ export default {
   color: black;
 }
 
-.arrow {
-  margin-right: 5px;
-}
 </style>

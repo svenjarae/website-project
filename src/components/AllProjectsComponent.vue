@@ -103,7 +103,7 @@ button {
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: blue;
   color: white;
 }
 

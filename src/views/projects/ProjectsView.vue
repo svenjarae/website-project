@@ -22,11 +22,11 @@ export default {
   .projectsContainer{
     margin: auto;
     padding: 80px;
-    background-color: #1e1f24;
+    background-color: var(--darkgrey);
   }
   @media screen and (max-width: 720px) {
     .projectsContainer{
-      padding: 80px 0 0 0;
+      padding: 40px 0 0 0;
   }
 }
   

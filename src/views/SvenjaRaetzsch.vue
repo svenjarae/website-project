@@ -91,7 +91,7 @@ export default {
     .factsContainer{
       position: inherit;
       max-width: inherit;
-      padding-top: 110px;
+      padding: 100px 50px;
     }
     .buttonContainer{
       position: inherit;
