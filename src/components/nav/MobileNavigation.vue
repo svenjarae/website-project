@@ -5,53 +5,75 @@
       <div class="button-container">
         <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
         <label for="checkbox3">
-          <div @click="this.isOpen = !this.isOpen" class="hamburger">
+          <div @click="toggleMenu" class="hamburger">
             <span class="bar bar1"></span>
             <span class="bar bar2"></span>
             <span class="bar bar3"></span>
           </div>
         </label>
       </div>
-      <div v-if="isOpen">
-        <div class="outerNavContainer">
-          <div class="navigation-container" @click="this.navigate('/')">
+      <transition name="menu-slide">
+        <div v-if="isOpen" class="outerNavContainer">
+          <div class="navigation-container" @click="navigate('/')">
             <router-link to="/">START</router-link>
           </div>
-          <div class="navigation-container" @click="this.navigate('/projects')">
+          <div class="navigation-container" @click="navigate('/projects')">
             <router-link to="/projects">PROJECTS</router-link>
           </div>
-          <div class="navigation-container" @click="this.navigate('/who')">
+          <div class="navigation-container" @click="navigate('/who')">
             <router-link to="/who">WHO</router-link>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
-
 </template>
 
 <script>
-
 export default {
   name: "MobileNavigation",
-  data(){
-    return{
+  data() {
+    return {
       isOpen: false,
-    }
+      routeChanged: false,
+    };
   },
-  methods:{
-// navigate to a view, by providing the path.
-    // each path needs to be registered inside the router
-    // component first.
-    navigate(extension){
+  watch: {
+    // Watch for route changes and set the flag
+    $route(to, from) {
+      this.routeChanged = to.path !== from.path;
+    },
+  },
+  methods: {
+    // Toggle the menu
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+      // If the route has changed, reset the flag
+      if (this.routeChanged) {
+        this.routeChanged = false;
+      }
+    },
+    // Navigate to a view by providing the path
+    navigate(extension) {
       this.$router.push({
         path: extension,
-      })
+      });
+      // Close the menu after navigation
       this.isOpen = false;
     },
-  }
-}
-
+  },
+  beforeRouteLeave(to, from, next) {
+    // Set the flag to indicate that the route is changing
+    this.routeChanged = true;
+    next();
+  },
+  beforeRouteEnter(to, from, next) {
+    // Ensure the component is fully loaded before opening the menu
+    next(vm => {
+      vm.routeChanged = false;
+    });
+  },
+};
 </script>
 
 <style scoped>
@@ -62,6 +84,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 70px);
+  width: 70%;
 }
 
 .mobile-header{
@@ -154,23 +177,14 @@ a{
   transform-origin: 5%;
 }
 
-.checkbox3:checked + label > .hamburger > .bar1{
-  transform: rotate(45deg);
-  height: 3px;
-  width: 35px;
+
+.menu-slide-enter-active,
+.menu-slide-leave-active {
+  transition: transform 0.3s;
 }
 
-.checkbox3:checked + label > .hamburger > .bar2{
-  transform: rotate(-45deg);
-  height: 3px;
-  background-color: transparent;
-}
-
-.checkbox3:checked + label > .hamburger > .bar3{
-  transform: rotate(-45deg);
-  height: 3px;
-  width: 35px;
-  top: 11.5px;
+.menu-slide-enter, .menu-slide-leave-to /* .menu-slide-leave-active in <2.1.8 */ {
+  transform: translateX(-100%);
 }
 
 </style>
