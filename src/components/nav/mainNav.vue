@@ -33,22 +33,18 @@
     </div>
 
     <div class="mainNav">
-      <router-link to="/">START</router-link>
-      <router-link to="/projects">PROJECTS</router-link>
-      <router-link to="/who">WHO</router-link>
+      <Breadcrumbs></Breadcrumbs>
     </div>
-
-    <BackBtn></BackBtn>
   </div>
 
 </template>
 
 <script>
-import BackBtn from "@/components/buttons/BackBtn";
+import Breadcrumbs from "@/components/breadcrumbs/BreadCrumbs";
 export default {
   name: 'MainNav',
   components: {
-    BackBtn
+    Breadcrumbs
   },
 }
 </script>
@@ -57,20 +53,6 @@ export default {
 
   .outerContainer{
     z-index: 100;
-  }
-
-  .mainNav{
-    writing-mode: vertical-rl;
-    position: fixed;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 0;
-    z-index: 100;
-    margin: 16px;
-    display: flex;
-    gap: 16px;
-    font-size: 16px;
-    letter-spacing: 0.1em;
   }
 
   .topNav{

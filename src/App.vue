@@ -20,13 +20,14 @@
         </div>
       </div>
     </footer>
+    <BackBtn></BackBtn>
   </div>
 </template>
 
 <script>
 
 //import AudioPlayer from "@/components/audio/AudioPlayer";
-
+import BackBtn from "@/components/buttons/BackBtn";
 import MainNav from "@/components/nav/mainNav";
 import BeatingHeart from "@/components/animations/BeatingHeart";
 import MobileNavigation from "@/components/nav/MobileNavigation";
@@ -35,8 +36,8 @@ export default {
   components: {
     MobileNavigation,
     BeatingHeart,
-    MainNav
-    //AudioPlayer
+    MainNav,
+    BackBtn,
   },
 
   computed: {

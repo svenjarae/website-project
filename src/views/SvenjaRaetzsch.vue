@@ -6,12 +6,15 @@
           <h2>Make a happy face</h2>
         </li>
         <li>This website presents a mix of my previous works</li>
-        <li>Spend as much time underwater as you can</li>
-        <li>Currently working at <a style="text-decoration: underline;" href="https://codevance.de/">CODEVANCE</a> as Frontend Developer</li>
+        <li>Base of Operations: Soaking up the sun and creative vibes in the coastal haven of Gran Canaria.</li>
+        <li>Let's create something extraordinary together!</li>
       </ul>
       <router-link to="/projects" class="buttonContainer">
         <TextAnime></TextAnime>
       </router-link>
+    </div>
+    <div>
+        <GridImgs></GridImgs>
     </div>
   </div>
 </template>
@@ -22,12 +25,13 @@ import image1 from "/././././././src/assets/images/bg/AdobeStock_533955412.png";
 import image2 from "/././././././src/assets/images/bg/AdobeStock_533955453.png";
 import video1 from "/././././././src/assets/videos/titlevid.mp4";
 import TextAnime from "@/components/animations/TextAnime";
+import GridImgs from "@/components/grid/GridImgs";
 
 export default {
   name: 'SvenjaRaetzsch',
   components: {
     TextAnime,
-
+    GridImgs,
   },
   data(){
     return{

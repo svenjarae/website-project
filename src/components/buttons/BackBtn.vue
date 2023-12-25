@@ -43,7 +43,7 @@ export default {
   transition: background-color 0.3s;
   background-color: transparent;
   text-transform: uppercase;
-  background-color: lightgrey;
+  background-color: darkgrey;
 }
 
 .back-button:hover {

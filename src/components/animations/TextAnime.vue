@@ -100,5 +100,15 @@ button:hover::after, button:focus::after {
 }
 
 
+  @media screen and (max-width: 1100px) {
+    .wrap{
+      position: absolute;
+      z-index: 1000000000;
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    }
+  }
+
 </style>
 
