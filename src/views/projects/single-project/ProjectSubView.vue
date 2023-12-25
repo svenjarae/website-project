@@ -3,7 +3,6 @@
     <div class="iframeContainer">
       <img :src="bubble2"/>
       <div class="containerDownBtn" @click="goto('page2')">
-        <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
       </div>
     </div>

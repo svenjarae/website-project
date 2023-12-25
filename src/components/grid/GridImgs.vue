@@ -1,88 +1,124 @@
 <template>
-    <div class="grid-container">
-      <div
+  <div class="collage-container">
+    <div class="collage">
+      <img
         v-for="(image, index) in images"
         :key="index"
-        class="grid-item"
+        :src="image.src"
+        :alt="image.alt"
         :style="{
-          backgroundImage: `url(${image.src})`,
-          gridRow: image.row,
-          gridColumn: image.column,
-          width: image.width,
-          height: image.height
+          width: `${getRandomSize()}px`,
+          height: 'auto',
+          margin: '5px',
+          transition: 'transform 0.3s ease-out',
         }"
-      >
-        <div class="overlay"></div>
-      </div>
+        @mouseover="handleMouseOver(index)"
+        @mouseout="handleMouseOut"
+      />
     </div>
-  </template>
-  
-  <script>
+  </div>
+</template>
 
-    import oct1 from "@/assets/images/projects/buceo-nocturno/pulpo.jpg";
-    import ivonOne from "@/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
-    import bubble2 from "/././././././src/assets/images/projects/sub/bubble2.jpg";
-    import titleImgSeal from "/././././././src/assets/images/projects/galapagos/titleImg.png";
-    import titleImgOni from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
-    import titleImgBird from "/././././././src/assets/images/projects/animations/bird/bird-titleimg.png";
-    import titleImgTrip from "/././././././src/assets/images/projects/animations/trip/titleimg-trip.png";
-    import squid1 from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
-    import pixelGridTitleImg from "/././././././src/assets/images/projects/animations/pixel-grid/pixelGridTitleImg.png";
-  export default {
-    data() {
-      return {
-        images: [
-          { src: ivonOne, row: '1 / 3', column: '1 / 3', width: '100%', height: '100%' },
-          { src: oct1, row: '1 / 2', column: '3 / 4', width: '100%', height: '200px' },
-          { src: bubble2, row: '2 / 4', column: '2 / 3', width: '150px', height: '150px' },
-          { src: titleImgSeal, row: '2 / 4', column: '2 / 3', width: '150px', height: '150px' },
-          { src: titleImgOni, row: '2 / 4', column: '2 / 3', width: '150px', height: '150px' },
-          { src: titleImgBird, row: '2 / 4', column: '2 / 3', width: '150px', height: '150px' },
-          { src: titleImgTrip, row: '2 / 4', column: '2 / 3', width: '150px', height: '150px' },
-          { src: squid1, row: '2 / 4', column: '3 / 3', width: '150px', height: '150px' },
-          { src: pixelGridTitleImg, row: '2 / 4', column: '2 / 3', width: '150px', height: '150px' },
-          // Add more images with different positions, widths, and heights
-        ],
-      };
+<script>
+  import svenjashark from "@/assets/images/profile/svenja-2.jpg";
+  import svenjabw from "@/assets/images/profile/Bretagne2023_LVossgaetter-1.jpg";
+  import svenja from "/././././././src/assets/images/projects/gc-sealife/squid1.png";
+  import squid1 from "@/assets/images/profile/Bretagne2023LVossgaetter.jpg";
+  import svenja2 from "@/assets/images/profile/OC_Season_SR_bw.jpg";
+  import turtlegalapagos from "@/assets/images/projects/glowing-turts/water-turtle.jpg";
+  import sealgalapagos from "@/assets/images/projects/galapagos/titleImg.png";
+  import bubble from "@/assets/images/projects/sub/bubble.jpg";
+
+  import onisstudio from "@/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
+  import svenja3 from "@/assets/images/profile/Svenja.jpg";
+  import svenja4 from "@/assets/images/profile/OC_Season_23_SR.jpg";
+  import morena from "@/assets/images/projects/gc-sealife/morrenaTitleimg.jpg";
+  import pulpo from "@/assets/images/projects/buceo-nocturno/pulpo.jpg";
+  import fish from "@/assets/images/projects/galapagos/galleryImgs/fish.png";
+
+export default {
+  data() {
+    return {
+      images: [
+        { src: svenjashark, alt: 'Image 1' },
+        { src: svenjabw, alt: 'Image 40' },
+        { src: svenja, alt: 'Image 40' },
+        { src: bubble, alt: 'Image 40' },
+        { src: squid1, alt: 'Image 40' },
+        { src: turtlegalapagos, alt: 'Image 40' },
+        { src: sealgalapagos, alt: 'Image 40' },
+        { src: svenja2, alt: 'Image 40' },
+        { src: svenjashark, alt: 'Image 1' },
+
+        { src: onisstudio, alt: 'Image 40' },
+        { src: svenja3, alt: 'Image 40' },
+
+        { src: svenja4, alt: 'Image 1' },
+
+        { src: svenja4, alt: 'Image 40' },
+        { src: morena, alt: 'Image 40' },
+        { src: pulpo, alt: 'Image 40' },
+        { src: svenjashark, alt: 'Image 1' },
+        { src: fish, alt: 'Image 40' },
+
+
+      ],
+      hoveredIndex: null,
+    };
+  },
+  methods: {
+    getRandomSize() {
+      // Generate a random size with small differences
+      return Math.random() * 40 + 80; // Width between 80 and 120 pixels
     },
-  };
-  </script>
-  
-  <style scoped>
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px;
-    height: 100vh; /* Adjust the height as needed */
-    position: absolute;
-    top: 20%;
-    opacity: 0.3;
-    left: 70%;
-  }
-  
-  .grid-item {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    border-radius: 8px; /* Optional: Add border radius for rounded corners */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
-  }
+    handleMouseOver(index) {
+      this.hoveredIndex = index;
+    },
+    handleMouseOut() {
+      this.hoveredIndex = null;
+    },
+  },
+};
+</script>
 
-  @media screen and (max-width: 1100px) {
-    .grid-container {
-    left: 0;
+<style scoped>
+.collage-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 50%; /* Make the container circular */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+}
+
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.collage img {
+  transform-origin: top left; /* Ensure images scale from top left */
+}
+
+.hovered {
+  transform: translate(-5px, -5px) scale(1.05);
+  transition: transform 0.3s ease-out;
+}
+
+img{
+  object-fit: cover;
+}
+
+@media screen and (max-width: 720px) {
+.collage-container{
+    right: 0;
+    bottom: 0;
+
+    transform: none;
   }
 }
-  
-  /* Customize additional styles as needed */
-  </style>
+</style>

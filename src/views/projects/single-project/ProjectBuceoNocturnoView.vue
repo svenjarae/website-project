@@ -3,7 +3,6 @@
     <div class="iframeContainer">
       <img :src="oct1" alt="poster image"/>
       <div class="containerDownBtn" @click="goto('page2')">
-        <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
       </div>
     </div>

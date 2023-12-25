@@ -3,7 +3,6 @@
     <div class="iframeContainer">
       <img :src="sealion"/>
       <div class="containerDownBtn" @click="goto('page2')">
-        <div>CLICK TO SCROLL</div>
         <DownBtn></DownBtn>
       </div>
     </div>
@@ -373,6 +372,7 @@ export default {
   left: 50%;
   transform: translate(-50%, 0);
   font-family: var(--secondaryFont);
+  text-transform: uppercase;
 }
 
 .containerDownBtn{

@@ -203,6 +203,7 @@ export default {
   transform: translate(-50%, -50%);
   color: orangered;
   font-family: myFirstFont;
+  text-transform: uppercase;
 }
 
 .containerDownBtn{

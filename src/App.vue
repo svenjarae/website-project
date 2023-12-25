@@ -14,6 +14,7 @@
       </transition>
     </router-view>
     <footer>
+      <!--CoolFooter></CoolFooter>-->
       <div class="innerContainer" style="background-color: #17191CFF;">
         <div class="heartContainer">
           <BeatingHeart></BeatingHeart>
@@ -31,6 +32,7 @@ import BackBtn from "@/components/buttons/BackBtn";
 import MainNav from "@/components/nav/mainNav";
 import BeatingHeart from "@/components/animations/BeatingHeart";
 import MobileNavigation from "@/components/nav/MobileNavigation";
+import CoolFooter from "@/components/footer/CoolFooter";
 export default {
   name: 'App',
   components: {
@@ -38,6 +40,7 @@ export default {
     BeatingHeart,
     MainNav,
     BackBtn,
+    CoolFooter
   },
 
   computed: {
@@ -96,6 +99,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--dark);
+  max-width: 1600px;
+  margin: auto;
 }
 
 body {

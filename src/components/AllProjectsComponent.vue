@@ -4,7 +4,6 @@
       <button @click="setSelected('all')" :class="{ 'active': selected === 'all' }">Alle</button>
       <button @click="setSelected('film')" :class="{ 'active': selected === 'film' }">Film</button>
       <button @click="setSelected('animation')" :class="{ 'active': selected === 'animation' }">Animation</button>
-      <button @click="setSelected('webdesign')" :class="{ 'active': selected === 'webdesign' }">Webdesign</button>
     </div>
   <div class="grid-container">
     <div v-for="project in filteredProjects" :key="project.title">

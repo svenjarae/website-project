@@ -5,8 +5,7 @@
         <li>
           <h2>Make a happy face</h2>
         </li>
-        <li>This website presents a mix of my previous works</li>
-        <li>Base of Operations: Soaking up the sun and creative vibes in the coastal haven of Gran Canaria.</li>
+        <li>Soaking up the sun and creative vibes in the coastal haven of <h2>Gran Canaria</h2></li>
         <li>Let's create something extraordinary together!</li>
       </ul>
       <router-link to="/projects" class="buttonContainer">
@@ -20,10 +19,6 @@
 </template>
 
 <script>
-
-import image1 from "/././././././src/assets/images/bg/AdobeStock_533955412.png";
-import image2 from "/././././././src/assets/images/bg/AdobeStock_533955453.png";
-import video1 from "/././././././src/assets/videos/titlevid.mp4";
 import TextAnime from "@/components/animations/TextAnime";
 import GridImgs from "@/components/grid/GridImgs";
 
@@ -35,9 +30,6 @@ export default {
   },
   data(){
     return{
-      image1: image1,
-      image2: image2,
-      video1: video1,
     }
   },
   methods: {
@@ -47,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+
+  .outerContainer{
+    position: relative;
+  }
   .factsContainer {
     position: absolute;
     bottom: 0;
@@ -81,6 +77,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
   }
 
   img{

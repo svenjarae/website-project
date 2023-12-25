@@ -23,6 +23,7 @@ export default {
     margin: auto;
     padding: 80px;
     background-color: var(--darkgrey);
+    min-height: calc(100vh - 160px);
   }
   @media screen and (max-width: 720px) {
     .projectsContainer{

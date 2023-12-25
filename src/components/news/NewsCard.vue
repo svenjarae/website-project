@@ -40,12 +40,11 @@ export default {
     cursor: pointer;
     background-color: black;
   }
-
   .cardTitle {
     font-size: 20px;
     font-family: myFirstFont;
     font-weight: 500;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -54,6 +53,7 @@ export default {
     color: white;
     transition: all 330ms ease-in-out;
     letter-spacing: 10px;
+    text-transform: uppercase;
   }
 
   .news-card-container:hover .cardTitle {
@@ -62,7 +62,7 @@ export default {
   }
 
   .news-card-container:hover img{
-    opacity: 0.2;
+    opacity: 0.8;
   }
 
   img{
@@ -76,6 +76,7 @@ export default {
     transition: all 0.5s ease-in-out;
     border-radius: 1px;
     /*filter: grayscale(1);*/
+    opacity: 0.2;
   }
 
   p{
