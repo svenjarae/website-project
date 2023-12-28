@@ -96,7 +96,7 @@ export default {
 }
 
 .logo-container {
-  letter-spacing: 10px;
+  font-size: 14px;
   margin: 16px 24px 15px 24px;
   font-weight: 500;
   font-family: var(--secondaryFont);
