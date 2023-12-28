@@ -181,6 +181,17 @@ const routes = [
       ],
     },
   },
+  {
+    path: '/dataprivacy',
+    name: 'dataprivacy',
+    component: () => import(/* webpackChunkName: "dataprivacy" */ '../views/required/PrivacyView.vue'),
+    meta: {
+      breadcrumbs: [
+        { label: 'Start', to: '/' },
+        { label: '> Data Privacy', to: '/dataprivacy' },
+      ],
+    },
+  },
 ]
 
 

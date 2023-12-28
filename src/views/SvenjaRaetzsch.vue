@@ -5,6 +5,7 @@
         <li>
           <h2>Make a happy face</h2>
         </li>
+        <li>This website presents a collection of my previous work, as <h2>Webdeveloper</h2>, <h2>Filmcreator</h2> & <h2>Photographer</h2>.</li>
         <li>Soaking up the sun and creative vibes in the coastal haven of <h2>Gran Canaria</h2></li>
         <li>Let's create something extraordinary together!</li>
       </ul>
@@ -47,7 +48,7 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 300px;
+    max-width: 350px;
     text-align: left;
     color: darkgray;
     text-transform: uppercase;
@@ -60,6 +61,7 @@ export default {
   .factsContainer h2{
     color: white;
     font-weight: 500;
+    display: inline-block;
   }
 
   .factsContainer li{

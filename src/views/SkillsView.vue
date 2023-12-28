@@ -48,7 +48,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 300px;
+  max-width: 350px;
   text-align: left;
   text-transform: uppercase;
   z-index: 100;
@@ -67,6 +67,7 @@ export default {
   color: white;
   font-weight: 500;
   display: inherit;
+  display: inline-block;
 }
 
 </style>

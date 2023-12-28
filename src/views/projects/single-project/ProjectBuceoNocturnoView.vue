@@ -14,7 +14,8 @@
           <li>
             <h2>Description</h2>
           </li>
-          <li>Dive sites become a wonderland of activity once the sun disappears. Many of the creatures you search for in vain during the day are active at night, floating by when you least expect them. As a scuba diver, you miss out on half of the ocean’s life if you only dive during the day.</li>
+          <li>Dive sites become a wonderland of activity once the sun disappears. Many of the creatures you search for in vain during the day are active at night, floating by when you least expect them. You miss out on half of the ocean’s life if you only dive during the day.</li>
+          <li>For an even cooler experience, go early in the morning before sunrise when the reef is buzzing with activity, giving you a front-row seat to the underwater morning hustle.</li>
         </ul>
       </div>
     </div>
@@ -222,7 +223,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 300px;
+  max-width: 350px;
   text-align: left;
   color: darkgray;
   text-transform: uppercase;
@@ -235,6 +236,7 @@ export default {
 .factsContainer h2{
   color: white;
   font-weight: 500;
+  display: inline-block;
 }
 
 .factsContainer li{

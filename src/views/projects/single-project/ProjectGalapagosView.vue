@@ -419,7 +419,7 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 300px;
+  max-width: 350px;
   text-align: left;
   color: darkgray;
   text-transform: uppercase;
@@ -432,6 +432,7 @@ export default {
 .factsContainer h2{
   color: white;
   font-weight: 500;
+  display: inline-block;
 }
 
 .factsContainer li{
