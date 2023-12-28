@@ -103,6 +103,7 @@ button:hover::after, button:focus::after {
   @media screen and (max-width: 1100px) {
     .wrap{
       z-index: 100;
+      margin-top: 0;
     }
   }
 

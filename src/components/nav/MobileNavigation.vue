@@ -84,7 +84,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 70px);
-  width: 70%;
+  width: 100%;
 }
 
 .mobile-header{
