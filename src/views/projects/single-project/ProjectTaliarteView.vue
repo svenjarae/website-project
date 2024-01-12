@@ -12,17 +12,18 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Info</h2>
+            <h2>Short</h2>
           </li>
           <li>Gran Canaria, Taliarte</li>
-          <li>Ivon, Lilly</li>
+          <li><a href="https://www.instagram.com/ivonzi/"></a>Ivon</li>
           <li>09/2022</li>
         </ul>
         <ul>
           <li>
             <h2>Description</h2>
           </li>
-          <li>every single day the Telde coastline is the setting for a fantastic colourful dawn. The early hours are the ideal moment to enjoy the beautiful morning sea which provides very good visibility to take great pictures and videos.</li>
+          <li>A rocky Bay close to Taliarte, Gran Canaria, offers calm waters protected by the harbor, with a maximum depth of 6 meters. The site, suitable for all skill levels, features clear visibility and gentle currents, making it ideal for capturing Ivon against the blue water and sandy surroundings.
+</li>
         </ul>
       </div>
     </div>
