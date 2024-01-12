@@ -82,28 +82,23 @@ export default {
 
 .filterContainer{
   display: flex;
-  gap: 20px;
   margin-bottom: 20px;
 }
 
 button {
-  letter-spacing: 0.1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #313133;
-    background: white;
-    border: none;
-    border-radius: 1000px;
-    transition: all 0.3s ease-in-out 0s;
+  margin-right: 10px;
+    padding: 8px 12px;
     cursor: pointer;
-    outline: none;
-    position: relative;
-    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
 .active {
   background-color: blue;
-  color: white;
 }
 
 @media only screen and (max-width: 720px) {

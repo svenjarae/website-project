@@ -28,13 +28,18 @@
       </div>
     </div>
     <div class="galleryContainer">
+      <div class="filter-buttons">
+        <button @click="setFilter('all')" :class="{ 'active': filter === 'all' }">All</button>
+        <button @click="setFilter('photo')" :class="{ 'active': filter === 'photo' }">Photos</button>
+        <button @click="setFilter('video')" :class="{ 'active': filter === 'video' }">Videos</button>
+      </div>
       <lightgallery
           :settings="{ speed: 500, plugins: plugins }"
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonOne"
@@ -43,9 +48,10 @@
               class="img-responsive"
               :src="ivonOne"
           />
+          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonTwo"
@@ -54,9 +60,10 @@
               class="img-responsive"
               :src="ivonTwo"
           />
+          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonThree"
@@ -65,9 +72,10 @@
               class="img-responsive"
               :src="ivonThree"
           />
+          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="ivonFour"
@@ -76,20 +84,10 @@
               class="img-responsive"
               :src="ivonFour"
           />
+          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="lilly"
-        >
-          <img
-              class="img-responsive"
-              :src="lilly"
-          />
-        </a>
-        <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="bgWater"
@@ -98,23 +96,14 @@
               class="img-responsive"
               :src="bgWater"
           />
-        </a>
-        <!-- Image --->
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="yo"
-        >
-          <img
-              class="img-responsive"
-              :src="yo"
-          />
+          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- VImeo Video --->
-        <a
-          data-lg-size="1280-720"
-          data-src="//vimeo.com/764521178"
-          data-poster=""
+        <a  v-if="filter === 'all' || filter === 'video'"
+            data-lg-size="1280-720"
+            data-src="//vimeo.com/764521178"
+            data-poster=""
+            class="fullWidthGridCard"
         >
         <img
             width="300"
@@ -122,6 +111,7 @@
             class="img-responsive"
             :src="titleImgAgua"
         />
+        <span class="fa fa-video icon-video"></span>
         </a>
       </lightgallery>
     </div>
@@ -135,9 +125,7 @@ import ivonOne from "/src/assets/images/projects/taliarte/P1033667.00_00_26_02.S
 import ivonTwo from "/src/assets/images/projects/taliarte/P1033667.00_00_02_20.Still004.jpg";
 import ivonThree from "/src/assets/images/projects/taliarte/P1033667.00_00_01_08.Still005.jpg";
 import ivonFour from "/src/assets/images/projects/taliarte/Sequence 01.00_00_08_31.Still005.jpg";
-import lilly from "/src/assets/images/projects/taliarte/Sequence 01.00_03_10_00.Still005.jpg";
 import bgWater from "/src/assets/images/projects/taliarte/Sequence 01.00_00_09_34.Still016.jpg";
-import yo from "/src/assets/images/projects/taliarte/yo-master.jpg";
 import titleImgAgua from "/src/assets/images/projects/taliarte/aguaTitleimg.png";
 
 
@@ -161,14 +149,17 @@ export default {
     ivonTwo: ivonTwo,
     ivonThree: ivonThree,
     ivonFour: ivonFour,
-    lilly: lilly,
     bgWater: bgWater,
-    yo:yo,
     titleImgAgua: titleImgAgua,
 
     plugins: [lgZoom, lgVideo],
+
+    filter: 'all', // 'all', 'photo', 'video'
   }),
   methods: {
+    setFilter(filter) {
+      this.filter = filter;
+    },
     goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
@@ -240,8 +231,17 @@ export default {
   height: 300px;
   width: 100%;
   min-width: 200px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1px;
+  opacity: 0.2;
 }
 
+.lightgallery-vue a:hover img{
+  opacity: 1;
+}
+.lightgallery-vue a:hover span{
+  opacity: 0;
+}
 .projectContentContainer{
   height: 100vh;
   background-color: #202023;
@@ -302,4 +302,41 @@ iframe .vp-center {
   align-items: center;
 }
 
+.fullWidthGridCard{
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+}
+
+.icon-photo, .icon-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: white;
+  opacity: 0.1;
+  transition: all 0.5s ease-in-out;
+}
+
+.filter-buttons {
+  margin: 20px 0;
+  display: flex;
+}
+
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button.active {
+  background-color: blue;
+}
 </style>
