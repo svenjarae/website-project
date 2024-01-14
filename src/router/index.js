@@ -40,6 +40,18 @@ const routes = [
     },
   },
   {
+    path: '/projects/liberte',
+    name: 'liberte',
+    component: () => import(/* webpackChunkName: "liberté" */ '../views/projects/single-project/ProjectLiberteView'),
+    meta: {
+      breadcrumbs: [
+        { label: 'Start', to: '/' },
+        { label: '> Projects', to: '/projects' },
+        { label: '> liberte', to: '/projects/liberte' },
+      ],
+    },
+  },
+  {
     path: '/projects/nocturno',
     name: 'nocturno',
     component: () => import(/* webpackChunkName: "nocturno" */ '../views/projects/single-project/ProjectBuceoNocturnoView'),
@@ -148,7 +160,7 @@ const routes = [
     },
   },
   {
-    path: '/projects/liberte',
+    path: '/projects/liberté',
     name: 'liberté',
     component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/projects/single-project/ProjectLibertéView'),
     meta: {

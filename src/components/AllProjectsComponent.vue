@@ -17,6 +17,7 @@
 <script>
 import NewsCard from "@/components/news/NewsCard";
 
+import seal01 from "@/assets/images/projects/liberte/seal-still001.jpg";
 import oct1 from "@/assets/images/projects/buceo-nocturno/pulpo.jpg";
 import ivonOne from "@/assets/images/projects/taliarte/P1033667.00_00_26_02.Still002.jpg";
 import bubble2 from "/././././././src/assets/images/projects/sub/bubble2.jpg";
@@ -36,6 +37,7 @@ export default {
   data() {
     return {
       projects: [
+      { title: 'liberte', iconSrc: seal01, category: 'film' },
       { title: 'nocturno', iconSrc: oct1, category: 'film' },
       { title: 'taliarte', iconSrc: ivonOne, category: 'film' },
       { title: 'gcsealife', iconSrc: squid1, category: 'film' },
