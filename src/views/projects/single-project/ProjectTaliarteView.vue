@@ -306,6 +306,7 @@ iframe .vp-center {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
+  
 }
 
 .icon-photo, .icon-video {

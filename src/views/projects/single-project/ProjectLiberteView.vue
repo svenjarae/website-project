@@ -47,7 +47,6 @@
               class="img-responsive"
               :src="bird"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -59,7 +58,6 @@
               class="img-responsive"
               :src="ow"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -71,7 +69,6 @@
               class="img-responsive"
               :src="phil"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -83,7 +80,6 @@
               class="img-responsive"
               :src="seal01"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -95,7 +91,6 @@
               class="img-responsive"
               :src="seal02"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -107,7 +102,6 @@
               class="img-responsive"
               :src="seal03"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -119,7 +113,6 @@
               class="img-responsive"
               :src="seal04"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -131,7 +124,6 @@
               class="img-responsive"
               :src="still08"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -143,7 +135,6 @@
               class="img-responsive"
               :src="vero01"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
           <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -155,14 +146,12 @@
               class="img-responsive"
               :src="vero02"
           />
-          <span class="fa fa-camera icon-photo"></span>
         </a>
         <!-- VImeo Video --->
         <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="//vimeo.com/902794090"
             data-poster=""
-            class="fullWidthGridCard"
         >
         <img
             width="300"
@@ -170,7 +159,7 @@
             class="img-responsive"
             :src="team"
         />
-        <span class="fa fa-video icon-video"></span>
+        <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
         
       </lightgallery>
@@ -289,26 +278,18 @@ export default {
 }
 
 .lightgallery-vue{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-  grid-gap: clamp(1rem, 2vw, 1rem)
+  display: flex;
+  flex-direction: column;
 }
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 300px;
+  height: 100%;
   width: 100%;
+  max-width: 600px;
   min-width: 200px;
   transition: all 0.5s ease-in-out;
   border-radius: 1px;
-  opacity: 0.2;
-}
-
-.lightgallery-vue a:hover img{
-  opacity: 1;
-}
-.lightgallery-vue a:hover span{
-  opacity: 0;
 }
 .projectContentContainer{
   height: 100vh;
@@ -370,20 +351,14 @@ iframe .vp-center {
   align-items: center;
 }
 
-.fullWidthGridCard{
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-}
-
-.icon-photo, .icon-video {
+.icon-video {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5em;
   color: white;
-  opacity: 0.1;
+  opacity: 0.4;
   transition: all 0.5s ease-in-out;
 }
 
@@ -419,6 +394,14 @@ iframe .vp-center {
 .link:hover a{
   text-decoration-color: white;
   color: blue;
+}
+
+.play-icon{
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 </style>
