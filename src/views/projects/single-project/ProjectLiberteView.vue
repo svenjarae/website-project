@@ -245,7 +245,7 @@ export default {
 
 .projectTitle{
   color: white;
-  font-size: 100px;
+  font-size: 12vw;
   letter-spacing: 0.1em;
   font-weight: 500;
   position: absolute;
