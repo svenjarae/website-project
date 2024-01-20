@@ -363,12 +363,15 @@ iframe .vp-center {
 }
 
 .filter-buttons {
-  margin: 20px 0;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+  max-width: 100px;
   display: flex;
 }
 
 .filter-buttons button {
-  margin-right: 10px;
+  margin-bottom: 10px;
   padding: 8px 12px;
   cursor: pointer;
   background-color: #333;
@@ -402,6 +405,19 @@ iframe .vp-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 1100px) {
+  .filter-buttons {
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px;
+    top: auto;
+    flex-direction: row-reverse;
+    z-index: 1;
+    gap: 10px;
+  }
 }
 
 </style>
