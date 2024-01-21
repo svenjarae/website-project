@@ -18,12 +18,13 @@
           <li class="link"><a href="https://www.instagram.com/ocean_collective_agency/">Ocean Collective</a></li>
           <li>09/2023</li>
         </ul>
-        <!-- <ul>
+        <ul>
           <li>
             <h2>Description</h2>
           </li>
-          <li>Blubb</li>
-        </ul> -->
+          <li>In this project, we embarked on a thrilling adventure in France, inviting ocean enthusiasts to join our collective of researchers, guides, and nature filmmakers in an immersive journey into marine biology in September 2023!</li>
+        <li>A 7-day expedition, where we contributed to research, engaged in animal encounters, and protected endangered species. Explored marine habitats, learned freediving, and made a positive impact with expert training. Follow @ocean_collective_agency for memories of our unforgettable journey! 🌊❤️</li>
+        </ul>
       </div>
     </div>
     <div class="galleryContainer">
@@ -301,7 +302,6 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 350px;
   text-align: left;
   color: darkgray;
   text-transform: uppercase;
@@ -309,6 +309,8 @@ export default {
   padding-inline-start: 0;
   padding: 80px;
   letter-spacing: 0.1em;
+  display: flex;
+  gap: 80px;
 }
 
 .factsContainer h2{
@@ -420,6 +422,12 @@ iframe .vp-center {
     margin-right: -60px;
     max-width: none;
   }
+}
+
+@media screen and (max-width: 780px) {
+  .factsContainer {
+  display: block;
+}
 }
 
 </style>
