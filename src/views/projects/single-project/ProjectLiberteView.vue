@@ -368,6 +368,7 @@ iframe .vp-center {
   top: 100px;
   max-width: 100px;
   display: flex;
+  z-index: 1;
 }
 
 .filter-buttons button {
@@ -410,13 +411,14 @@ iframe .vp-center {
 
 @media screen and (max-width: 1100px) {
   .filter-buttons {
-    position: fixed;
-    bottom: 20px !important;
-    right: 20px;
-    top: auto;
-    flex-direction: row-reverse;
-    z-index: 1;
+    position: sticky;
+    top: calc(100vh - 50px);
+    left: unset;
+    flex-direction: row;
     gap: 10px;
+    justify-content: flex-end;
+    margin-right: -60px;
+    max-width: none;
   }
 }
 
