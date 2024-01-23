@@ -79,11 +79,11 @@ export default {
 <style scoped>
 
 .outerNavContainer{
-  padding: 10px 0;
+  padding: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 50px);
   width: 100%;
 }
 

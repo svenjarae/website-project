@@ -27,7 +27,7 @@ export default {
   }
   @media screen and (max-width: 720px) {
     .projectsContainer{
-      padding: 40px 0 0 0;
+      padding: 10px 0 0 0;
   }
 }
   

@@ -419,7 +419,7 @@ iframe .vp-center {
     flex-direction: row;
     gap: 10px;
     justify-content: flex-end;
-    margin-right: -60px;
+    margin-right: -40px;
     max-width: none;
   }
 }
@@ -427,6 +427,21 @@ iframe .vp-center {
 @media screen and (max-width: 780px) {
   .factsContainer {
   display: block;
+  position: unset;
+  padding: 20px;
+  font-size: 14px;
+}
+.projectTitle{
+      position: unset;
+      transform: translate(0, 0);
+      padding-top: 30px;
+    }
+.projectContentContainer{
+  height: auto;
+}
+
+.galleryContainer{
+  padding: 60px;
 }
 }
 

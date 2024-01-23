@@ -160,18 +160,6 @@ const routes = [
     },
   },
   {
-    path: '/projects/liberté',
-    name: 'liberté',
-    component: () => import(/* webpackChunkName: "pixelgrid" */ '../views/projects/single-project/ProjectLibertéView'),
-    meta: {
-      breadcrumbs: [
-        { label: 'Start', to: '/' },
-        { label: '> Projects', to: '/projects' },
-        { label: '> Liberté', to: '/projects/liberte' },
-      ],
-    },
-  },
-  {
     path: '/who',
     name: 'who',
     component: () => import(/* webpackChunkName: "skills" */ '../views/SkillsView'),

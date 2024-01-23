@@ -83,8 +83,21 @@ export default {
 }
 
 .filterContainer{
-  display: flex;
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 20px;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  right: 20px;
+  position: sticky;
+  top: calc(100vh - 50px);
+  flex-direction: row;
+  margin-right: -60px;
+  justify-content: flex-end;
+  max-width: none;
 }
 
 button {
@@ -109,16 +122,8 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Adjusted for mobile */
   grid-gap: clamp(1rem, 2vw, 1rem);
 }
-
-.filterContainer {
-  display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-  gap: 10px;
-    margin-left: 20px;
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    right: 20px;
+.filterContainer{
+  margin-right: 20px;
 }
 }
 </style>
