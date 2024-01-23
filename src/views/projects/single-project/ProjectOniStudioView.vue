@@ -12,22 +12,34 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Info</h2>
+            <h2>Short</h2>
           </li>
           <li>Jewellery, designed and crafted in Berlin.</li>
-          <li style="text-decoration: underline"><a href="https://www.oni-studio.com/">Link to website</a></li>
-          <li>07/2022</li>
+          <li class="link"><a href="https://www.oni-studio.com/">Website</a></li>
+          <li class="link"><a href="https://www.instagram.com/_oni_studio_jewelry/">Instagram</a></li>
+          <li>09/2022</li>
+        </ul>
+        <ul>
+          <li>
+            <h2></h2>
+          </li>
+          <li></li>  
         </ul>
       </div>
     </div>
 
     <div class="galleryContainer">
+      <div class="filter-buttons">
+        <button @click="setFilter('all')" :class="{ 'active': filter === 'all' }">All</button>
+        <button @click="setFilter('photo')" :class="{ 'active': filter === 'photo' }">Photos</button>
+        <button @click="setFilter('video')" :class="{ 'active': filter === 'video' }">Videos</button>
+      </div>
       <lightgallery
           :settings="{ speed: 500, plugins: plugins }"
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="sequ2stil1"
@@ -39,7 +51,7 @@
         </a>
 
         <!-- VImeo Video --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="//vimeo.com/740767794"
             data-poster=""
@@ -50,9 +62,10 @@
               class="img-responsive"
               :src="sequ3stil1"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
         <!-- VImeo Video --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="//vimeo.com/740775943"
             data-poster=""
@@ -63,9 +76,10 @@
               class="img-responsive"
               :src="sequ5stil1"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
         <!-- VImeo Video --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="//vimeo.com/740764055"
             data-poster=""
@@ -76,9 +90,10 @@
               class="img-responsive"
               :src="sequ2stil2"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
 
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="sequ2stil3"
@@ -90,7 +105,7 @@
         </a>
 
 
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="carla2"
@@ -100,7 +115,7 @@
               :src="carla2"
           />
         </a>
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="carla"
@@ -110,7 +125,7 @@
               :src="carla"
           />
         </a>
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="carla3"
@@ -121,7 +136,7 @@
           />
         </a>
         <!-- VImeo Video --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="//vimeo.com/740779271"
             data-poster=""
@@ -132,9 +147,10 @@
               class="img-responsive"
               :src="titleimgsequenz6"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
 
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="imageW"
@@ -144,7 +160,7 @@
               :src="imageW"
           />
         </a>
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="imgSequenz7"
@@ -154,7 +170,7 @@
               :src="imgSequenz7"
           />
         </a>
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="redBlue2"
@@ -164,7 +180,7 @@
               :src="redBlue2"
           />
         </a>
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="toni"
@@ -175,7 +191,7 @@
           />
         </a>
 
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="toni2"
@@ -186,7 +202,7 @@
           />
         </a>
         <!-- VImeo Video --->
-        <a
+        <a  
             data-lg-size="1280-720"
             data-src="//vimeo.com/740789436"
             data-poster=""
@@ -197,9 +213,10 @@
               class="img-responsive"
               :src="titleimgsequenz1"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
         <!-- VImeo Video --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="https://vimeo.com/740789047"
             data-poster=""
@@ -210,8 +227,9 @@
               class="img-responsive"
               :src="bwTitleImg"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1406-1390"
             class="gallery-item"
             :data-src="titleImgSequ8"
@@ -234,24 +252,19 @@ import image from "/src/assets/logo.png";
 import sequ2stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil1.jpg";
 import sequ2stil2 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil2.png";
 import sequ2stil3 from "/././././././src/assets/images/projects/oni-studio/Sequence2-Stil3.jpg";
-
 import sequ5stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence5-Stil1.png";
 import sequ3stil1 from "/././././././src/assets/images/projects/oni-studio/Sequence3-Stil1.jpg";
-
 import titleimgsequenz1 from "/././././././src/assets/images/projects/oni-studio/titelimg-sequenz1.jpg";
-
 import carla from "/././././././src/assets/images/projects/oni-studio/carla.png";
 import carla2 from "/././././././src/assets/images/projects/oni-studio/carla2.jpg";
 import carla3 from "/././././././src/assets/images/projects/oni-studio/carla3.jpg";
 import toni from "/././././././src/assets/images/projects/oni-studio/toni.jpg";
 import toni2 from "/././././././src/assets/images/projects/oni-studio/toni2.jpg";
-
 import imageW from "/././././././src/assets/images/projects/oni-studio/image.jpg";
 import imgSequenz7 from "/././././././src/assets/images/projects/oni-studio/image-sequenz7.jpg";
 import titleImgSequ8 from "/././././././src/assets/images/projects/oni-studio/titleimg-sequenz8.jpg";
 import titleimgsequenz6 from "/././././././src/assets/images/projects/oni-studio/titleimg-sequenz6.png";
 import redBlue2 from "/src/assets/images/projects/oni-studio/red-blue2.jpg";
-
 import bwTitleImg from "/src/assets/images/projects/oni-studio/bw-titleimg.png";
 
 import Lightgallery from 'lightgallery/vue';
@@ -286,8 +299,13 @@ export default {
     bwTitleImg: bwTitleImg,
 
     plugins: [lgZoom, lgVideo],
+
+    filter: 'all', // 'all', 'photo', 'video'
   }),
   methods: {
+    setFilter(filter) {
+      this.filter = filter;
+    },
     goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
@@ -316,7 +334,7 @@ export default {
 
 .projectTitle{
   color: white;
-  font-size: 100px;
+  font-size: 12vw;
   letter-spacing: 0.1em;
   font-weight: 500;
   position: absolute;
@@ -349,18 +367,19 @@ export default {
 }
 
 .lightgallery-vue{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-  grid-gap: clamp(1rem, 2vw, 1rem)
+  display: flex;
+  flex-direction: column;
 }
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 300px;
+  height: 100%;
   width: 100%;
+  max-width: 600px;
   min-width: 200px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1px;
 }
-
 .projectContentContainer{
   height: 100vh;
   background-color: #202023;
@@ -371,7 +390,6 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 350px;
   text-align: left;
   color: darkgray;
   text-transform: uppercase;
@@ -379,6 +397,8 @@ export default {
   padding-inline-start: 0;
   padding: 80px;
   letter-spacing: 0.1em;
+  display: flex;
+  gap: 80px;
 }
 
 .factsContainer h2{
@@ -418,8 +438,99 @@ iframe{
 iframe .vp-center {
   display: block;
   justify-content: inherit !important;
-
   align-items: center;
+}
+
+.icon-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: white;
+  opacity: 0.4;
+  transition: all 0.5s ease-in-out;
+}
+
+.filter-buttons {
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+  max-width: 100px;
+  display: flex;
+  z-index: 1;
+}
+
+.filter-buttons button {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button.active {
+  background-color: blue;
+}
+
+.link a{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: blue;
+  transition: all 0.3s ease-in-out 0s;
+  color: darkgray;
+}
+
+.link:hover a{
+  text-decoration-color: white;
+  color: blue;
+}
+
+.play-icon{
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 1100px) {
+  .filter-buttons {
+    position: sticky;
+    top: calc(100vh - 50px);
+    left: unset;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-right: -40px;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .factsContainer {
+  display: block;
+  position: unset;
+  padding: 20px;
+  font-size: 14px;
+}
+.projectTitle{
+      position: unset;
+      transform: translate(0, 0);
+      padding-top: 30px;
+    }
+.projectContentContainer{
+  height: auto;
+}
+
+.galleryContainer{
+  padding: 60px;
+}
 }
 
 </style>

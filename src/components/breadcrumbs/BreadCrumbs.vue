@@ -39,7 +39,7 @@
     top: 50%;
     transform: translate(0, -50%);
     right: 0;
-    z-index: 100;
+    z-index: 1000;
     margin: 16px;
     display: flex;
     font-size: 16px;

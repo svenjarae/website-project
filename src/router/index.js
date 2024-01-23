@@ -52,18 +52,6 @@ const routes = [
     },
   },
   {
-    path: '/projects/nocturno',
-    name: 'nocturno',
-    component: () => import(/* webpackChunkName: "nocturno" */ '../views/projects/single-project/ProjectBuceoNocturnoView'),
-    meta: {
-      breadcrumbs: [
-        { label: 'Start', to: '/' },
-        { label: '> Projects', to: '/projects' },
-        { label: '> Nocturno', to: '/projects/nocturno' },
-      ],
-    },
-  },
-  {
     path: '/projects/taliarte',
     name: 'taliarte',
     component: () => import(/* webpackChunkName: "taliarte" */ '../views/projects/single-project/ProjectTaliarteView'),
@@ -76,14 +64,14 @@ const routes = [
     },
   },
   {
-    path: '/projects/gcsealife',
-    name: 'gcsealife',
-    component: () => import(/* webpackChunkName: "gcsealife" */ '../views/projects/single-project/ProjectGcSealifeView'),
+    path: '/projects/canarias',
+    name: 'canarias',
+    component: () => import(/* webpackChunkName: "canarias" */ '../views/projects/single-project/ProjectCanariasView'),
     meta: {
       breadcrumbs: [
         { label: 'Start', to: '/' },
         { label: '> Projects', to: '/projects' },
-        { label: '> GC Sealife', to: '/projects/gcsealife' },
+        { label: '> Canarias', to: '/projects/canarias' },
       ],
     },
   },

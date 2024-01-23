@@ -12,27 +12,33 @@
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Info</h2>
+            <h2>Short</h2>
           </li>
           <li>Galapagos Island</li>
           <li>10/2018</li>
+          <li>Perfect example of evolution & unique wildlife.</li>
         </ul>
         <ul>
           <li>
-            <h2>Description</h2>
+            <h2></h2>
           </li>
-        <li>Perfect example of evolution & unique wildlife.</li>
+          <li></li>
         </ul>
       </div>
     </div>
     <div class="galleryContainer">
+      <div class="filter-buttons">
+        <button @click="setFilter('all')" :class="{ 'active': filter === 'all' }">All</button>
+        <button @click="setFilter('photo')" :class="{ 'active': filter === 'photo' }">Photos</button>
+        <button @click="setFilter('video')" :class="{ 'active': filter === 'video' }">Videos</button>
+      </div>
       <lightgallery
           :settings="{ speed: 500, plugins: plugins }"
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
-        <!-- VImeo Video --->
-        <a
+        <!-- Vimeo Video --->
+        <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
             data-src="//vimeo.com/738656811"
             data-poster=""
@@ -43,9 +49,10 @@
               class="img-responsive"
               :src="sealion"
           />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
-
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="waterHighSat"
@@ -55,7 +62,8 @@
               :src="waterHighSat"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="waterTurtle"
@@ -65,8 +73,8 @@
               :src="waterTurtle"
           />
         </a>
-
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="sealionsCuddle"
@@ -76,7 +84,8 @@
               :src="sealionsCuddle"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="galapagosShark"
@@ -86,7 +95,8 @@
               :src="galapagosShark"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="manta"
@@ -96,18 +106,8 @@
               :src="manta"
           />
         </a>
-
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="turtle"
-        >
-          <img
-              class="img-responsive"
-              :src="turtle"
-          />
-        </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="bwWhitetips"
@@ -117,7 +117,8 @@
               :src="bwWhitetips"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="island"
@@ -127,7 +128,8 @@
               :src="island"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="puertoVillamil"
@@ -137,7 +139,8 @@
               :src="puertoVillamil"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="landscape"
@@ -147,7 +150,8 @@
               :src="landscape"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="birdDry"
@@ -157,7 +161,8 @@
               :src="birdDry"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="iguana"
@@ -167,7 +172,8 @@
               :src="iguana"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="iguanas"
@@ -177,7 +183,8 @@
               :src="iguanas"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="galapagosExe"
@@ -187,7 +194,8 @@
               :src="galapagosExe"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="turtles"
@@ -197,17 +205,8 @@
               :src="turtles"
           />
         </a>
-        <a
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="mobulas"
-        >
-          <img
-              class="img-responsive"
-              :src="mobulas"
-          />
-        </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="whitetip"
@@ -217,7 +216,8 @@
               :src="whitetip"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="sharkFin"
@@ -227,7 +227,8 @@
               :src="sharkFin"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="iDive"
@@ -237,7 +238,8 @@
               :src="iDive"
           />
         </a>
-        <a
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="molamola"
@@ -245,19 +247,6 @@
           <img
               class="img-responsive"
               :src="molamola"
-          />
-        </a>
-        <!-- VImeo Video --->
-        <a
-            data-lg-size="1280-720"
-            data-src="//vimeo.com/741586500"
-            data-poster=""
-        >
-          <img
-              width="300"
-              height="100"
-              class="img-responsive"
-              :src="pingu"
           />
         </a>
       </lightgallery>
@@ -276,22 +265,17 @@ import island from "/././././././src/assets/images/projects/galapagos/galleryImg
 import manta from "/././././././src/assets/images/projects/galapagos/galleryImgs/manta.jpg";
 import sealionsCuddle from "/././././././src/assets/images/projects/galapagos/galleryImgs/seelions-cuddle.jpg";
 import sharkFin from "/././././././src/assets/images/projects/galapagos/galleryImgs/sharkfin.jpg";
-import pingu from "/././././././src/assets/images/projects/galapagos/galleryImgs/piingu.png";
 import waterHighSat from "/././././././src/assets/images/projects/glowing-turts/water-high-saturation.jpg";
 import waterTurtle from "/././././././src/assets/images/projects/glowing-turts/water-turtle.jpg";
 import birdDry from "/././././././src/assets/images/projects/galapagos/galleryImgs/birdDry.jpg";
 import galapagosExe from "/src/assets/images/projects/galapagos/galleryImgs/galapagosExe.jpg";
 import landscape from "/src/assets/images/projects/galapagos/galleryImgs/landscape.jpg";
-
-
 import bwWhitetips from "/src/assets/images/projects/galapagos/galleryImgs/bw-whitetips.jpg";
 import whitetip from "/src/assets/images/projects/galapagos/galleryImgs/whitetip.jpg";
 import iguana from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-iguana.jpg";
 import iguanas from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-iguanas.jpg";
-import turtle from "/src/assets/images/projects/galapagos/galleryImgs/galapagos_turtle.jpg";
 import turtles from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-turtles.jpg";
 import molamola from "/src/assets/images/projects/galapagos/galleryImgs/molamola.jpg";
-import mobulas from "/src/assets/images/projects/galapagos/galleryImgs/galapagos-mobulas.jpg";
 
 import DownBtn from "@/components/buttons/DownBtn";
 import Lightgallery from 'lightgallery/vue';
@@ -304,9 +288,6 @@ export default {
     Lightgallery,
     DownBtn,
   },
-  props:{
-
-  },
   data: () => ({
     image: image,
     sealionsCuddle: sealionsCuddle,
@@ -317,25 +298,26 @@ export default {
     iDive: iDive,
     puertoVillamil: puertoVillamil,
     sealion: sealion,
-    pingu: pingu,
     waterHighSat: waterHighSat,
     waterTurtle: waterTurtle,
     birdDry: birdDry,
     galapagosExe: galapagosExe,
     landscape: landscape,
-
     bwWhitetips: bwWhitetips,
     iguana: iguana,
     iguanas: iguanas,
-    mobulas: mobulas,
-    turtle: turtle,
     turtles: turtles,
     molamola: molamola,
     whitetip: whitetip,
 
     plugins: [lgZoom, lgVideo],
+
+    filter: 'all', // 'all', 'photo', 'video'
   }),
   methods: {
+    setFilter(filter) {
+      this.filter = filter;
+    },
     goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
@@ -364,7 +346,7 @@ export default {
 
 .projectTitle{
   color: white;
-  font-size: 100px;
+  font-size: 12vw;
   letter-spacing: 0.1em;
   font-weight: 500;
   position: absolute;
@@ -397,18 +379,19 @@ export default {
 }
 
 .lightgallery-vue{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-  grid-gap: clamp(1rem, 2vw, 1rem)
+  display: flex;
+  flex-direction: column;
 }
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 300px;
+  height: 100%;
   width: 100%;
+  max-width: 600px;
   min-width: 200px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1px;
 }
-
 .projectContentContainer{
   height: 100vh;
   background-color: #202023;
@@ -419,7 +402,6 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 350px;
   text-align: left;
   color: darkgray;
   text-transform: uppercase;
@@ -427,6 +409,8 @@ export default {
   padding-inline-start: 0;
   padding: 80px;
   letter-spacing: 0.1em;
+  display: flex;
+  gap: 80px;
 }
 
 .factsContainer h2{
@@ -467,6 +451,98 @@ iframe .vp-center {
   display: block;
   justify-content: inherit !important;
   align-items: center;
+}
+
+.icon-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: white;
+  opacity: 0.4;
+  transition: all 0.5s ease-in-out;
+}
+
+.filter-buttons {
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+  max-width: 100px;
+  display: flex;
+  z-index: 1;
+}
+
+.filter-buttons button {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button.active {
+  background-color: blue;
+}
+
+.link a{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: blue;
+  transition: all 0.3s ease-in-out 0s;
+  color: darkgray;
+}
+
+.link:hover a{
+  text-decoration-color: white;
+  color: blue;
+}
+
+.play-icon{
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 1100px) {
+  .filter-buttons {
+    position: sticky;
+    top: calc(100vh - 50px);
+    left: unset;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-right: -40px;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .factsContainer {
+  display: block;
+  position: unset;
+  padding: 20px;
+  font-size: 14px;
+}
+.projectTitle{
+      position: unset;
+      transform: translate(0, 0);
+      padding-top: 30px;
+    }
+.projectContentContainer{
+  height: auto;
+}
+
+.galleryContainer{
+  padding: 60px;
+}
 }
 
 </style>

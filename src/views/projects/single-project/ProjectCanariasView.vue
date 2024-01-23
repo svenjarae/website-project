@@ -1,56 +1,114 @@
 <template>
   <div>
     <div class="iframeContainer">
-      <img :src="oct1" alt="poster image"/>
+      <img :src="squid1"/>
       <div class="containerDownBtn" @click="goto('page2')">
         <DownBtn></DownBtn>
       </div>
     </div>
     <div style="height: 100vh; width: 100vw;"></div>
     <div ref="page2" class="projectContentContainer">
-      <h1 class="projectTitle">NOCTURNO</h1>
+      <h1 class="projectTitle">Canarias</h1>
       <div class="factsContainer">
         <ul>
           <li>
-            <h2>Description</h2>
+            <h2>Short</h2>
           </li>
-          <li>Dive sites become a wonderland of activity once the sun disappears. Many of the creatures you search for in vain during the day are active at night, floating by when you least expect them. You miss out on half of the ocean’s life if you only dive during the day.</li>
-          <li>For an even cooler experience, go early in the morning before sunrise when the reef is buzzing with activity, giving you a front-row seat to the underwater morning hustle.</li>
+          <li>Canary Islands, Gran Canaria</li>
+          <li>Divesites: El Cabron, Tufia, Sardina del Norte</li>
+          <li>Day- and Nightdives</li>
+          <li class="link">Scuba Diving with
+            <a href="https://www.karapatdive.com/">Karapat Dive</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h2></h2>
+          </li>
+          <li></li>
         </ul>
       </div>
     </div>
     <div class="galleryContainer">
+      <div class="filter-buttons">
+        <button @click="setFilter('all')" :class="{ 'active': filter === 'all' }">All</button>
+        <button @click="setFilter('photo')" :class="{ 'active': filter === 'photo' }">Photos</button>
+        <button @click="setFilter('video')" :class="{ 'active': filter === 'video' }">Videos</button>
+      </div>
       <lightgallery
           :settings="{ speed: 500, plugins: plugins }"
           :onInit="onInit"
           :onBeforeSlide="onBeforeSlide"
       >
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="oct1"
-            data-sub-html="<h4>Photo taken & edited by SR - </h4><p>White spotted oct</p>"
+            :data-src="squid1"
+            data-sub-html="<h4>Photos & Videos taken & edited by SR - </h4><p>Squids</p>"
         >
           <img
               class="img-responsive"
-              :src="oct1"
+              :src="squid1"
           />
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="oct2"
-            data-sub-html="<h4>Photo taken & edited by SR - </h4><p>White spotted oct</p>"
+            :data-src="squid2"
         >
           <img
               class="img-responsive"
-              :src="oct2"
+              :src="squid2"
           />
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="squid3"
+        >
+          <img
+              class="img-responsive"
+              :src="squid3"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="glow"
+        >
+          <img
+              class="img-responsive"
+              :src="glow"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="part1"
+        >
+          <img
+              class="img-responsive"
+              :src="part1"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="part2"
+        >
+          <img
+              class="img-responsive"
+              :src="part2"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="oct3"
@@ -62,7 +120,7 @@
           />
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="oct4"
@@ -74,7 +132,7 @@
           />
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="fish1"
@@ -86,7 +144,7 @@
           />
         </a>
         <!-- Image --->
-        <a
+        <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
             :data-src="fish2"
@@ -104,14 +162,17 @@
 <script>
 
 // images
-import oct1 from "/src/assets/images/projects/buceo-nocturno/pulpo.jpg";
-import oct2 from "/src/assets/images/projects/buceo-nocturno/pulpo-close-master.jpg";
+import image from "/src/assets/logo.png";
+import squid2 from "/src/assets/images/projects/gc-sealife/squid2.png";
+import squid1 from "/src/assets/images/projects/gc-sealife/squid1.png";
+import squid3 from "/src/assets/images/projects/gc-sealife/squid3.png";
+import part1 from "/src/assets/images/projects/gc-sealife/part1.jpg";
+import part2 from "/src/assets/images/projects/gc-sealife/part2.jpg";
+import glow from "/src/assets/images/projects/gc-sealife/glow.png";
 import oct3 from "/src/assets/images/projects/buceo-nocturno/pulpili11.jpg";
 import oct4 from "/src/assets/images/projects/buceo-nocturno/pulpi.jpg";
 import fish1 from "/src/assets/images/projects/buceo-nocturno/fishi-gc-1.jpg";
 import fish2 from "/src/assets/images/projects/buceo-nocturno/fishi-gc-4.jpg";
-
-
 
 import DownBtn from "@/components/buttons/DownBtn";
 import Lightgallery from 'lightgallery/vue';
@@ -119,26 +180,32 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
 export default {
-  name: 'BuceoNocturnoView',
+  name: 'CanariasView',
   components: {
     Lightgallery,
     DownBtn,
   },
-  props:{
-
-  },
   data: () => ({
-    oct1: oct1,
-    oct2: oct2,
+    image: image,
+    squid1: squid1,
+    squid2: squid2,
+    squid3: squid3,
+    part1: part1,
+    part2: part2,
+    glow: glow,
     oct3: oct3,
     oct4: oct4,
     fish1: fish1,
     fish2: fish2,
 
-
     plugins: [lgZoom, lgVideo],
+
+    filter: 'all', // 'all', 'photo', 'video'
   }),
   methods: {
+    setFilter(filter) {
+      this.filter = filter;
+    },
     goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
@@ -168,7 +235,7 @@ export default {
 
 .projectTitle{
   color: white;
-  font-size: 100px;
+  font-size: 12vw;
   letter-spacing: 0.1em;
   font-weight: 500;
   position: absolute;
@@ -201,18 +268,19 @@ export default {
 }
 
 .lightgallery-vue{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
-  grid-gap: clamp(1rem, 2vw, 1rem)
+  display: flex;
+  flex-direction: column;
 }
 
 .lightgallery-vue img{
   object-fit: cover;
-  height: 300px;
+  height: 100%;
   width: 100%;
+  max-width: 600px;
   min-width: 200px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1px;
 }
-
 .projectContentContainer{
   height: 100vh;
   background-color: #202023;
@@ -223,7 +291,6 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 350px;
   text-align: left;
   color: darkgray;
   text-transform: uppercase;
@@ -231,6 +298,8 @@ export default {
   padding-inline-start: 0;
   padding: 80px;
   letter-spacing: 0.1em;
+  display: flex;
+  gap: 80px;
 }
 
 .factsContainer h2{
@@ -273,9 +342,96 @@ iframe .vp-center {
   align-items: center;
 }
 
-@media only screen and (max-width: 720px){
-  .projectTitle{
-    font-size: 30px;
+.icon-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: white;
+  opacity: 0.4;
+  transition: all 0.5s ease-in-out;
+}
+
+.filter-buttons {
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+  max-width: 100px;
+  display: flex;
+  z-index: 1;
+}
+
+.filter-buttons button {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button.active {
+  background-color: blue;
+}
+
+.link a{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: blue;
+  transition: all 0.3s ease-in-out 0s;
+  color: darkgray;
+}
+
+.link:hover a{
+  text-decoration-color: white;
+  color: blue;
+}
+
+.play-icon{
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 1100px) {
+  .filter-buttons {
+    position: sticky;
+    top: calc(100vh - 50px);
+    left: unset;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-right: -40px;
+    max-width: none;
   }
 }
+
+@media screen and (max-width: 780px) {
+  .factsContainer {
+  display: block;
+  position: unset;
+  padding: 20px;
+  font-size: 14px;
+}
+.projectTitle{
+      position: unset;
+      transform: translate(0, 0);
+      padding-top: 30px;
+    }
+.projectContentContainer{
+  height: auto;
+}
+
+.galleryContainer{
+  padding: 60px;
+}
+}
+
 </style>

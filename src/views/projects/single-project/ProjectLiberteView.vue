@@ -23,7 +23,7 @@
             <h2>Description</h2>
           </li>
           <li>In this project, we embarked on a thrilling adventure in France, inviting ocean enthusiasts to join our collective of researchers, guides, and nature filmmakers in an immersive journey into marine biology in September 2023!</li>
-        <li>A 7-day expedition, where we contributed to research, engaged in animal encounters, and protected endangered species. Explored marine habitats, learned freediving, and made a positive impact with expert training. Follow @ocean_collective_agency for memories of our unforgettable journey! 🌊❤️</li>
+          <li>A 7-day expedition, where we contributed to research, engaged in animal encounters, and protected endangered species. Explored marine habitats, learned freediving, and made a positive impact with expert training. Follow @ocean_collective_agency for memories of our unforgettable journey! 🌊❤️</li>
         </ul>
       </div>
     </div>
@@ -154,15 +154,14 @@
             data-src="//vimeo.com/902794090"
             data-poster=""
         >
-        <img
+          <img
             width="300"
             height="100"
             class="img-responsive"
             :src="team"
-        />
-        <span class="play-icon fa fa-play" aria-hidden="true"></span>
+          />
+          <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
-        
       </lightgallery>
     </div>
   </div>
@@ -182,20 +181,16 @@ import vero01 from "/src/assets/images/projects/liberte/vero-still001.jpg";
 import vero02 from "/src/assets/images/projects/liberte/vero-still002.jpg";
 import team from "/src/assets/images/projects/liberte/team.jpg";
 
-
 import DownBtn from "@/components/buttons/DownBtn";
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
 export default {
-  name: 'ProjectGalapagosView',
+  name: 'ProjectLiberteView',
   components: {
     Lightgallery,
     DownBtn,
-  },
-  props:{
-
   },
   data: () => ({
     bird: bird,

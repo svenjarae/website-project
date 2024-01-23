@@ -56,6 +56,7 @@ export default {
     padding-inline-start: 0;
     padding: 80px;
     letter-spacing: 0.1em;
+    font-size: 16px;
   }
 
   .factsContainer h2{
