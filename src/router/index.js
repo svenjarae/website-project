@@ -52,6 +52,18 @@ const routes = [
     },
   },
   {
+    path: '/projects/spain',
+    name: 'spain',
+    component: () => import(/* webpackChunkName: "spain" */ '../views/projects/single-project/ProjectSpainView'),
+    meta: {
+      breadcrumbs: [
+        { label: 'Start', to: '/' },
+        { label: '> Projects', to: '/projects' },
+        { label: '> spain', to: '/projects/spain' },
+      ],
+    },
+  },
+  {
     path: '/projects/taliarte',
     name: 'taliarte',
     component: () => import(/* webpackChunkName: "taliarte" */ '../views/projects/single-project/ProjectTaliarteView'),
