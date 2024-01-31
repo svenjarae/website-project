@@ -321,6 +321,8 @@ export default {
 .lightgallery-vue{
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  margin: auto;
 }
 
 .lightgallery-vue img{
