@@ -55,6 +55,18 @@
         <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
+            :data-src="thirteen"
+        >
+          <img
+              class="img-responsive"
+              :src="thirteen"
+          />
+          <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
             :data-src="one"
         >
           <img
@@ -79,51 +91,6 @@
         <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
             class="gallery-item"
-            :data-src="three"
-        >
-          <img
-              class="img-responsive"
-              :src="three"
-          />
-        </a>
-        <!-- Image --->
-        <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="four"
-        >
-          <img
-              class="img-responsive"
-              :src="four"
-          />
-        </a>
-        <!-- Image --->
-        <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="five"
-        >
-          <img
-              class="img-responsive"
-              :src="five"
-          />
-        </a>
-        <!-- Image --->
-        <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="six"
-        >
-          <img
-              class="img-responsive"
-              :src="six"
-          />
-        </a>
-
-        <!-- Image --->
-        <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
             :data-src="seven"
         >
           <img
@@ -140,17 +107,6 @@
           <img
               class="img-responsive"
               :src="eight"
-          />
-        </a>
-          <!-- Image --->
-        <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="nine"
-        >
-          <img
-              class="img-responsive"
-              :src="nine"
           />
         </a>
          <!-- Image --->
@@ -175,29 +131,6 @@
               :src="eleven"
           />
         </a>
-        <!-- Image --->
-        <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="twelve"
-        >
-          <img
-              class="img-responsive"
-              :src="twelve"
-          />
-        </a>
-         <!-- Image --->
-         <a  v-if="filter === 'all' || filter === 'photo'"
-            data-lg-size="1400-1400"
-            class="gallery-item"
-            :data-src="thirteen"
-        >
-          <img
-              class="img-responsive"
-              :src="thirteen"
-          />
-          <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
-        </a>
         <!-- VImeo Video --->
         <a  v-if="filter === 'all' || filter === 'video'"
             data-lg-size="1280-720"
@@ -211,6 +144,17 @@
             :src="titleImgVideo1"
           />
           <span class="play-icon fa fa-play" aria-hidden="true"></span>
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="twelve"
+        >
+          <img
+              class="img-responsive"
+              :src="twelve"
+          />
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -300,6 +244,50 @@
               :src="twentyone"
           />
         </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="six"
+        >
+          <img
+              class="img-responsive"
+              :src="six"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="three"
+        >
+          <img
+              class="img-responsive"
+              :src="three"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="four"
+        >
+          <img
+              class="img-responsive"
+              :src="four"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="five"
+        >
+          <img
+              class="img-responsive"
+              :src="five"
+          />
+        </a>
       </lightgallery>
     </div>
   </div>
@@ -317,7 +305,6 @@ import five from "@/assets/images/projects/spain/P1055097.00_00_46_28.Still004.j
 import six from "@/assets/images/projects/spain/emelieP1055163.MOV.11_43_46_09.Still002.jpg";
 import seven from "@/assets/images/projects/spain/P1055124.MOV.10_59_24_48.Still004.jpg";
 import eight from "@/assets/images/projects/spain/P1055124.MOV.10_59_27_49.Still002.jpg";
-import nine from "@/assets/images/projects/spain/P1055129.MOV.11_07_14_12.Still005-1.jpg";
 import ten from "@/assets/images/projects/spain/P1055129.MOV.11_10_39_12.Still007-2.jpg";
 import eleven from "@/assets/images/projects/spain/P1055318.jpg";
 import twelve from "@/assets/images/projects/spain/P1055116.MOV.10_44_33_20.Still007.jpg";
@@ -353,7 +340,6 @@ export default {
     six:six,
     seven:seven,
     eight:eight,
-    nine:nine,
     ten:ten,
     eleven:eleven,
     twelve:twelve,
