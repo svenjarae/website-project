@@ -14,12 +14,13 @@
       </transition>
     </router-view>
     <footer>
-      <!--CoolFooter></CoolFooter>-->
+      
       <div class="innerContainer" style="background-color: #17191CFF;">
         <div class="heartContainer">
           <BeatingHeart></BeatingHeart>
         </div>
       </div>
+      <CoolFooter></CoolFooter>
     </footer>
     <BackBtn></BackBtn>
   </div>

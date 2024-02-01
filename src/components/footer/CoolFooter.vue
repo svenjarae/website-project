@@ -1,31 +1,21 @@
 <template>
     <footer class="cool-footer">
       <div class="footer-content">
-        <div class="footer-logo">Your Logo</div>
+        <div class="footer-logo">SR</div>
         <div class="footer-links">
-          <router-link to="/">Start</router-link>
-          <router-link to="/about">Info</router-link>
-          <router-link to="/about">Projects</router-link>
-          <router-link to="/contact">Contact</router-link>
+
         </div>
         <div class="footer-social">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
-          </a>
+          <router-link to="/dataprivacy">Data Privacy</router-link>
+          <router-link to="/">Impress</router-link>
         </div>
       </div>
     </footer>
     <div style="background-color: blue;">
       <div class="footer-partners">
-          <img src="">Ocean Collective
-          <img src="">Ocean Wildlife Project
-          <img src="">Codevance
+          <img src="">
+          <img src="">
+          <img src="">
         </div>
     </div>
   </template>
@@ -42,6 +32,7 @@
     color: white;
     padding: 20px;
     text-align: center;
+    font-size: 12px;
   }
   
   .footer-content {
@@ -51,8 +42,11 @@
   }
   
   .footer-logo {
-    font-size: 24px;
-    font-weight: bold;
+    letter-spacing: 10px;
+    margin: 16px 24px;
+    font-weight: 500;
+    font-family: var(--secondaryFont);
+    font-size: 40px;
   }
   
   .footer-links {
@@ -66,10 +60,6 @@
     font-weight: 500;
   }
   
-  .footer-social {
-    font-size: 24px;
-  }
-  
   .footer-social a {
     color: white;
     margin-right: 10px;
@@ -81,7 +71,6 @@
     justify-content: center;
     padding: 20px;
     color: white;
-    font-weight: bold;
   }
   
   /* Add your own styles to make it even cooler! */
