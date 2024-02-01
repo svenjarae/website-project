@@ -2,7 +2,7 @@
   <div>
     <div class="iframeContainer">
         <img :src="spainTitle"/>
-        <div style="color: white; position: absolute; bottom: 20px; right: 20px;">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
+        <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
       <div class="containerDownBtn" @click="goto('page2')">
         <DownBtn></DownBtn>
       </div>
@@ -49,7 +49,7 @@
               class="img-responsive"
               :src="spainTitle"
           />
-          <div style="color: white; position: absolute; bottom: 20px; right: 20px;">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
+          <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -61,7 +61,7 @@
               class="img-responsive"
               :src="one"
           />
-          <div style="color: white; position: absolute; bottom: 20px; right: 20px;">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
+          <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -73,7 +73,7 @@
               class="img-responsive"
               :src="two"
           />
-          <div style="color: white; position: absolute; bottom: 20px; right: 20px;">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
+          <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
         </a>
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
@@ -119,6 +119,7 @@
               :src="six"
           />
         </a>
+
         <!-- Image --->
         <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
@@ -174,6 +175,17 @@
               :src="eleven"
           />
         </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="twelve"
+        >
+          <img
+              class="img-responsive"
+              :src="twelve"
+          />
+        </a>
          <!-- Image --->
          <a  v-if="filter === 'all' || filter === 'photo'"
             data-lg-size="1400-1400"
@@ -184,7 +196,7 @@
               class="img-responsive"
               :src="thirteen"
           />
-          <div style="color: white; position: absolute; bottom: 20px; right: 20px;">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
+          <div class="copyright">&copy; <a href="https://www.instagram.com/lennyunderwater/">Lennart Voßgätter</a></div>
         </a>
         <!-- VImeo Video --->
         <a  v-if="filter === 'all' || filter === 'video'"
@@ -200,6 +212,94 @@
           />
           <span class="play-icon fa fa-play" aria-hidden="true"></span>
         </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="fourteen"
+        >
+          <img
+              class="img-responsive"
+              :src="fourteen"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="fiveteen"
+        >
+          <img
+              class="img-responsive"
+              :src="fiveteen"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="sixteen"
+        >
+          <img
+              class="img-responsive"
+              :src="sixteen"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="seventeen"
+        >
+          <img
+              class="img-responsive"
+              :src="seventeen"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="eighteen"
+        >
+          <img
+              class="img-responsive"
+              :src="eighteen"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="nineteen"
+        >
+          <img
+              class="img-responsive"
+              :src="nineteen"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="twenty"
+        >
+          <img
+              class="img-responsive"
+              :src="twenty"
+          />
+        </a>
+        <!-- Image --->
+        <a  v-if="filter === 'all' || filter === 'photo'"
+            data-lg-size="1400-1400"
+            class="gallery-item"
+            :data-src="twentyone"
+        >
+          <img
+              class="img-responsive"
+              :src="twentyone"
+          />
+        </a>
       </lightgallery>
     </div>
   </div>
@@ -214,13 +314,22 @@ import two from "@/assets/images/projects/spain/OC_Season_SR_bw.jpg";
 import three from "@/assets/images/projects/spain/P1055097.00_00_10_46.Still001.jpg";
 import four from "@/assets/images/projects/spain/P1055097.00_00_30_40.Still005.jpg";
 import five from "@/assets/images/projects/spain/P1055097.00_00_46_28.Still004.jpg";
-import six from "@/assets/images/projects/spain/P1055116.MOV.10_47_25_11.Still014.jpg";
+import six from "@/assets/images/projects/spain/emelieP1055163.MOV.11_43_46_09.Still002.jpg";
 import seven from "@/assets/images/projects/spain/P1055124.MOV.10_59_24_48.Still004.jpg";
 import eight from "@/assets/images/projects/spain/P1055124.MOV.10_59_27_49.Still002.jpg";
 import nine from "@/assets/images/projects/spain/P1055129.MOV.11_07_14_12.Still005-1.jpg";
 import ten from "@/assets/images/projects/spain/P1055129.MOV.11_10_39_12.Still007-2.jpg";
 import eleven from "@/assets/images/projects/spain/P1055318.jpg";
+import twelve from "@/assets/images/projects/spain/P1055116.MOV.10_44_33_20.Still007.jpg";
 import thirteen from "@/assets/images/projects/spain/svenja-3.jpg";
+import fourteen from "@/assets/images/projects/spain/P1055129.MOV.11_07_14_12.Still005.jpg";
+import fiveteen from "@/assets/images/projects/spain/P1055130.00_00_01_14.Still017.jpg";
+import sixteen from "@/assets/images/projects/spain/P1055130.00_00_13_06.Still003.jpg";
+import seventeen from "@/assets/images/projects/spain/P1055130.00_00_24_49.Still014.jpg";
+import eighteen from "@/assets/images/projects/spain/P1055130.00_00_28_27.Still016.jpg";
+import nineteen from "@/assets/images/projects/spain/P1055130.00_04_40_31.Still008.jpg";
+import twenty from "@/assets/images/projects/spain/P1055135.MOV.11_20_57_18.Still001.jpg";
+import twentyone from "@/assets/images/projects/spain/P1055139.MOV.11_24_57_36.Still001.jpg";
 
 import DownBtn from "@/components/buttons/DownBtn";
 import Lightgallery from 'lightgallery/vue';
@@ -247,7 +356,16 @@ export default {
     nine:nine,
     ten:ten,
     eleven:eleven,
+    twelve:twelve,
     thirteen:thirteen,
+    fourteen:fourteen,
+    fiveteen:fiveteen,
+    sixteen:sixteen,
+    seventeen:seventeen,
+    eighteen:eighteen,
+    nineteen:nineteen,
+    twenty:twenty,
+    twentyone:twentyone,
 
     plugins: [lgZoom, lgVideo],
 
@@ -450,6 +568,14 @@ iframe .vp-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.copyright{
+  color: white; 
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px;
+  font-size: 12px;
 }
 
 
