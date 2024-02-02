@@ -1,9 +1,10 @@
 <template>
     <footer class="cool-footer">
       <div class="footer-content">
-        <div class="footer-logo">SR</div>
-        <div class="footer-links">
-
+        <div class="footer-partners">
+          <img src="@/assets/images/logos/codevance_logo_positiv.svg">
+          <img src="@/assets/images/logos/OC_Logo_Hero.png">
+          <img src="@/assets/images/logos/oceanwildlife-logo.png">
         </div>
         <div class="footer-social">
           <router-link to="/dataprivacy">Data Privacy</router-link>
@@ -11,13 +12,6 @@
         </div>
       </div>
     </footer>
-    <div style="background-color: blue;">
-      <div class="footer-partners">
-          <img src="">
-          <img src="">
-          <img src="">
-        </div>
-    </div>
   </template>
   
   <script>
@@ -49,11 +43,6 @@
     font-size: 40px;
   }
   
-  .footer-links {
-    display: flex;
-    gap: 20px;
-  }
-  
   .footer-links a {
     color: white;
     text-decoration: none;
@@ -63,6 +52,9 @@
   .footer-social a {
     color: white;
     margin-right: 10px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   .footer-partners{
@@ -71,6 +63,14 @@
     justify-content: center;
     padding: 20px;
     color: white;
+  }
+
+  .footer-partners img{
+    max-width: 200px;
+    max-height: 100px;
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
   }
   
   /* Add your own styles to make it even cooler! */
