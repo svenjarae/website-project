@@ -12,8 +12,9 @@
         <div class="footer-social">
           <router-link to="/dataprivacy">Data Privacy</router-link>
           <router-link to="/">Impress</router-link>
-          <button @click="triggerPopup">Contact</button>
+          <router-link to="/projects">Projects</router-link>
           <router-link to="/skills">Skills</router-link>
+          <button @click="triggerPopup">Contact</button>
           <Popup ref="popupRef" />
         </div>
       </div>
@@ -39,13 +40,16 @@
   .cool-footer {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     font-size: 12px;
+    position: sticky;
+    bottom: 0;
   }
   
   .footer-content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
@@ -63,6 +67,10 @@
     text-decoration: none;
     font-weight: 500;
   }
+
+  .footer-social{
+    margin-top: 20px;
+  }
   
   .footer-social a {
     color: white;
@@ -78,6 +86,7 @@
     justify-content: center;
     padding: 20px;
     color: white;
+    overflow: auto;
   }
 
   .footer-partners img{
@@ -99,19 +108,6 @@
     text-transform: uppercase;
     cursor: pointer;
   }
-
-  @media screen and (max-width: 1200px) {
-
-    .footer-content{
-      flex-direction: column;
-    }
-    .footer-social{
-      margin-top: 20px;
-    }
-    .footer-partners{
-  overflow: auto;
-}
-}
 
 @media screen and (max-width: 500px) {
 
