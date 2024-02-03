@@ -91,7 +91,7 @@
 
   .footer-partners img{
     max-width: 120px;
-    max-height: 80px;
+    max-height: 50px;
     width: 100%;
     object-fit: contain;
     object-position: left;

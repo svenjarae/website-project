@@ -47,19 +47,23 @@
   .tab-buttons {
     display: flex;
     margin-bottom: 10px;
+    gap: 10px;
   }
   
   .tab-buttons button {
-    padding: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
     cursor: pointer;
-    border: none;
-    background-color: #4caf50;
+    background-color: #333;
     color: white;
-    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
   }
   
   .tab-buttons button.active {
-    background-color: #45a049;
+    background-color: blue;
   }
   
   .tab-content div {
