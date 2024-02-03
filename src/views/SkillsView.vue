@@ -1,30 +1,59 @@
 <template>
   <div class="outerContainer">
     <div class="factsContainer">
-      <span>I am experienced in <h2>developing</h2> web and desktop applications including full <h2>frontend</h2> design. This includes prototyping, brand identity, graphics and illustrations.</span>
-      <br><br>
-      <span>In addition my personal interests lie in <h2>uw photo & video creations</h2>, as I have a professional background in film making and visual effects.</span>
-      <br><br>
-      <span>Since 04/2023 I got my <h2>dive instructor</h2> license and I plan to continue teaching on the canary islands.</span>
+      <div>
+        <ReusableTab :tabs="myTabs" />
+      </div>
     </div>
+
+    
   </div>
-  <div class="container">
-    <RollingText></RollingText><span style="margin-right: 10px"></span>
-  </div>
+    <div class="container">
+      <RollingText></RollingText><span style="margin-right: 10px"></span>
+    </div>
 
 </template>
 
 <script>
 
 import RollingText from "@/components/animations/RollingText";
+import ReusableTab from "@/components/tabs/ReusableTab";
 export default {
   name: 'SkillsView',
   components: {
-    RollingText
+    RollingText,
+    ReusableTab
   },
   data(){
     return{
-    }
+      myTabs: [
+        {
+          title: 'Dive Instructor',
+          list: ['Item 1', 'Item 2', 'Item 3'],
+          gallery: [
+            ['image1.jpg', 'image2.jpg'],
+            ['image3.jpg', 'image4.jpg'],
+          ],
+        },
+        {
+          title: 'Tab 2',
+          list: ['Item A', 'Item B', 'Item C'],
+          gallery: [
+            ['image5.jpg', 'image6.jpg'],
+            ['image7.jpg', 'image8.jpg'],
+          ],
+        },
+        {
+          title: 'Tab 3',
+          list: ['Apple', 'Banana', 'Orange'],
+          gallery: [
+            ['image9.jpg', 'image10.jpg'],
+            ['image11.jpg', 'image12.jpg'],
+          ],
+        },
+      ],
+    };
+
   },
   methods: {
   }
@@ -45,10 +74,6 @@ export default {
 }
 
 .factsContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 350px;
   text-align: left;
   text-transform: uppercase;
   z-index: 100;

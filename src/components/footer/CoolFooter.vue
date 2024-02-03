@@ -2,12 +2,12 @@
     <footer class="cool-footer">
       <div class="footer-content">
         <div class="footer-partners">
-          <img src="@/assets/images/logos/rhm-logo-positiv.png">
-          <img src="@/assets/images/logos/codevance_logo_positiv.svg">
+          <img src="@/assets/images/logos/delphinus-logo-popup.png">
+          <img src="@/assets/images/logos/rhm-logo-positiv.png" style="background-color: white; padding: 0 5px 0 5px">
+          <img src="@/assets/images/logos/codevance_logo_positiv.svg" style="background-color: white; padding: 0 5px 0 5px">
           <img src="@/assets/images/logos/OC_Logo_Hero.png">
           <img src="@/assets/images/logos/oceanwildlife-logo.png">
           <img src="@/assets/images/logos/Logo-white-IRS.svg">
-          
         </div>
         <div class="footer-social">
           <router-link to="/dataprivacy">Data Privacy</router-link>
@@ -38,7 +38,7 @@
   
   <style scoped>
   .cool-footer {
-    background-color: #333;
+    background-color: rgb(32, 32, 35);
     color: white;
     padding: 40px;
     text-align: center;

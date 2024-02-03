@@ -162,7 +162,7 @@ a{
 }
 
 .innerContainer{
-  height: calc(100vh + 20px);
+  height: calc(100vh - 180px);
   width: 100%;
   position: relative;
 }
