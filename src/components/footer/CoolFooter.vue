@@ -9,14 +9,25 @@
         <div class="footer-social">
           <router-link to="/dataprivacy">Data Privacy</router-link>
           <router-link to="/">Impress</router-link>
+          <button @click="triggerPopup">Contact</button>
+          <Popup ref="popupRef" />
         </div>
       </div>
     </footer>
   </template>
   
   <script>
+  import Popup from "@/components/popup/PopUp.vue";
   export default {
     name: "CoolFooter",
+    methods: {
+      triggerPopup() {
+        this.$refs.popupRef.openPopup();
+      },
+    },
+    components: {
+      Popup,
+    },
   };
   </script>
   
@@ -73,5 +84,15 @@
     object-position: left;
   }
   
-  /* Add your own styles to make it even cooler! */
+  button{
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
   </style>

@@ -74,6 +74,7 @@
     font-size: 12vw;
     letter-spacing: 0.1em;
     font-weight: 500;
+    text-transform: uppercase;
     }
 
     h2{
