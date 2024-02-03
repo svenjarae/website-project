@@ -100,8 +100,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   overflow: hidden;
-  width: 50%; /* Adjust the width as needed */
-  max-width: 400px; /* Set a maximum width for responsiveness */
+  max-width: 400px;
   z-index: 1000;
 }
 

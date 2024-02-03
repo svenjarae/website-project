@@ -160,13 +160,13 @@ const routes = [
     },
   },
   {
-    path: '/who',
-    name: 'who',
+    path: '/skills',
+    name: 'skills',
     component: () => import(/* webpackChunkName: "skills" */ '../views/SkillsView'),
     meta: {
       breadcrumbs: [
         { label: 'Start', to: '/' },
-        { label: '> Who', to: '/who' },
+        { label: '> Skills', to: '/skills' },
       ],
     },
   },

@@ -20,8 +20,8 @@
           <div class="navigation-container" @click="navigate('/projects')">
             <router-link to="/projects">PROJECTS</router-link>
           </div>
-          <div class="navigation-container" @click="navigate('/who')">
-            <router-link to="/who">WHO</router-link>
+          <div class="navigation-container" @click="navigate('/skills')">
+            <router-link to="/skills">SKILLS</router-link>
           </div>
         </div>
       </transition>

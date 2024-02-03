@@ -2,14 +2,18 @@
     <footer class="cool-footer">
       <div class="footer-content">
         <div class="footer-partners">
+          <img src="@/assets/images/logos/rhm-logo-positiv.png">
           <img src="@/assets/images/logos/codevance_logo_positiv.svg">
           <img src="@/assets/images/logos/OC_Logo_Hero.png">
           <img src="@/assets/images/logos/oceanwildlife-logo.png">
+          <img src="@/assets/images/logos/Logo-white-IRS.svg">
+          
         </div>
         <div class="footer-social">
           <router-link to="/dataprivacy">Data Privacy</router-link>
           <router-link to="/">Impress</router-link>
           <button @click="triggerPopup">Contact</button>
+          <router-link to="/skills">Skills</router-link>
           <Popup ref="popupRef" />
         </div>
       </div>
@@ -77,8 +81,8 @@
   }
 
   .footer-partners img{
-    max-width: 200px;
-    max-height: 100px;
+    max-width: 120px;
+    max-height: 80px;
     width: 100%;
     object-fit: contain;
     object-position: left;
@@ -95,4 +99,35 @@
     text-transform: uppercase;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1200px) {
+
+    .footer-content{
+      flex-direction: column;
+    }
+    .footer-social{
+      margin-top: 20px;
+    }
+    .footer-partners{
+  overflow: auto;
+}
+}
+
+@media screen and (max-width: 500px) {
+
+.footer-content{
+  flex-direction: column;
+}
+
+.footer-partners img{
+  object-position: center;
+}
+
+.footer-social{
+  flex-direction: column;
+    display: flex;
+    gap: 16px;
+}
+
+}
   </style>
