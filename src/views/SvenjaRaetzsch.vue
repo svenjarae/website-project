@@ -5,8 +5,9 @@
         <li>
           <h2>Make a happy face</h2>
         </li>
+        <li>Comfort doesn’t create adventure</li>
         <li>This website presents a collection of my previous work, as <h2>Webdeveloper</h2>, <h2>Filmcreator</h2> & <h2>Photographer</h2>.</li>
-        <li>Soaking up the sun and creative vibes in the coastal haven of <h2>Gran Canaria</h2></li>
+        <li>Soaking up the sun and creative vibes in the coastal heaven of <h2>Gran Canaria</h2></li>
         <li>Let's create something extraordinary together!</li>
       </ul>
       <router-link to="/projects" class="buttonContainer">
